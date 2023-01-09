@@ -4,7 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterPro
 import './index.css';
 import Sidebar from './layouts/Sidebar';
 import Collection from './router/collection';
-import Root from './router/root';
+import Home from './router/home';
 
 const AppLayout = () => {
   return (
@@ -18,7 +18,7 @@ const AppLayout = () => {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<AppLayout />}>
-      <Route path='/' element={<Root />} />
+      <Route path='/' element={<Home />} />
       <Route path='collection' element={<Collection />} />
     </Route>,
   ),

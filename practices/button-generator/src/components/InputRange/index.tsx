@@ -4,10 +4,9 @@ const InputRange = ({ ...rest }: React.ComponentPropsWithoutRef<'input'>): React
   return (
     <input
       type='range'
-      className='form-range w-full h-6 p-0 cursor-pointer bg-transparent focus:outline-none focus:ring-0 focus:shadow-none'
+      className='w-full h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm'
       {...rest}
     />
   );
 };
-
 export default InputRange;
