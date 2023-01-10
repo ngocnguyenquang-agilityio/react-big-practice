@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import Button from '../components/Button';
 import DropDownMenu from '../components/DropDownMenu';
 import InputRange from '../components/InputRange';
+import Switch from '../components/Switch';
 import { DROPDOWN_OPTION_VARIANTS } from '../constants/options';
 import { getBtnBorderRadiusValue, getBtnBorderSizeValue, getBtnSizeValue } from '../helpers/buttonHelpers';
 import { buttonReducer, defaultButton } from '../reducer/button.reducer';
@@ -29,8 +30,12 @@ const Home = () => {
     dispatch({ type: 'CHANGE_BORDER_RADIUS', data: e.target.value });
   };
 
+  const handleSetDisplayBlock = () => {
+    dispatch({ type: 'SET_BUTTON_TO_BLOCK', data: !btnStyle.isDisplayBlock });
+  };
+
   return (
-    <form className='p-3 w-2/5 grow md:grow-0'>
+    <div className='p-3 w-2/5 grow md:grow-0'>
       <h1 className='font-bold leading-none tracking-tight text-xl md:text-2xl mb-5'>Home</h1>
       <div className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
         <div className='w-full h-32 flex items-center justify-center'>
@@ -39,7 +44,7 @@ const Home = () => {
       </div>
 
       <h2 className='font-bold leading-none tracking-tight text-lg md:text-xl md:text-2xl my-5'>Properties</h2>
-      <div className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
+      <form className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
         <div className='pb-1 md: pb-3'>
           <label className='text-sm md:text-md'>Button Size: {getBtnSizeValue(btnStyle.size!)}</label>
           <InputRange min='1' max='3' step='1' value={btnStyle.size} onChange={handleChangeSize} />
@@ -64,8 +69,13 @@ const Home = () => {
           <label className='text-sm md:text-md'>Border Radius: {getBtnBorderRadiusValue(btnStyle.borderRadius!)}</label>
           <InputRange min='1' max='4' step='1' value={btnStyle.borderRadius} onChange={handleChangeBorderRadius} />
         </div>
-      </div>
-    </form>
+
+        <div className='pb-1 md: pb-3 flex gap-2'>
+          <label className='text-sm md:text-md'>Set button to display block</label>
+          <Switch onChange={handleSetDisplayBlock} />
+        </div>
+      </form>
+    </div>
   );
 };
 
