@@ -48,6 +48,11 @@ export const buttonReducer = (state: IButton, action: Action): IButton => {
         ...state,
         borderRadius: action.data,
       };
+    case 'SET_BUTTON_TO_BLOCK':
+      return {
+        ...state,
+        isDisplayBlock: action.data,
+      };
     default:
       return state;
   }
