@@ -21,6 +21,10 @@ const Home = () => {
     dispatch({ type: 'CHANGE_BORDER_SIZE', data: e.target.value });
   };
 
+  const handleChangeBorderColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch({ type: 'CHANGE_BORDER_COLOR', data: e.target.value });
+  };
+
   return (
     <form className='p-3 w-2/5'>
       <h1 className='font-bold leading-none tracking-tight text-3xl mb-5'>Home</h1>
@@ -45,6 +49,11 @@ const Home = () => {
         <div className='pb-5'>
           <label>Border Size: {getBtnBorderSizeValue(btnStyle.borderSize!)}</label>
           <InputRange min='1' max='4' step='1' value={btnStyle.borderSize} onChange={handleChangeBorderSize} />
+        </div>
+
+        <div className='pb-5'>
+          <label>Border Color</label>
+          <DropDownMenu dropdownOptions={DROPDOWN_OPTION_VARIANTS} onChange={handleChangeBorderColor} />
         </div>
       </div>
     </form>
