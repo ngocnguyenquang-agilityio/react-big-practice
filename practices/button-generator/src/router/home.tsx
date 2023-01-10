@@ -3,7 +3,7 @@ import Button from '../components/Button';
 import DropDownMenu from '../components/DropDownMenu';
 import InputRange from '../components/InputRange';
 import { DROPDOWN_OPTION_VARIANTS } from '../constants/options';
-import { getBtnSizeValue } from '../helpers/buttonHelpers';
+import { getBtnBorderSizeValue, getBtnSizeValue } from '../helpers/buttonHelpers';
 import { buttonReducer, defaultButton } from '../reducer/button.reducer';
 
 const Home = () => {
@@ -15,6 +15,10 @@ const Home = () => {
 
   const handleChangeBgColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch({ type: 'CHANGE_BG_COLOR', data: e.target.value });
+  };
+
+  const handleChangeBorderSize = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch({ type: 'CHANGE_BORDER_SIZE', data: e.target.value });
   };
 
   return (
@@ -32,9 +36,15 @@ const Home = () => {
           <label>Button Size: {getBtnSizeValue(btnStyle.size!)}</label>
           <InputRange min='1' max='3' step='1' value={btnStyle.size} onChange={handleChangeSize} />
         </div>
+
         <div className='pb-5'>
           <label>Background Color</label>
           <DropDownMenu dropdownOptions={DROPDOWN_OPTION_VARIANTS} onChange={handleChangeBgColor} />
+        </div>
+
+        <div className='pb-5'>
+          <label>Border Size: {getBtnBorderSizeValue(btnStyle.borderSize!)}</label>
+          <InputRange min='1' max='4' step='1' value={btnStyle.borderSize} onChange={handleChangeBorderSize} />
         </div>
       </div>
     </form>

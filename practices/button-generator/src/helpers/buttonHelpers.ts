@@ -109,3 +109,19 @@ export const getBtnSizeValue = (value: SIZE): string => {
 
   return btnSizeValue[value];
 };
+
+/**
+ * Get the text consistent with the button border size value
+ * @param {BORDER_SIZE} value: the value of border button size
+ * @returns {string}: the text consistent with the button border size value
+ */
+export const getBtnBorderSizeValue = (value: BORDER_SIZE): string => {
+  const btnBorderSizeValue = {
+    [BORDER_SIZE.SMALL]: 'Small',
+    [BORDER_SIZE.MEDIUM]: 'Medium',
+    [BORDER_SIZE.LARGE]: 'Large',
+    [BORDER_SIZE.EXTRA_LARGE]: 'Extra Large',
+  };
+
+  return btnBorderSizeValue[value];
+};
