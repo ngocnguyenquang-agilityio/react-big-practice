@@ -1,4 +1,4 @@
-import { BORDER_SIZE, SIZE, VARIANT } from '../enums/button';
+import { BORDER_SIZE, ROUNDED_SIZE, SIZE, VARIANT } from '../enums/button';
 import { IButton } from '../interfaces/button.interface';
 
 export const defaultButton: IButton = {
@@ -7,6 +7,7 @@ export const defaultButton: IButton = {
   bgColor: VARIANT.PRIMARY,
   borderSize: BORDER_SIZE.SMALL,
   borderColor: VARIANT.PRIMARY,
+  borderRadius: ROUNDED_SIZE.SMALL,
 };
 
 export type Action = {
@@ -41,6 +42,11 @@ export const buttonReducer = (state: IButton, action: Action): IButton => {
       return {
         ...state,
         borderColor: action.data,
+      };
+    case 'CHANGE_BORDER_RADIUS':
+      return {
+        ...state,
+        borderRadius: action.data,
       };
     default:
       return state;

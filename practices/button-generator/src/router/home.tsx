@@ -3,7 +3,7 @@ import Button from '../components/Button';
 import DropDownMenu from '../components/DropDownMenu';
 import InputRange from '../components/InputRange';
 import { DROPDOWN_OPTION_VARIANTS } from '../constants/options';
-import { getBtnBorderSizeValue, getBtnSizeValue } from '../helpers/buttonHelpers';
+import { getBtnBorderRadiusValue, getBtnBorderSizeValue, getBtnSizeValue } from '../helpers/buttonHelpers';
 import { buttonReducer, defaultButton } from '../reducer/button.reducer';
 
 const Home = () => {
@@ -25,35 +25,44 @@ const Home = () => {
     dispatch({ type: 'CHANGE_BORDER_COLOR', data: e.target.value });
   };
 
+  const handleChangeBorderRadius = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch({ type: 'CHANGE_BORDER_RADIUS', data: e.target.value });
+  };
+
   return (
-    <form className='p-3 w-2/5'>
-      <h1 className='font-bold leading-none tracking-tight text-3xl mb-5'>Home</h1>
+    <form className='p-3 w-2/5 grow md:grow-0'>
+      <h1 className='font-bold leading-none tracking-tight text-xl md:text-2xl mb-5'>Home</h1>
       <div className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
         <div className='w-full h-32 flex items-center justify-center'>
           <Button type='button' {...btnStyle} />
         </div>
       </div>
 
-      <h2 className='font-bold leading-none tracking-tight text-2xl my-5'>Properties</h2>
+      <h2 className='font-bold leading-none tracking-tight text-lg md:text-xl md:text-2xl my-5'>Properties</h2>
       <div className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
-        <div className='pb-5'>
-          <label>Button Size: {getBtnSizeValue(btnStyle.size!)}</label>
+        <div className='pb-1 md: pb-3'>
+          <label className='text-sm md:text-md'>Button Size: {getBtnSizeValue(btnStyle.size!)}</label>
           <InputRange min='1' max='3' step='1' value={btnStyle.size} onChange={handleChangeSize} />
         </div>
 
-        <div className='pb-5'>
-          <label>Background Color</label>
+        <div className='pb-1 md: pb-3'>
+          <label className='text-sm md:text-md'>Background Color</label>
           <DropDownMenu dropdownOptions={DROPDOWN_OPTION_VARIANTS} onChange={handleChangeBgColor} />
         </div>
 
-        <div className='pb-5'>
-          <label>Border Size: {getBtnBorderSizeValue(btnStyle.borderSize!)}</label>
+        <div className='pb-1 md: pb-3'>
+          <label className='text-sm md:text-md'>Border Size: {getBtnBorderSizeValue(btnStyle.borderSize!)}</label>
           <InputRange min='1' max='4' step='1' value={btnStyle.borderSize} onChange={handleChangeBorderSize} />
         </div>
 
-        <div className='pb-5'>
-          <label>Border Color</label>
+        <div className='pb-1 md: pb-3'>
+          <label className='text-sm md:text-md'>Border Color</label>
           <DropDownMenu dropdownOptions={DROPDOWN_OPTION_VARIANTS} onChange={handleChangeBorderColor} />
+        </div>
+
+        <div className='pb-1 md: pb-3'>
+          <label className='text-sm md:text-md'>Border Radius: {getBtnBorderRadiusValue(btnStyle.borderRadius!)}</label>
+          <InputRange min='1' max='4' step='1' value={btnStyle.borderRadius} onChange={handleChangeBorderRadius} />
         </div>
       </div>
     </form>

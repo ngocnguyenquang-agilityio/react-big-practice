@@ -125,3 +125,19 @@ export const getBtnBorderSizeValue = (value: BORDER_SIZE): string => {
 
   return btnBorderSizeValue[value];
 };
+
+/**
+ * Get the text consistent with the button border radius size value
+ * @param {ROUNDED_SIZE} value: the value of border radius button size
+ * @returns {string}: the text consistent with the button border radius size value
+ */
+export const getBtnBorderRadiusValue = (value: ROUNDED_SIZE): string => {
+  const btnBorderRadiusValue = {
+    [ROUNDED_SIZE.SMALL]: 'Small',
+    [ROUNDED_SIZE.MEDIUM]: 'Medium',
+    [ROUNDED_SIZE.LARGE]: 'Large',
+    [ROUNDED_SIZE.FULL]: 'Full',
+  };
+
+  return btnBorderRadiusValue[value];
+};

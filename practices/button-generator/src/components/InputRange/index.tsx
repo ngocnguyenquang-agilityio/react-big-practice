@@ -4,7 +4,7 @@ const InputRange = ({ ...rest }: React.ComponentPropsWithoutRef<'input'>): React
   return (
     <input
       type='range'
-      className='w-full h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm'
+      className='w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm'
       {...rest}
     />
   );
