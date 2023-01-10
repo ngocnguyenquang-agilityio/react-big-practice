@@ -53,6 +53,11 @@ export const buttonReducer = (state: IButton, action: Action): IButton => {
         ...state,
         isDisplayBlock: action.data,
       };
+    case 'SET_BUTTON_DISABLED':
+      return {
+        ...state,
+        isDisabled: action.data,
+      };
     default:
       return state;
   }

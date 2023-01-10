@@ -34,6 +34,10 @@ const Home = () => {
     dispatch({ type: 'SET_BUTTON_TO_BLOCK', data: !btnStyle.isDisplayBlock });
   };
 
+  const handleSetDisable = () => {
+    dispatch({ type: 'SET_BUTTON_DISABLED', data: !btnStyle.isDisabled });
+  };
+
   return (
     <div className='p-3 w-2/5 grow md:grow-0'>
       <h1 className='font-bold leading-none tracking-tight text-xl md:text-2xl mb-5'>Home</h1>
@@ -73,6 +77,11 @@ const Home = () => {
         <div className='pb-1 md: pb-3 flex gap-2'>
           <label className='text-sm md:text-md'>Set button to display block</label>
           <Switch onChange={handleSetDisplayBlock} />
+        </div>
+
+        <div className='pb-1 md: pb-3 flex gap-2'>
+          <label className='text-sm md:text-md'>Set button to disable</label>
+          <Switch onChange={handleSetDisable} />
         </div>
       </form>
     </div>
