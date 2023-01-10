@@ -1,24 +1,36 @@
-import { SIZE } from '../enums/button';
+import { SIZE, VARIANT } from '../enums/button';
 import { IButton } from '../interfaces/button.interface';
 
 export const defaultButton: IButton = {
   textContent: 'Button',
   size: SIZE.SMALL,
+  bgColor: VARIANT.PRIMARY,
+};
+
+export type Action = {
+  type: string;
+  data?: any;
 };
 
 /**
  *
  * @param {IButton} state: the state of the button
- * @param action: to change the state of the button
+ * @param {Action} action: to change the state of the button
  * @returns {IButton}: new button state after did action
  */
-export const buttonReducer = (state: IButton, action: any) => {
+export const buttonReducer = (state: IButton, action: Action): IButton => {
   switch (action.type) {
     case 'CHANGE_SIZE':
       return {
         ...state,
         size: action.data,
       };
+    case 'CHANGE_BG_COLOR':
+      return {
+        ...state,
+        bgColor: action.data,
+      };
+
     default:
       return state;
   }
