@@ -6,6 +6,7 @@ export const defaultButton: IButton = {
   size: SIZE.SMALL,
   bgColor: VARIANT.PRIMARY,
   borderSize: BORDER_SIZE.SMALL,
+  borderColor: VARIANT.PRIMARY,
 };
 
 export type Action = {
@@ -35,6 +36,11 @@ export const buttonReducer = (state: IButton, action: Action): IButton => {
       return {
         ...state,
         borderSize: action.data,
+      };
+    case 'CHANGE_BORDER_COLOR':
+      return {
+        ...state,
+        borderColor: action.data,
       };
     default:
       return state;
