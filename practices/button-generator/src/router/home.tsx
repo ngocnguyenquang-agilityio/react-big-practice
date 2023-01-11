@@ -4,7 +4,7 @@ import DropDownMenu from '../components/DropdownMenu';
 import InputRange from '../components/InputRange';
 import Switch from '../components/Switch';
 import { DROPDOWN_OPTION_VARIANTS } from '../constants/options';
-import { getBtnBorderRadiusValue, getBtnBorderSizeValue, getBtnSizeValue } from '../helpers/buttonHelpers';
+import { getBtnBorderRadiusValue, getBtnBorderSizeValue,  getBtnInHTML,  getBtnSizeValue } from '../helpers/buttonHelpers';
 import { buttonReducer, defaultButton } from '../reducer/button.reducer';
 import { CollectionType, CollectionContext } from '../store/collection.context';
 
@@ -46,17 +46,21 @@ const Home = () => {
     addToCollectionButton(btnStyle);
   };
 
+  const showBtnHTMLCode = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    alert(`Your button in HTML is:\n${getBtnInHTML(e)}`)
+  }
+
   return (
     <div className='p-3 w-2/5 grow md:grow-0'>
       <h1 className='font-bold leading-none tracking-tight text-xl md:text-2xl mb-5'>Home</h1>
-      <div className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
+      <div className='m-2 p-3 rounded-lg border-2 border-solid border-grey-200'>
         <div className='w-full h-32 flex items-center justify-center'>
-          <Button {...btnStyle} />
+          <Button {...btnStyle} onClick={showBtnHTMLCode} />
         </div>
       </div>
 
       <h2 className='font-bold leading-none tracking-tight text-lg md:text-xl md:text-2xl my-5'>Properties</h2>
-      <form className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
+      <form className='m-2 p-3 rounded-lg border-2 border-solid border-grey-200'>
         <div className='pb-1 md: pb-3'>
           <label className='text-sm md:text-md'>Button Size: {getBtnSizeValue(btnStyle.size!)}</label>
           <InputRange min='1' max='3' step='1' value={btnStyle.size} onChange={handleChangeSize} />

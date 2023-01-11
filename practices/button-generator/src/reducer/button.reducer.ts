@@ -3,7 +3,7 @@ import { IButton } from '../interfaces/button.interface';
 
 export const defaultButton: IButton = {
   id: Date.now().toString(),
-  textContent: 'Button',
+  textContent: 'Click me!',
   size: SIZE.SMALL,
   bgColor: VARIANT.PRIMARY,
   borderSize: BORDER_SIZE.SMALL,
