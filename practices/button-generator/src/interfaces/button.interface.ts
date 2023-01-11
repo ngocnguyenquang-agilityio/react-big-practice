@@ -3,6 +3,7 @@
 import { VARIANT, ROUNDED_SIZE, SIZE, BORDER_SIZE } from '../enums/button';
 
 export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  readonly id?: string;
   textContent: string;
   size?: SIZE;
   borderSize?: BORDER_SIZE;

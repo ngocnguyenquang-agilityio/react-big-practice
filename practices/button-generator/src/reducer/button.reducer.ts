@@ -2,12 +2,15 @@ import { BORDER_SIZE, ROUNDED_SIZE, SIZE, VARIANT } from '../enums/button';
 import { IButton } from '../interfaces/button.interface';
 
 export const defaultButton: IButton = {
+  id: Date.now().toString(),
   textContent: 'Button',
   size: SIZE.SMALL,
   bgColor: VARIANT.PRIMARY,
   borderSize: BORDER_SIZE.SMALL,
   borderColor: VARIANT.PRIMARY,
   borderRadius: ROUNDED_SIZE.SMALL,
+  isDisplayBlock: false,
+  isDisabled: false,
 };
 
 export type Action = {

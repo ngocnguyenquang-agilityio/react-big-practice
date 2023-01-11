@@ -5,6 +5,7 @@ import './index.css';
 import Sidebar from './layouts/Sidebar';
 import Collection from './router/collection';
 import Home from './router/home';
+import CollectionProvider from './store/CollectionProvider';
 
 const AppLayout = () => {
   return (
@@ -24,10 +25,10 @@ const router = createBrowserRouter(
   ),
 );
 
-
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CollectionProvider>
+      <RouterProvider router={router} />
+    </CollectionProvider>
   </React.StrictMode>,
 );
