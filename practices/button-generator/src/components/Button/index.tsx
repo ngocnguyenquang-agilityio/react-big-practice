@@ -37,7 +37,7 @@ const Button = ({
     isDisplayBlock === true ? 'block w-full' : '',
     isDisplayBlock === false ? '' : '',
 
-    isDisabled === true ? 'opacity-50 cursor-not-allowed' : '',
+    isDisabled === true ? 'opacity-50' : '',
     isDisabled === false ? '' : '',
   ].join(' ');
   return (

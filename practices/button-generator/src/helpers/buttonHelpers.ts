@@ -1,3 +1,4 @@
+import React from 'react';
 import { BORDER_SIZE, ROUNDED_SIZE, SIZE, VARIANT } from '../enums/button';
 
 /**
@@ -140,4 +141,13 @@ export const getBtnBorderRadiusValue = (value: ROUNDED_SIZE): string => {
   };
 
   return btnBorderRadiusValue[value];
+};
+
+/**
+ * Get code of button in HTML
+ * @param {MouseEvent<HTMLButtonElement, MouseEvent>} event: button event and mouse event
+ * @returns {string}: a string of html button code
+ */
+export const getBtnInHTML = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): string => {
+  return `<button class="${event.currentTarget.className.trim()}">${event.currentTarget.innerHTML}</button>`;
 };
