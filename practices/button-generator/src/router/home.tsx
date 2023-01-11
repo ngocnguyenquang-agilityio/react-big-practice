@@ -1,14 +1,16 @@
-import React, { useReducer } from 'react';
+import React, { useContext, useReducer } from 'react';
 import Button from '../components/Button';
-import DropDownMenu from '../components/DropDownMenu';
+import DropDownMenu from '../components/DropdownMenu';
 import InputRange from '../components/InputRange';
 import Switch from '../components/Switch';
 import { DROPDOWN_OPTION_VARIANTS } from '../constants/options';
 import { getBtnBorderRadiusValue, getBtnBorderSizeValue, getBtnSizeValue } from '../helpers/buttonHelpers';
 import { buttonReducer, defaultButton } from '../reducer/button.reducer';
+import { CollectionType, CollectionContext } from '../store/collection.context';
 
 const Home = () => {
   const [btnStyle, dispatch] = useReducer(buttonReducer, defaultButton);
+  const { addToCollectionButton } = useContext(CollectionContext) as CollectionType;
 
   const handleChangeSize = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'CHANGE_SIZE', data: e.target.value });
@@ -38,12 +40,18 @@ const Home = () => {
     dispatch({ type: 'SET_BUTTON_DISABLED', data: !btnStyle.isDisabled });
   };
 
+  const handleAddButtonToCollection = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    addToCollectionButton(btnStyle);
+  };
+
   return (
     <div className='p-3 w-2/5 grow md:grow-0'>
       <h1 className='font-bold leading-none tracking-tight text-xl md:text-2xl mb-5'>Home</h1>
       <div className='m-2 p-3 rounded-lg border-2 boder-solid border-grey-200'>
         <div className='w-full h-32 flex items-center justify-center'>
-          <Button type='button' {...btnStyle} />
+          <Button {...btnStyle} />
         </div>
       </div>
 
@@ -82,6 +90,10 @@ const Home = () => {
         <div className='pb-1 md: pb-3 flex gap-2'>
           <label className='text-sm md:text-md'>Set button to disable</label>
           <Switch onChange={handleSetDisable} />
+        </div>
+
+        <div className='mt-5 pr-3'>
+          <Button textContent='Add to Collection' isDisplayBlock onClick={handleAddButtonToCollection} />
         </div>
       </form>
     </div>

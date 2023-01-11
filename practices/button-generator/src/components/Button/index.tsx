@@ -19,6 +19,7 @@ const Button = ({
   borderRadius = ROUNDED_SIZE.MEDIUM,
   isDisplayBlock = false,
   isDisabled = false,
+  type = 'button',
   ...rest
 }: IButton): React.ReactElement => {
   const baseClass = 'text-white text-center m-2 border-solid border-2';
@@ -40,7 +41,7 @@ const Button = ({
     isDisabled === false ? '' : '',
   ].join(' ');
   return (
-    <button className={`${classes}`} {...rest}>
+    <button type={type} className={`${classes}`} {...rest}>
       {textContent}
     </button>
   );
