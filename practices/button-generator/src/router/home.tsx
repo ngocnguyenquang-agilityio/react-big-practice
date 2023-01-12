@@ -1,6 +1,6 @@
 import React, { useContext, useReducer } from 'react';
 import Button from '../components/Button';
-import DropDownMenu from '../components/DropDownMenu';
+import DropDownMenu from '../components/DropdownMenu';
 import InputRange from '../components/InputRange';
 import Switch from '../components/Switch';
 import { DROPDOWN_OPTION_VARIANTS } from '../constants/options';
