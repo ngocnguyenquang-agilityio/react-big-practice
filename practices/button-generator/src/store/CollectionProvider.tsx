@@ -1,4 +1,5 @@
 import { useReducer } from 'react';
+import { BUTTON_COLLECTION } from '../constants/collection';
 import { IButton } from '../interfaces/button.interface';
 import { buttonCollection, collectionReducer } from '../reducer/collection.reducer';
 import { CollectionContext } from './collection.context';
@@ -8,9 +9,19 @@ import { CollectionContext } from './collection.context';
  * @param {IButton} button: the button to be added
  */
 const addButtonToLocalStorage = (button: IButton) => {
-  const collection: IButton[] = JSON.parse(localStorage.getItem('collection') as string) || [];
+  const collection: IButton[] = JSON.parse(localStorage.getItem(BUTTON_COLLECTION) as string) || [];
   collection.push(button);
-  localStorage.setItem('collection', JSON.stringify(collection));
+  localStorage.setItem(BUTTON_COLLECTION, JSON.stringify(collection));
+};
+
+/**
+ * Remove button from localStorage
+ * @param {string} id: id of the button
+ */
+const removeButtonFromLocalStorage = (id: string) => {
+  const collection: IButton[] = JSON.parse(localStorage.getItem(BUTTON_COLLECTION) as string) || [];
+  const buttonRemoved = collection.filter((item) => item.id !== id);
+  localStorage.setItem(BUTTON_COLLECTION, JSON.stringify(buttonRemoved));
 };
 
 /**
@@ -21,14 +32,26 @@ const addButtonToLocalStorage = (button: IButton) => {
 const CollectionProvider = ({ children }: { children: React.ReactElement }) => {
   const [state, dispatch] = useReducer(collectionReducer, buttonCollection);
 
+  /**
+   * Add button to collection
+   * @param {IButton} button: button to be added
+   */
   const addToCollectionButton = (button: IButton) => {
     addButtonToLocalStorage(button);
     dispatch({ type: 'ADD_BTN', data: button });
-    alert('Added to collection')
+  };
+
+  /**
+   * Remove button from collection by id
+   * @param {string} id: id of the button
+   */
+  const removeButtonFromCollection = (id: string) => {
+    removeButtonFromLocalStorage(id);
+    dispatch({ type: 'REMOVE_BTN', data: id });
   };
 
   return (
-    <CollectionContext.Provider value={{ value: state.collection, addToCollectionButton }}>
+    <CollectionContext.Provider value={{ value: state.collection, addToCollectionButton, removeButtonFromCollection }}>
       {children}
     </CollectionContext.Provider>
   );
