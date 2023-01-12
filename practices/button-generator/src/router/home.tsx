@@ -1,10 +1,15 @@
 import React, { useContext, useReducer } from 'react';
 import Button from '../components/Button';
-import DropDownMenu from '../components/DropdownMenu';
+import DropDownMenu from '../components/DropDownMenu';
 import InputRange from '../components/InputRange';
 import Switch from '../components/Switch';
 import { DROPDOWN_OPTION_VARIANTS } from '../constants/options';
-import { getBtnBorderRadiusValue, getBtnBorderSizeValue,  getBtnInHTML,  getBtnSizeValue } from '../helpers/buttonHelpers';
+import {
+  getBtnBorderRadiusValue,
+  getBtnBorderSizeValue,
+  getBtnInHTML,
+  getBtnSizeValue,
+} from '../helpers/buttonHelpers';
 import { buttonReducer, defaultButton } from '../reducer/button.reducer';
 import { CollectionType, CollectionContext } from '../store/collection.context';
 
@@ -43,12 +48,14 @@ const Home = () => {
   const handleAddButtonToCollection = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
+    dispatch({ type: 'SET_BTN' });
     addToCollectionButton(btnStyle);
+    alert('Added to collection');
   };
 
   const showBtnHTMLCode = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    alert(`Your button in HTML is:\n${getBtnInHTML(e)}`)
-  }
+    alert(`Your button in HTML is:\n${getBtnInHTML(e)}`);
+  };
 
   return (
     <div className='p-3 w-2/5 grow md:grow-0'>

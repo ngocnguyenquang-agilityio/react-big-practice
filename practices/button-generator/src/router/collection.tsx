@@ -1,15 +1,22 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import Button from '../components/Button';
 import { SIZE, VARIANT } from '../enums/button';
 import { getBtnInHTML } from '../helpers/buttonHelpers';
 import { CollectionContext, CollectionType } from '../store/collection.context';
 
 const Collection = () => {
-  const { value } = useContext(CollectionContext) as CollectionType;
+  const { value, removeButtonFromCollection } = useContext(CollectionContext) as CollectionType;
 
   const showBtnHTMLCode = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    alert(`Your button in HTML is:\n${getBtnInHTML(e)}`)
-  }
+    alert(`Your button in HTML is:\n${getBtnInHTML(e)}`);
+  };
+
+  const handleRemoveButton = (id: string) => {
+    const message = 'Are you sure to remove this button ?';
+    if (confirm(message) === true) {
+      removeButtonFromCollection(id);
+    }
+  };
 
   return (
     <div className='p-3 w-3/5 grow md:grow-0'>
@@ -41,6 +48,7 @@ const Collection = () => {
                       bgColor={VARIANT.DANGER}
                       borderColor={VARIANT.DANGER}
                       size={SIZE.SMALL}
+                      onClick={() => handleRemoveButton(item.id!)} // TODO: Remove the arrow function. Find another way and test re-render later
                     />
                   </td>
                 </tr>

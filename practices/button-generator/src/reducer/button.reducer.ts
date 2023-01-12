@@ -26,6 +26,12 @@ export type Action = {
  */
 export const buttonReducer = (state: IButton, action: Action): IButton => {
   switch (action.type) {
+    //TODO: Remove redundant dispatch
+    case 'SET_BTN':
+      return {
+        ...state,
+        id: Date.now().toString(),
+      };
     case 'CHANGE_SIZE':
       return {
         ...state,
