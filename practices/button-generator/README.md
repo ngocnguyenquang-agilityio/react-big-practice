@@ -35,7 +35,7 @@
 ## Timeline
 
 - Estimate time: 7 days of working
-- Actual time: TBD
+- Actual time: 9 days of working
 
 ## Tech Stacks
 

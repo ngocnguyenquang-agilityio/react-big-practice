@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom';
 import './index.css';
 import Sidebar from './layouts/Sidebar';
-import Collection from './router/Collection';
-import Home from './router/Home';
+import Collection from './router/collection';
+import Home from './router/home';
+
 import CollectionProvider from './store/CollectionProvider';
 
 const AppLayout = () => {
