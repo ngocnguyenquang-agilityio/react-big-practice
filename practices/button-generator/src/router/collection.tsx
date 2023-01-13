@@ -11,7 +11,10 @@ const Collection = () => {
     alert(`Your button in HTML is:\n${getBtnInHTML(e)}`);
   };
 
-  const handleRemoveButton = (id: string) => {
+  const handleRemoveButton = (e:React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    const id = e.currentTarget.value
     const message = 'Are you sure to remove this button ?';
     if (confirm(message) === true) {
       removeButtonFromCollection(id);
@@ -44,11 +47,12 @@ const Collection = () => {
                   </td>
                   <td>
                     <Button
+                      value={item.id}
                       textContent='Remove'
                       bgColor={VARIANT.DANGER}
                       borderColor={VARIANT.DANGER}
                       size={SIZE.SMALL}
-                      onClick={() => handleRemoveButton(item.id!)} // TODO: Remove the arrow function. Find another way and test re-render later
+                      onClick={handleRemoveButton}
                     />
                   </td>
                 </tr>
