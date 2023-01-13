@@ -12,18 +12,12 @@ export const buttonCollection: { collection: IButton[] } = {
  * @param {Action} action: action to change the state of the collection
  * @returns {IButton[]}: new collection state
  */
-export const collectionReducer = (state: { collection: IButton[] }, action: Action) => {
+export const collectionReducer = (state: IButton[], action: Action) => {
   switch (action.type) {
     case 'ADD_BTN':
-      return {
-        ...state,
-        collection: [...state.collection, action.data],
-      };
+      return [...state, action.data];
     case 'REMOVE_BTN':
-      return {
-        ...state,
-        collection: [...state.collection.filter((item) => item.id !== action.data)],
-      };
+      return state.filter((item) => item.id !== action.data);
     default:
       return state;
   }
