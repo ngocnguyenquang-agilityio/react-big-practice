@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom';
 import './index.css';
 import Sidebar from './layouts/Sidebar';
-import Collection from './router/Collection';
+import Collection from './router/collection';
 import Home from './router/Home';
 import CollectionProvider from './store/CollectionProvider';
 

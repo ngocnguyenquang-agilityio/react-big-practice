@@ -17,7 +17,7 @@ const CollectionProvider = ({ children }: { children: React.ReactElement }) => {
    * @param {IButton} button: button to be added
    */
   const addToCollectionButton = (button: IButton) => {
-    dispatch({ type: 'ADD_BTN', data: button });
+    dispatch({ type: 'ADD_BTN', data: { ...button, id: Date.now().toString() } });
   };
 
   /**
