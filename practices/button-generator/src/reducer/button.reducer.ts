@@ -2,7 +2,6 @@ import { BORDER_SIZE, ROUNDED_SIZE, SIZE, VARIANT } from '../enums/button';
 import { IButton } from '../interfaces/button.interface';
 
 export const defaultButton: IButton = {
-  id: Date.now().toString(),
   textContent: 'Click me!',
   size: SIZE.SMALL,
   bgColor: VARIANT.PRIMARY,
@@ -19,19 +18,13 @@ export type Action = {
 };
 
 /**
- *
+ * Button reducer function
  * @param {IButton} state: the state of the button
  * @param {Action} action: to change the state of the button
  * @returns {IButton}: new button state after did action
  */
 export const buttonReducer = (state: IButton, action: Action): IButton => {
   switch (action.type) {
-    //TODO: Remove redundant dispatch
-    case 'SET_BTN':
-      return {
-        ...state,
-        id: Date.now().toString(),
-      };
     case 'CHANGE_SIZE':
       return {
         ...state,
