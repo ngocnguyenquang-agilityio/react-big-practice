@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes, NavLink } from 'react-router-dom';
-import { CollectionContext, CollectionType } from '../../store/collection.context';
+import { useCollection } from '../../hooks/useCollection';
 
 const Sidebar = () => {
-  const { value } = useContext(CollectionContext) as CollectionType;
+  const { value } = useCollection();
 
   return (
     <div className='flex'>

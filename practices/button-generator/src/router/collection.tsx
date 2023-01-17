@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react';
 import Button from '../components/Button';
 import Modal from '../components/Modal';
 import { SIZE, VARIANT } from '../enums/button';
-import { CollectionContext, CollectionType } from '../store/collection.context';
+import { useCollection } from '../hooks/useCollection';
 
 const Collection = () => {
-  const { value, removeButtonFromCollection } = useContext(CollectionContext) as CollectionType;
+  const { value, removeButtonFromCollection } = useCollection();
   const [buttonCode, setButtonCode] = useState({ className: '', content: '' });
   const [isOpenModal, setIsOpenModal] = useState(false);
 
