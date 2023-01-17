@@ -1,10 +1,10 @@
-import { useContext, useReducer } from 'react';
+import { useReducer } from 'react';
 import { DROPDOWN_OPTION_VARIANTS } from '../../constants/options';
 import { getBtnBorderRadiusValue, getBtnBorderSizeValue, getBtnSizeValue } from '../../helpers/buttonHelpers';
+import { useCollection } from '../../hooks/useCollection';
 import { buttonReducer, defaultButton } from '../../reducer/button.reducer';
-import { CollectionContext, CollectionType } from '../../store/collection.context';
 import Button from '../Button';
-import DropDownMenu from '../DropdownMenu';
+import DropDownMenu from '../DropDownMenu';
 import InputRange from '../InputRange';
 import Switch from '../Switch';
 
@@ -14,7 +14,7 @@ const ButtonPropertiesForm = ({
   showBtnHTMLCode: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }): React.ReactElement => {
   const [btnStyle, dispatch] = useReducer(buttonReducer, defaultButton);
-  const { addToCollectionButton } = useContext(CollectionContext) as CollectionType;
+  const { addToCollectionButton } = useCollection();
 
   const handleChangeSize = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'CHANGE_SIZE', data: e.target.value });

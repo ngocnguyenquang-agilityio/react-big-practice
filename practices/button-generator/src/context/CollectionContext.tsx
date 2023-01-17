@@ -1,14 +1,17 @@
+import { createContext } from 'react';
 import { BUTTON_COLLECTION } from '../constants/collection';
 import { useReducerWithLocalStorage } from '../hooks/useReducerWithLocalStorage';
 import { IButton } from '../interfaces/button.interface';
 import { collectionReducer } from '../reducer/collection.reducer';
-import { CollectionContext } from './collection.context';
 
-/**
- * Collection Provider
- * @param {Element} children: React component
- * @returns: A provider for collection with value pairs and children as elements
- */
+export type CollectionType = {
+  value: IButton[];
+  addToCollectionButton: (button: IButton) => void;
+  removeButtonFromCollection: (id: string) => void;
+};
+
+export const CollectionContext = createContext<CollectionType | null>(null);
+
 const CollectionProvider = ({ children }: { children: React.ReactElement }) => {
   const [state, dispatch] = useReducerWithLocalStorage(BUTTON_COLLECTION, collectionReducer);
 
