@@ -1,20 +1,31 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from '../components/Button';
+import Modal from '../components/Modal';
 import { SIZE, VARIANT } from '../enums/button';
-import { getBtnInHTML } from '../helpers/buttonHelpers';
 import { CollectionContext, CollectionType } from '../store/collection.context';
 
 const Collection = () => {
   const { value, removeButtonFromCollection } = useContext(CollectionContext) as CollectionType;
+  const [buttonCode, setButtonCode] = useState({ className: '', content: '' });
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const showBtnHTMLCode = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    alert(`Your button in HTML is:\n${getBtnInHTML(e)}`);
+    e.preventDefault();
+    setButtonCode({
+      className: e.currentTarget.className.trim(),
+      content: e.currentTarget.innerHTML,
+    });
+    setIsOpenModal(true);
   };
 
-  const handleRemoveButton = (e:React.MouseEvent<HTMLButtonElement>) => {
+  const closeModal = () => {
+    setIsOpenModal(false);
+  };
+
+  const handleRemoveButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    const id = e.currentTarget.value
+    const id = e.currentTarget.value;
     const message = 'Are you sure to remove this button ?';
     if (confirm(message) === true) {
       removeButtonFromCollection(id);
@@ -44,6 +55,7 @@ const Collection = () => {
                 <tr key={item.id} className='border-b'>
                   <td className='border-r pr-3'>
                     <Button {...item} onClick={showBtnHTMLCode} />
+                    {isOpenModal && <Modal isOpenModal={isOpenModal} onCloseModal={closeModal} btnStyle={buttonCode} />}
                   </td>
                   <td>
                     <Button

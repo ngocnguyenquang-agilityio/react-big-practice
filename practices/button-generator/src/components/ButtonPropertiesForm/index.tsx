@@ -1,11 +1,6 @@
 import { useContext, useReducer } from 'react';
 import { DROPDOWN_OPTION_VARIANTS } from '../../constants/options';
-import {
-  getBtnBorderRadiusValue,
-  getBtnBorderSizeValue,
-  getBtnSizeValue,
-  getBtnInHTML,
-} from '../../helpers/buttonHelpers';
+import { getBtnBorderRadiusValue, getBtnBorderSizeValue, getBtnSizeValue } from '../../helpers/buttonHelpers';
 import { buttonReducer, defaultButton } from '../../reducer/button.reducer';
 import { CollectionContext, CollectionType } from '../../store/collection.context';
 import Button from '../Button';
@@ -13,9 +8,12 @@ import DropDownMenu from '../DropdownMenu';
 import InputRange from '../InputRange';
 import Switch from '../Switch';
 
-const ButtonPropertiesForm = (): React.ReactElement => {
+const ButtonPropertiesForm = ({
+  showBtnHTMLCode,
+}: {
+  showBtnHTMLCode: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}): React.ReactElement => {
   const [btnStyle, dispatch] = useReducer(buttonReducer, defaultButton);
-
   const { addToCollectionButton } = useContext(CollectionContext) as CollectionType;
 
   const handleChangeSize = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,10 +48,6 @@ const ButtonPropertiesForm = (): React.ReactElement => {
     e.preventDefault();
     addToCollectionButton(btnStyle);
     alert('Added to collection');
-  };
-
-  const showBtnHTMLCode = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    alert(`Your button in HTML is:\n${getBtnInHTML(e)}`);
   };
 
   return (
