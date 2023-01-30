@@ -1,10 +1,10 @@
-import { useReducer } from 'react';
+import { useCallback, useReducer } from 'react';
 import { DROPDOWN_OPTION_VARIANTS } from '../../constants/options';
 import { getBtnBorderRadiusValue, getBtnBorderSizeValue, getBtnSizeValue } from '../../helpers/buttonHelpers';
 import { useCollection } from '../../hooks/useCollection';
 import { buttonReducer, defaultButton } from '../../reducer/button.reducer';
 import Button from '../Button';
-import DropDownMenu from '../DropDownMenu';
+import DropDownMenu from '../DropdownMenu';
 import InputRange from '../InputRange';
 import Switch from '../Switch';
 
@@ -16,33 +16,33 @@ const ButtonPropertiesForm = ({
   const [btnStyle, dispatch] = useReducer(buttonReducer, defaultButton);
   const { addToCollectionButton } = useCollection();
 
-  const handleChangeSize = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeSize = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'CHANGE_SIZE', data: e.target.value });
-  };
+  }, []);
 
-  const handleChangeBgColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChangeBgColor = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch({ type: 'CHANGE_BG_COLOR', data: e.target.value });
-  };
+  }, []);
 
-  const handleChangeBorderSize = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeBorderSize = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'CHANGE_BORDER_SIZE', data: e.target.value });
-  };
+  }, []);
 
-  const handleChangeBorderColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChangeBorderColor = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch({ type: 'CHANGE_BORDER_COLOR', data: e.target.value });
-  };
+  }, []);
 
-  const handleChangeBorderRadius = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeBorderRadius = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'CHANGE_BORDER_RADIUS', data: e.target.value });
-  };
+  }, []);
 
-  const handleSetDisplayBlock = () => {
+  const handleSetDisplayBlock = useCallback(() => {
     dispatch({ type: 'SET_BUTTON_TO_BLOCK', data: !btnStyle.isDisplayBlock });
-  };
+  }, []);
 
-  const handleSetDisable = () => {
+  const handleSetDisable = useCallback(() => {
     dispatch({ type: 'SET_BUTTON_DISABLED', data: !btnStyle.isDisabled });
-  };
+  }, []);
 
   const handleAddButtonToCollection = (e: React.SyntheticEvent) => {
     e.preventDefault();

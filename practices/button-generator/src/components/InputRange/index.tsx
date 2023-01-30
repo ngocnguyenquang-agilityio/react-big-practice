@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const InputRange = ({ ...rest }: React.ComponentPropsWithoutRef<'input'>): React.ReactElement => {
+const InputRange = memo(({ ...rest }: React.ComponentPropsWithoutRef<'input'>): React.ReactElement => {
   return (
     <input
       type='range'
@@ -8,5 +8,6 @@ const InputRange = ({ ...rest }: React.ComponentPropsWithoutRef<'input'>): React
       {...rest}
     />
   );
-};
+});
+
 export default InputRange;
