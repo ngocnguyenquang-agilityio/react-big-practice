@@ -2,7 +2,24 @@ import { createContext } from 'react';
 import { BUTTON_COLLECTION } from '../constants/collection';
 import { useReducerWithLocalStorage } from '../hooks/useReducerWithLocalStorage';
 import { IButton } from '../interfaces/button.interface';
-import { collectionReducer } from '../reducer/collection.reducer';
+import { Action } from '../reducer/button.reducer';
+
+/**
+ * Collection reducer function
+ * @param {IButton[]} state: the state of the collection is a array of buttons
+ * @param {Action} action: action to change the state of the collection
+ * @returns {IButton[]}: new collection state
+ */
+const collectionReducer = (state: IButton[], action: Action) => {
+  switch (action.type) {
+    case 'ADD_BTN':
+      return [...state, action.data];
+    case 'REMOVE_BTN':
+      return state.filter((item) => item.id !== action.data);
+    default:
+      return state;
+  }
+};
 
 export type CollectionType = {
   value: IButton[];
