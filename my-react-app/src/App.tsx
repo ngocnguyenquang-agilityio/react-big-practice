@@ -1,29 +1,28 @@
-import { Profiler, useMemo, useState } from "react";
-import HoverImage1 from "./Advance/HOC/Image1";
-import HoverImage2 from "./Advance/HOC/Image2";
-import NewForm from "./Advance/Profiler/NewForm";
-import { profilerCallback } from "./Advance/Profiler/profilerCallback";
 import "./App.css";
-import { Effect } from "./Hooks/useEffect";
-import CounterReducer from "./Hooks/useReducer";
-import { Greeting } from "./Main Concepts/Conditional Rendering";
+import Contact from "./SWR/Contact";
+import useSWR from "swr";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const { data, error } = useSWR(
+    "https://jsonplaceholder.typicode.com/users",
+    fetcher
+  );
 
-  const handleClick = () => {
-    setCount(count + 1);
-  };
-
-  const memoizedComponent = useMemo(() => {
-    return <Greeting isLoggedIn={true} />;
-  }, []);
+  if (error) return <p>An error occurred</p>;
+  if (!data) return <p>Loading</p>;
 
   return (
     <div className="App">
-      <h2>You clicked {count} times</h2>
-      <button onClick={handleClick}>Click me !</button>
-      {memoizedComponent}
+      {data.map(({ id, name, email, company }) => (
+        <Contact
+          key={id}
+          name={name}
+          email={email}
+          tagline={company.catchPhrase}
+        />
+      ))}
     </div>
   );
 };
