@@ -1,11 +1,10 @@
-import React from "react";
 import useSWR from "swr";
 import AddContact from "./AddContact";
 import { postURL } from "./api";
 import { fetcher } from "./fetcher";
 
 const Contact = () => {
-  const { data, error } = useSWR(postURL, fetcher);
+  const { data, error } = useSWR(postURL, fetcher, { refreshInterval: 1000 });
 
   if (error) return <p>An error occurred</p>;
   if (!data) return <p>Loading</p>;
@@ -20,11 +19,11 @@ const Contact = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map(({ id, name, email, address }) => (
-            <tr key={id}>
-              <td>{name}</td>
-              <td>{email}</td>
-              <td>{address}</td>
+          {data.map((user: any) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.address}</td>
             </tr>
           ))}
         </tbody>
