@@ -1,18 +1,24 @@
+import { useState } from "react";
 import useSWR from "swr";
 import AddContact from "./AddContact";
 import { postURL } from "./api";
 import { fetcher } from "./fetcher";
 
 const Contact = () => {
-  const { data, error } = useSWR(postURL, fetcher, {
-    onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
-      if (error.status === 404) return;
-      if (key === postURL) return;
-      if (retryCount >= 10) return;
+  const [pageIndex, setPageIndex] = useState(0);
+  const { data, error } = useSWR(
+    `http://localhost:3000/posts?page=${pageIndex}`,
+    fetcher,
+    {
+      onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
+        if (error.status === 404) return;
+        if (key === postURL) return;
+        if (retryCount >= 10) return;
 
-      setTimeout(() => revalidate({ retryCount }), 5000);
-    },
-  });
+        setTimeout(() => revalidate({ retryCount }), 5000);
+      },
+    }
+  );
 
   if (error) return <p>An error occurred</p>;
   if (!data) return <p>Loading</p>;
@@ -35,6 +41,19 @@ const Contact = () => {
             </tr>
           ))}
         </tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <button onClick={() => setPageIndex(pageIndex - 1)}>
+                Previous
+              </button>
+            </td>
+            <td></td>
+            <td>
+              <button onClick={() => setPageIndex(pageIndex + 1)}>Next</button>
+            </td>
+          </tr>
+        </tfoot>
       </table>
       <AddContact />
     </div>
