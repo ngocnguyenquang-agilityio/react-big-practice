@@ -4,7 +4,15 @@ import { postURL } from "./api";
 import { fetcher } from "./fetcher";
 
 const Contact = () => {
-  const { data, error } = useSWR(postURL, fetcher, { refreshInterval: 1000 });
+  const { data, error } = useSWR(postURL, fetcher, {
+    onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
+      if (error.status === 404) return;
+      if (key === postURL) return;
+      if (retryCount >= 10) return;
+
+      setTimeout(() => revalidate({ retryCount }), 5000);
+    },
+  });
 
   if (error) return <p>An error occurred</p>;
   if (!data) return <p>Loading</p>;
