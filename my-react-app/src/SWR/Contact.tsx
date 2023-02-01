@@ -1,12 +1,11 @@
+import React from "react";
 import useSWR from "swr";
-
-const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
+import AddContact from "./AddContact";
+import { postURL } from "./api";
+import { fetcher } from "./fetcher";
 
 const Contact = () => {
-  const { data, error } = useSWR(
-    "https://jsonplaceholder.typicode.com/users",
-    fetcher
-  );
+  const { data, error } = useSWR(postURL, fetcher);
 
   if (error) return <p>An error occurred</p>;
   if (!data) return <p>Loading</p>;
@@ -14,20 +13,23 @@ const Contact = () => {
     <div className="contact">
       <table>
         <thead>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Company</th>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+          </tr>
         </thead>
         <tbody>
-          {data.map(({ id, name, email, company }) => (
+          {data.map(({ id, name, email, address }) => (
             <tr key={id}>
               <td>{name}</td>
               <td>{email}</td>
-              <td>{company.name}</td>
+              <td>{address}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      <AddContact />
     </div>
   );
 };
