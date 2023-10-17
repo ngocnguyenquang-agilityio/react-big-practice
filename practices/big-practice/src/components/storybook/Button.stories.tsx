@@ -38,8 +38,8 @@ export const Disabled: Story = {
 }
 
 export const IconButton: Story = {
-  render: (args) => (
-    <Button {...args}>
+  render: () => (
+    <Button variant='outline' size='icon'>
       <Menu />
     </Button>
   )
