@@ -12,7 +12,7 @@ const buttonVariants = cva(
         outline:
           "border border-slate-800 bg-slate-950 hover:bg-slate-800 dark:hover:text-slate-50",
         secondary:
-          "bg-neutral-900 border-neutral-800 ring-1 ring-transparent transition duration-300 ease-in-out active:hover:scale-110 active:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden before:absolute before:inset-x-0 before:-z-10 before:h-px before:-rotate-45 before:bg-neutral-300 before:transition-transform bg-neutral-900 dark:text-neutral-400 ring-neutral-700 before:bg-neutral-700",
+          "bg-neutral-900 border-neutral-800 ring-1 ring-transparent transition duration-300 ease-in-out active:hover:scale-110 active:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:bg-neutral-300 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700",
         link: "underline-offset-4 hover:underline dark:text-neutral-100",
       },
       size: {
