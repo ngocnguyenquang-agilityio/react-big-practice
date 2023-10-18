@@ -13,7 +13,7 @@
     "prepare": "cd ../../ && husky install ./practices/big-practice/.husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests --updateSnapshot"
   },
   "dependencies": {
     "@commitlint/cli": "^17.8.0",
