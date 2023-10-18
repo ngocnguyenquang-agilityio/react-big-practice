@@ -17,15 +17,22 @@
   },
   "dependencies": {
     "@commitlint/cli": "^17.8.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-interactions": "^7.4.6",
     "@storybook/addon-links": "^7.4.6",
     "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-themes": "^7.4.6",
     "@storybook/blocks": "^7.4.6",
     "@storybook/react": "^7.4.6",
     "@storybook/react-vite": "^7.4.6",
@@ -33,6 +40,7 @@
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.5",
+    "@types/node": "^20.8.6",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
