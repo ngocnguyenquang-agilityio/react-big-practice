@@ -12,7 +12,8 @@
     "format": "npx prettier --write .",
     "prepare": "cd ../../ && husky install ./practices/big-practice/.husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "build-storybook -s public",
+    "serve-storybook": "serve storybook-static",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
