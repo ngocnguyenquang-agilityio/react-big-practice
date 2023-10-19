@@ -23,6 +23,7 @@ exports[`Header component Should match snapshot 1`] = `
                 <svg
                   aria-label="Acme Store logo"
                   class="h-5 w-5 fill-white h-[16px] w-[16px]"
+                  name="logo-icon"
                   viewBox="0 0 32 28"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -104,6 +105,7 @@ exports[`Header component Should match snapshot 1`] = `
               class="lucide lucide-shopping-cart"
               fill="none"
               height="16"
+              name="cart-icon"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -150,6 +152,7 @@ exports[`Header component Should match snapshot 1`] = `
               <svg
                 aria-label="Acme Store logo"
                 class="h-5 w-5 fill-white h-[16px] w-[16px]"
+                name="logo-icon"
                 viewBox="0 0 32 28"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -231,6 +234,7 @@ exports[`Header component Should match snapshot 1`] = `
             class="lucide lucide-shopping-cart"
             fill="none"
             height="16"
+            name="cart-icon"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
