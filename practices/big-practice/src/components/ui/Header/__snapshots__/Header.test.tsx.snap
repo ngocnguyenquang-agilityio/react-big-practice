@@ -45,29 +45,20 @@ exports[`Header component Should match snapshot 1`] = `
           <ul
             class="gap-6 text-sm md:flex md:items-center"
           >
-            <li>
-              <a
-                class=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300"
-                href=""
-              >
-                All
-              </a>
+            <li
+              class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
+            >
+              All
             </li>
-            <li>
-              <a
-                class=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300"
-                href=""
-              >
-                Shirts
-              </a>
+            <li
+              class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
+            >
+              Shirts
             </li>
-            <li>
-              <a
-                class=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300"
-                href=""
-              >
-                Stickers
-              </a>
+            <li
+              class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
+            >
+              Stickers
             </li>
           </ul>
         </div>
@@ -181,29 +172,20 @@ exports[`Header component Should match snapshot 1`] = `
         <ul
           class="gap-6 text-sm md:flex md:items-center"
         >
-          <li>
-            <a
-              class=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300"
-              href=""
-            >
-              All
-            </a>
+          <li
+            class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
+          >
+            All
           </li>
-          <li>
-            <a
-              class=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300"
-              href=""
-            >
-              Shirts
-            </a>
+          <li
+            class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
+          >
+            Shirts
           </li>
-          <li>
-            <a
-              class=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300"
-              href=""
-            >
-              Stickers
-            </a>
+          <li
+            class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
+          >
+            Stickers
           </li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 // Components
-import { CartIcon, LogoIcon } from "@/components/icons"
-import { Button } from "@components/ui/Button/"
+import { CartIcon, LogoIcon } from "@components/icons"
+import { Button } from "@components/ui/Button/Button"
 import SearchInput from "@components/ui/SearchInput/SearchInput"
 
 // TODO: Update type when implement function
@@ -16,14 +16,14 @@ const Header = () => {
           <a className="ml-2 text-sm font-medium uppercase text-white" href="">acme store</a>
         </div>
         <ul className="gap-6 text-sm md:flex md:items-center">
-          <li>
-            <a className=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300" href="">All</a>
+          <li className="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer">
+            All
           </li>
-          <li>
-            <a className=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300" href="">Shirts</a>
+          <li className="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer">
+            Shirts
           </li>
-          <li>
-            <a className=" underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300" href="">Stickers</a>
+          <li className="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer">
+            Stickers
           </li>
         </ul>
       </div>
