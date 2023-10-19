@@ -1,8 +1,12 @@
 import { render, fireEvent } from '@testing-library/react';
 
-import SearchInput, { ISearchInput } from './SearchInput';
+// Components
+import SearchInput from './SearchInput';
 
-const props: ISearchInput = {
+// Types
+import { InputProps } from '@components/ui/Input/Input';
+
+const props: InputProps = {
   type: 'text',
   placeholder: 'Search products ...',
   onChange: jest.fn()

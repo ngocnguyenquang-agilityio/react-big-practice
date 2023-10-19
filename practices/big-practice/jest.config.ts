@@ -7,6 +7,13 @@ export default {
   coverageProvider: 'v8',
   moduleDirectories: ['node_modules', '<rootDir>'],
   moduleFileExtensions: ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'node'],
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1',
+    '@components/(.*)': '<rootDir>/src/components/$1',
+    '@lib/(.*)': '<rootDir>/src/lib/$1',
+    '@pages/(.*)': '<rootDir>/src/pages/$1',
+    '@helpers/(.*)': '<rootDir>/src/helpers/$1',
+  },
   roots: ['<rootDir>/src'],
   testEnvironment: 'jest-environment-jsdom',
   transform: {

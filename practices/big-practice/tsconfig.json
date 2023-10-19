@@ -22,7 +22,6 @@
 
     "types": ["node", "jest"],
     "paths": {
-      "@/*": ["./src/*"],
       "@assets": ["./src/assets"],
       "@components/*": ["./src/components/*"],
       "@constants": ["./src/constants"],
@@ -35,7 +34,8 @@
       "@types": ["./src/types"],
       "@utils": ["./src/utils"],
       "@contexts/*": ["./src/contexts/*"],
-      "@hooks": ["./src/hooks"]
+      "@hooks": ["./src/hooks"],
+      "@lib/*": ["./src/lib/*"]
     }
   },
   "include": ["src"],
