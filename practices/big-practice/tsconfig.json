@@ -22,7 +22,6 @@
 
     "types": ["node", "jest"],
     "paths": {
-      "@/*": ["./src/*"],
       "@assets": ["./src/assets"],
       "@components/*": ["./src/components/*"],
       "@constants": ["./src/constants"],
