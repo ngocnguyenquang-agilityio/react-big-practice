@@ -1,5 +1,4 @@
-import { Input, InputProps } from "../Input/input"
-
+import { Input, InputProps } from "@components/ui/Input/Input"
 
 const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
   return (

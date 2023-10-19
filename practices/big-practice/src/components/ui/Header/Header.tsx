@@ -1,7 +1,7 @@
 // Components
 import { CartIcon, LogoIcon } from "@/components/icons"
-import { Button } from "../Button/button"
-import SearchInput from "../SearchInput/SearchInput"
+import { Button } from "@components/ui/Button/"
+import SearchInput from "@components/ui/SearchInput/SearchInput"
 
 // TODO: Update type when implement function
 

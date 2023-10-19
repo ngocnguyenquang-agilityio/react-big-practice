@@ -1,2 +1,2 @@
-export { LogoIcon } from './logo-icon';
-export { CartIcon } from './cart-icon';
+export { LogoIcon } from './LogoIcon';
+export { CartIcon } from './CartIcon';

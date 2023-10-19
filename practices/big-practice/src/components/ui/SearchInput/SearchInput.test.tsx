@@ -4,7 +4,7 @@ import { render, fireEvent } from '@testing-library/react';
 import SearchInput from './SearchInput';
 
 // Types
-import { InputProps } from '../Input/input';
+import { InputProps } from '@components/ui/Input/Input';
 
 const props: InputProps = {
   type: 'text',
