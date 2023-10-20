@@ -1,12 +1,13 @@
 export interface ICollection {
+  title: string,
   list: string[]
 }
 
-const Collection = ({ list }: ICollection): JSX.Element => {
+const Collection = ({ title, list }: ICollection): JSX.Element => {
   return (
     <nav>
       <h3 className="text-xs text-neutral-400 md:block">
-        Collection
+        {title}
       </h3>
       <ul className="block" data-testid='collection'>
         {list.map((item, index) => (
