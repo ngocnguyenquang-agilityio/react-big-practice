@@ -9,6 +9,7 @@ export default {
   moduleFileExtensions: ['js', 'mjs', 'cjs', 'jsx', 'ts', 'tsx', 'json', 'node'],
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
+    '@assets/(.*)': '<rootDir>/src/assets/$1',
     '@components/(.*)': '<rootDir>/src/components/$1',
     '@lib/(.*)': '<rootDir>/src/lib/$1',
     '@pages/(.*)': '<rootDir>/src/pages/$1',
