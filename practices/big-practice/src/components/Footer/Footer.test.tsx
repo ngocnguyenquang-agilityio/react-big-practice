@@ -7,10 +7,10 @@ describe('Footer component', () => {
   test('Should render successfully', () => {
     const comp = render(<Footer />)
     expect(comp).toBeTruthy()
-  })
+  });
 
   test('Should match snapshot', () => {
     const comp = render(<Footer />)
     expect(comp).toMatchSnapshot()
-  })
-})
+  });
+});

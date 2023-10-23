@@ -6,10 +6,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="aspect-square transition-opacity animate-fadeIn"
+        class="relative inline-block h-full w-full"
       >
         <div
-          class="group flex h-1/3 w-1/3 items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
+          class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
         >
           <img
             alt="Test Product Card"
@@ -46,10 +46,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="aspect-square transition-opacity animate-fadeIn"
+      class="relative inline-block h-full w-full"
     >
       <div
-        class="group flex h-1/3 w-1/3 items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
+        class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
       >
         <img
           alt="Test Product Card"

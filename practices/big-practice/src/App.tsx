@@ -1,10 +1,28 @@
-import './App.css'
+// Libs
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Constants
+import { APP_ROUTERS } from '@constants';
+
+// Pages  
+import HomePage from '@pages/HomePage';
+import Main from '@pages/Main';
 
 function App() {
 
   return (
-    <h1 className="text-3xl font-bold text-red-500 underline text-center">Hello world!</h1>
+    <Router>
+      <Routes>
+        <Route element={<Main />}>
+          <Route
+            key='home-page'
+            path={APP_ROUTERS.HOMEPAGE}
+            element={<HomePage />}
+          />
+        </Route>
+      </Routes>
+    </Router>
   )
-}
+};
 
-export default App
+export default App;

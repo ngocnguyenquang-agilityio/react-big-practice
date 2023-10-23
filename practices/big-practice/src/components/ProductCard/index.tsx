@@ -2,11 +2,11 @@ export interface IProductCard {
   name: string,
   price: number,
   image: string
-}
+};
 
 const ProductCard = ({ name, price, image }: IProductCard): JSX.Element => {
   return (
-    <div className="aspect-square transition-opacity animate-fadeIn">
+    <div className="relative inline-block h-full w-full">
       <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800">
         <img
           // TODO: Add lazy load for image
@@ -27,6 +27,6 @@ const ProductCard = ({ name, price, image }: IProductCard): JSX.Element => {
       </div>
     </div>
   )
-}
+};
 
-export default ProductCard
+export default ProductCard;

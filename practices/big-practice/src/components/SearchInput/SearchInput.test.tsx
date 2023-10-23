@@ -10,18 +10,18 @@ const props: InputProps = {
   type: 'text',
   placeholder: 'Search products ...',
   onChange: jest.fn()
-}
+};
 
 describe("SearchInput component", () => {
   test('Should render successfully', () => {
     const comp = render(<SearchInput {...props} />)
     expect(comp).toBeTruthy();
-  })
+  });
 
   test('Should match snapshot', () => {
     const comp = render(<SearchInput {...props} />)
     expect(comp).toMatchSnapshot();
-  })
+  });
 
   test('Should able to type', () => {
     const { getByPlaceholderText } = render(<SearchInput {...props} />);
@@ -30,5 +30,5 @@ describe("SearchInput component", () => {
 
     fireEvent.change(searchInput, { target: { value: value } });
     expect(searchInput.value).toBe(value)
-  })
-})
+  });
+});
