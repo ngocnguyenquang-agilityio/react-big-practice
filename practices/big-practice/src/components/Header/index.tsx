@@ -1,13 +1,15 @@
 // Icons
-import { CartIcon, LogoIcon } from "@assets/icons";
+import { LogoIcon } from "@assets/icons";
 
 // Components
 import { Button } from "@components/Button";
+import Cart from "@components/Cart";
 import SearchInput from "@components/SearchInput";
 
 // TODO: Update type when implement function
 
 const Header = () => {
+
   return (
     <div className="relative flex items-center justify-between p-4 lg:px-6">
       <div className="flex w-full items-center">
@@ -35,9 +37,7 @@ const Header = () => {
           />
         </div>
         <div className="flex justify-end md:w-1/3">
-          <Button variant='outline' size='icon'>
-            <CartIcon />
-          </Button>
+          <Cart />
         </div>
       </div>
     </div>
