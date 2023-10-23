@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Constants
-import { AppRoute } from '@constants';
+import { APP_ROUTERS } from '@constants';
 
 // Layouts
 import HomeLayout from '@layouts/HomeLayout';
@@ -25,7 +25,7 @@ function App() {
               [
                 <Route
                   key='list-products'
-                  path={AppRoute.LIST_PRODUCTS}
+                  path={APP_ROUTERS.LIST_PRODUCTS}
                   element={<ListProductPage />}
                 />
               ]
