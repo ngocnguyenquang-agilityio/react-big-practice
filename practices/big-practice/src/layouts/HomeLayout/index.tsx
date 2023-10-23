@@ -13,7 +13,13 @@ const HomeLayout = () => {
         <Outlet />
       </div>
       <div className="order-none flex-none md:order-last md:w-[125px]">
-        <Collection list={mockListCollection} title="Sort by" />
+        <Collection
+          list={[
+            'Price: Low to Hight',
+            'Price: High to Low',
+          ]}
+          title="Sort by"
+        />
       </div>
     </>
   )
