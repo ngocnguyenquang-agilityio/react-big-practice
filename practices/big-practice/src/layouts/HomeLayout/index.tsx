@@ -1,8 +1,8 @@
 // Libs
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
 
 // Components
-import Collection from "@components/Collection"
+import Collection from "@components/Collection";
 
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt']
 
@@ -26,6 +26,6 @@ const HomeLayout = () => {
       </div>
     </>
   )
-}
+};
 
-export default HomeLayout
+export default HomeLayout;
