@@ -4,32 +4,20 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // Constants
 import { APP_ROUTERS } from '@constants';
 
-// Layouts
-import HomeLayout from '@layouts/HomeLayout';
-import MainLayout from '@layouts/MainLayout';
-
-// Pages
-import ListProductPage from '@pages/ListProductsPage';
+// Pages  
+import HomePage from '@pages/HomePage';
+import Main from '@pages/Main';
 
 function App() {
 
   return (
     <Router>
       <Routes>
-        <Route element={<MainLayout />}>
+        <Route element={<Main />}>
           <Route
-            key='/'
-            path='/'
-            element={<HomeLayout />}
-            children={
-              [
-                <Route
-                  key='list-products'
-                  path={APP_ROUTERS.LIST_PRODUCTS}
-                  element={<ListProductPage />}
-                />
-              ]
-            }
+            key='home-page'
+            path={APP_ROUTERS.HOMEPAGE}
+            element={<HomePage />}
           />
         </Route>
       </Routes>
