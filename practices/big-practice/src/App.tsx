@@ -1,6 +1,7 @@
-import MainLayout from '@layouts/MainLayout';
-import Home from '@pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomeLayout from '@layouts/HomeLayout';
+import MainLayout from '@layouts/MainLayout';
+import ListProductPage from '@pages/ListProductsPage';
 
 function App() {
 
@@ -11,7 +12,16 @@ function App() {
           <Route
             key='/'
             path='/'
-            element={<Home />}
+            element={<HomeLayout />}
+            children={
+              [
+                <Route
+                  key='/list-products'
+                  path={`/list-products`}
+                  element={<ListProductPage />}
+                />
+              ]
+            }
           />
         </Route>
       </Routes>
