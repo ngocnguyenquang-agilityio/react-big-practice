@@ -1,6 +1,14 @@
+// Libs
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Constants
+import { AppRoute } from '@constants';
+
+// Layouts
 import HomeLayout from '@layouts/HomeLayout';
 import MainLayout from '@layouts/MainLayout';
+
+// Pages
 import ListProductPage from '@pages/ListProductsPage';
 
 function App() {
@@ -16,8 +24,8 @@ function App() {
             children={
               [
                 <Route
-                  key='/list-products'
-                  path={`/list-products`}
+                  key='list-products'
+                  path={AppRoute.LIST_PRODUCTS}
                   element={<ListProductPage />}
                 />
               ]
@@ -27,6 +35,6 @@ function App() {
       </Routes>
     </Router>
   )
-}
+};
 
-export default App
+export default App;

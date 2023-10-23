@@ -62,11 +62,6 @@ exports[`MainLayout Should match snapshot 1`] = `
                 >
                   Shirts
                 </li>
-                <li
-                  class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
-                >
-                  Stickers
-                </li>
               </ul>
             </div>
             <div
@@ -285,11 +280,6 @@ exports[`MainLayout Should match snapshot 1`] = `
                 class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
               >
                 Shirts
-              </li>
-              <li
-                class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
-              >
-                Stickers
               </li>
             </ul>
           </div>

@@ -1,9 +1,9 @@
 // Icons
-import { CartIcon, LogoIcon } from "@assets/icons"
+import { CartIcon, LogoIcon } from "@assets/icons";
 
 // Components
-import { Button } from "@components/Button"
-import SearchInput from "@components/SearchInput"
+import { Button } from "@components/Button";
+import SearchInput from "@components/SearchInput";
 
 // TODO: Update type when implement function
 
@@ -25,9 +25,6 @@ const Header = () => {
             <li className="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer">
               Shirts
             </li>
-            <li className="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer">
-              Stickers
-            </li>
           </ul>
         </div>
         <div className="justify-center md:flex md:w-1/3">
@@ -47,4 +44,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;

@@ -1,5 +1,8 @@
-import Collection from "@components/Collection"
+// Libs
 import { Outlet } from "react-router-dom"
+
+// Components
+import Collection from "@components/Collection"
 
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt']
 
