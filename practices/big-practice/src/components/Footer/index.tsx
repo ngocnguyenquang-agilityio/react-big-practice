@@ -1,8 +1,8 @@
 // Icons
-import { LogoIcon } from "../../assets/icons"
+import { LogoIcon } from "../../assets/icons";
 
 // Components
-import { Button } from "@components/Button"
+import { Button } from "@components/Button";
 
 const Footer = (): JSX.Element => {
   return (
@@ -44,6 +44,6 @@ const Footer = (): JSX.Element => {
       </div>
     </footer>
   )
-}
+};
 
-export default Footer
+export default Footer;

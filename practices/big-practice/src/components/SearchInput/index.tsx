@@ -1,11 +1,11 @@
 // Icons
-import { SearchIcon } from "@assets/icons"
+import { SearchIcon } from "@assets/icons";
 
 // Components
-import { Input } from "@components/Input"
+import { Input } from "@components/Input";
 
 // Types
-import { InputProps } from "@components/Input"
+import { InputProps } from "@components/Input";
 
 const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
   return (
@@ -16,6 +16,6 @@ const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
       </div>
     </div>
   )
-}
+};
 
-export default SearchInput
+export default SearchInput;

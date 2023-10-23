@@ -1,7 +1,7 @@
 export interface ICollection {
   title: string,
   list: string[]
-}
+};
 
 const Collection = ({ title, list }: ICollection): JSX.Element => {
   return (
@@ -20,6 +20,6 @@ const Collection = ({ title, list }: ICollection): JSX.Element => {
       </ul>
     </nav>
   )
-}
+};
 
-export default Collection
+export default Collection;
