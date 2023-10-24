@@ -78,7 +78,7 @@ exports[`ProductList Component Should match snapshot 1`] = `
                   <p
                     class="flex-none rounded-full bg-blue-600 p-2 text-white"
                   >
-                    10
+                    20
                     <span
                       class="ml-1 inline @[275px]/label:inline"
                     >
@@ -167,7 +167,7 @@ exports[`ProductList Component Should match snapshot 1`] = `
                 <p
                   class="flex-none rounded-full bg-blue-600 p-2 text-white"
                 >
-                  10
+                  20
                   <span
                     class="ml-1 inline @[275px]/label:inline"
                   >
