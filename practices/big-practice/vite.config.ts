@@ -14,6 +14,7 @@ export default defineConfig({
       '@layouts': `${path.resolve(__dirname, './src/layouts/')}`,
       '@pages': `${path.resolve(__dirname, './src/pages/')}`,
       '@interfaces': `${path.resolve(__dirname, './src/interfaces/')}`,
+      '@services': `${path.resolve(__dirname, './src/services/')}`,
     },
   },
 });
