@@ -14,6 +14,7 @@ export default {
     '@lib/(.*)': '<rootDir>/src/lib/$1',
     '@pages/(.*)': '<rootDir>/src/pages/$1',
     '@helpers/(.*)': '<rootDir>/src/helpers/$1',
+    '@interfaces/(.*)': '<rootDir>/src/interfaces/$1',
   },
   roots: ['<rootDir>/src'],
   testEnvironment: 'jest-environment-jsdom',

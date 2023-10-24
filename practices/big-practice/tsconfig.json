@@ -13,14 +13,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    
-    "types": ["node", "jest"],
+
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "paths": {
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
@@ -35,9 +35,10 @@
       "@utils": ["./src/utils"],
       "@contexts/*": ["./src/contexts/*"],
       "@hooks": ["./src/hooks"],
-      "@lib/*": ["./src/lib/*"]
+      "@lib/*": ["./src/lib/*"],
+      "@interfaces": ["./src/interfaces"]
     },
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
