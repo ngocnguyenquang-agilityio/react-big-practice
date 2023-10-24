@@ -16,7 +16,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           >
             <img
               class="h-full w-full object-contain"
-              src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75"
+              src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
             />
           </div>
           <ul
@@ -33,9 +33,9 @@ exports[`ProductCard Component Should match snapshot 1`] = `
                   class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
                 >
                   <img
-                    alt=""
+                    alt="Product Detail"
                     class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
-                    src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75"
+                    src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
                   />
                 </div>
               </a>
@@ -49,7 +49,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             class="mb-6 flex flex-col border-b pb-6 border-neutral-700"
           >
             <h1
-              class="mb-2 text-5xl font-medium"
+              class="mb-2 text-5xl text-white font-medium"
             >
               Acme Circles T-Shirt
             </h1>
@@ -57,7 +57,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
               class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"
             >
               <p>
-                $20.00
+                $20
                 <span
                   class="ml-1 inline"
                 >
@@ -70,25 +70,33 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             class="mb-8"
           >
             <p
-              class="mb-4 text-sm uppercase tracking-wide"
+              class="mb-4 text-sm text-white uppercase tracking-wide"
             >
               Color
             </p>
             <ul
+              aria-label="color"
               class="flex flex-wrap gap-3"
             >
               <li>
                 <button
                   class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
                 >
-                  Black
+                  black
                 </button>
               </li>
               <li>
                 <button
                   class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
                 >
-                  White
+                  white
+                </button>
+              </li>
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  blue
                 </button>
               </li>
             </ul>
@@ -97,11 +105,12 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             class="mb-8"
           >
             <p
-              class="mb-4 text-sm uppercase tracking-wide"
+              class="mb-4 text-sm text-white uppercase tracking-wide"
             >
-              Color
+              Size
             </p>
             <ul
+              aria-label="size"
               class="flex flex-wrap gap-3"
             >
               <li>
@@ -155,7 +164,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
         >
           <img
             class="h-full w-full object-contain"
-            src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75"
+            src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
           />
         </div>
         <ul
@@ -172,9 +181,9 @@ exports[`ProductCard Component Should match snapshot 1`] = `
                 class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
               >
                 <img
-                  alt=""
+                  alt="Product Detail"
                   class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
-                  src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75"
+                  src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
                 />
               </div>
             </a>
@@ -188,7 +197,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           class="mb-6 flex flex-col border-b pb-6 border-neutral-700"
         >
           <h1
-            class="mb-2 text-5xl font-medium"
+            class="mb-2 text-5xl text-white font-medium"
           >
             Acme Circles T-Shirt
           </h1>
@@ -196,7 +205,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"
           >
             <p>
-              $20.00
+              $20
               <span
                 class="ml-1 inline"
               >
@@ -209,25 +218,33 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           class="mb-8"
         >
           <p
-            class="mb-4 text-sm uppercase tracking-wide"
+            class="mb-4 text-sm text-white uppercase tracking-wide"
           >
             Color
           </p>
           <ul
+            aria-label="color"
             class="flex flex-wrap gap-3"
           >
             <li>
               <button
                 class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
               >
-                Black
+                black
               </button>
             </li>
             <li>
               <button
                 class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
               >
-                White
+                white
+              </button>
+            </li>
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                blue
               </button>
             </li>
           </ul>
@@ -236,11 +253,12 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           class="mb-8"
         >
           <p
-            class="mb-4 text-sm uppercase tracking-wide"
+            class="mb-4 text-sm text-white uppercase tracking-wide"
           >
-            Color
+            Size
           </p>
           <ul
+            aria-label="size"
             class="flex flex-wrap gap-3"
           >
             <li>
