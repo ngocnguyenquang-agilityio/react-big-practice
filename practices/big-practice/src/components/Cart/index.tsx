@@ -7,11 +7,11 @@ import CartEmpty from '@components/Cart/CartEmpty';
 import CartBody from '@components/Cart/CartBody';
 
 // Types
-import { IProducts } from '@interfaces';
+import { IProduct } from '@interfaces';
 
 interface ICart {
   handleToggleCart: () => void;
-  cart?: IProducts[];
+  cart?: IProduct[];
 }
 
 const Cart = ({ handleToggleCart, cart = [] }: ICart) => {
