@@ -13,6 +13,7 @@ export default defineConfig({
       '@lib': `${path.resolve(__dirname, './src/lib/')}`,
       '@layouts': `${path.resolve(__dirname, './src/layouts/')}`,
       '@pages': `${path.resolve(__dirname, './src/pages/')}`,
+      '@interfaces': `${path.resolve(__dirname, './src/interfaces/')}`,
     },
   },
 });
