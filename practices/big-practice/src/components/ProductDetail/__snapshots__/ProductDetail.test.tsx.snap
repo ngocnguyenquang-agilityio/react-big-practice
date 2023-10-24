@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard Component Should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex flex-col rounded-lg border p-8 border-neutral-800 bg-black md:p-12 lg:flex-row lg:gap-8"
+      >
+        <div
+          class="h-full w-full basis-full lg:basis-4/6"
+        >
+          <div
+            class="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
+          >
+            <img
+              class="h-full w-full object-contain"
+              src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+            />
+          </div>
+          <ul
+            class="my-12 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0"
+          >
+            <li
+              class="h-20 w-20"
+            >
+              <a
+                class="h-full w-full"
+                href=""
+              >
+                <div
+                  class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
+                >
+                  <img
+                    alt="Product Detail"
+                    class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                    src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="basis-full lg:basis-2/6"
+        >
+          <div
+            class="mb-6 flex flex-col border-b pb-6 border-neutral-700"
+          >
+            <h1
+              class="mb-2 text-5xl text-white font-medium"
+            >
+              Acme Circles T-Shirt
+            </h1>
+            <div
+              class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"
+            >
+              <p>
+                $20
+                <span
+                  class="ml-1 inline"
+                >
+                  USD
+                </span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="mb-8"
+          >
+            <p
+              class="mb-4 text-sm text-white uppercase tracking-wide"
+            >
+              Color
+            </p>
+            <ul
+              aria-label="color"
+              class="flex flex-wrap gap-3"
+            >
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  black
+                </button>
+              </li>
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  white
+                </button>
+              </li>
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  blue
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="mb-8"
+          >
+            <p
+              class="mb-4 text-sm text-white uppercase tracking-wide"
+            >
+              Size
+            </p>
+            <ul
+              aria-label="size"
+              class="flex flex-wrap gap-3"
+            >
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  XS
+                </button>
+              </li>
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  S
+                </button>
+              </li>
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  M
+                </button>
+              </li>
+              <li>
+                <button
+                  class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+                >
+                  L
+                </button>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-blue-600 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 w-full h-11 rounded-full"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex flex-col rounded-lg border p-8 border-neutral-800 bg-black md:p-12 lg:flex-row lg:gap-8"
+    >
+      <div
+        class="h-full w-full basis-full lg:basis-4/6"
+      >
+        <div
+          class="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
+        >
+          <img
+            class="h-full w-full object-contain"
+            src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+          />
+        </div>
+        <ul
+          class="my-12 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0"
+        >
+          <li
+            class="h-20 w-20"
+          >
+            <a
+              class="h-full w-full"
+              href=""
+            >
+              <div
+                class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
+              >
+                <img
+                  alt="Product Detail"
+                  class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                  src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+                />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="basis-full lg:basis-2/6"
+      >
+        <div
+          class="mb-6 flex flex-col border-b pb-6 border-neutral-700"
+        >
+          <h1
+            class="mb-2 text-5xl text-white font-medium"
+          >
+            Acme Circles T-Shirt
+          </h1>
+          <div
+            class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"
+          >
+            <p>
+              $20
+              <span
+                class="ml-1 inline"
+              >
+                USD
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="mb-8"
+        >
+          <p
+            class="mb-4 text-sm text-white uppercase tracking-wide"
+          >
+            Color
+          </p>
+          <ul
+            aria-label="color"
+            class="flex flex-wrap gap-3"
+          >
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                black
+              </button>
+            </li>
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                white
+              </button>
+            </li>
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                blue
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mb-8"
+        >
+          <p
+            class="mb-4 text-sm text-white uppercase tracking-wide"
+          >
+            Size
+          </p>
+          <ul
+            aria-label="size"
+            class="flex flex-wrap gap-3"
+          >
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                XS
+              </button>
+            </li>
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                S
+              </button>
+            </li>
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                M
+              </button>
+            </li>
+            <li>
+              <button
+                class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-neutral-900 border-neutral-800 ring-1 transition duration-300 ease-in-out enabled:hover:scale-110 enabled:hover:ring-blue-600 relative z-10 disabled:cursor-not-allowed overflow-hidden disabled:before:absolute disabled:before:inset-x-0 disabled:before:-z-10 disabled:before:h-px disabled:before:-rotate-45 disabled:before:transition-transform disabled:text-neutral-400 ring-neutral-700 disabled:before:bg-neutral-700 h-10 px-4 py-2 rounded-full"
+              >
+                L
+              </button>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-blue-600 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 w-full h-11 rounded-full"
+        >
+          Add To Cart
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
