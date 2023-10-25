@@ -8,25 +8,29 @@ import { APP_ROUTERS } from '@constants';
 import HomePage from '@pages/HomePage';
 import Main from '@pages/Main';
 import ProductDetailsPage from '@pages/ProductDetailsPage';
+import { SWRConfig } from 'swr';
+import { request } from '@services/request';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route element={<Main />}>
-          <Route 
-          key='home-page' 
-          path={APP_ROUTERS.HOMEPAGE} 
-          element={<HomePage />} 
-          />
-          <Route
-           key='product-details-page' 
-           path={APP_ROUTERS.DETAILSPAGE} 
-           element={<ProductDetailsPage />}
-          />
-        </Route>
-      </Routes>
-    </Router>
+    <SWRConfig value={{ provider: () => new Map() }}>
+      <Router>
+        <Routes>
+          <Route element={<Main />}>
+            <Route
+              key='home-page'
+              path={APP_ROUTERS.HOMEPAGE}
+              element={<HomePage />}
+            />
+            <Route
+              key='product-details-page'
+              path={APP_ROUTERS.DETAILSPAGE}
+              element={<ProductDetailsPage />}
+            />
+          </Route>
+        </Routes>
+      </Router>
+    </SWRConfig>
   );
 }
 
