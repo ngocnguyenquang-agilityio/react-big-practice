@@ -9,27 +9,20 @@ import { Button } from '@components/Button';
 import Cart from '@components/Cart';
 import SearchInput from '@components/SearchInput';
 
-// Store
-import { useEndpoint } from '@stores/endpoint';
-import { DEFAULT_ENDPOINT } from '@constants';
-
 // Helpers
 import { debounce } from '@helpers/debounce';
+import { useSearchParams } from 'react-router-dom';
 
 const Header = () => {
   const [isOpenCart, setIsOpenCart] = useState(false);
-  const { updateEndpoint } = useEndpoint();
+  const [searchParams, setSearchParams] = useSearchParams()
+  const searchKeyword = searchParams.get('search')
 
   const handleSearch = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const inputValue = e.target.value;
-    
-    if (inputValue.trim() === '') {
-      updateEndpoint(DEFAULT_ENDPOINT);
-    } else {
-      updateEndpoint(`/search?q=${inputValue.trim()}`);
-    }
-    
+  
+    setSearchParams({'search': inputValue.trim()})  
   }, []);
 
   const searchWithDebounce = debounce(handleSearch, 1000)
