@@ -1,3 +1,6 @@
+// Libs
+import { useState } from 'react';
+
 // Icons
 import { CartIcon, LogoIcon } from '@assets/icons';
 
@@ -5,9 +8,6 @@ import { CartIcon, LogoIcon } from '@assets/icons';
 import { Button } from '@components/Button';
 import Cart from '@components/Cart';
 import SearchInput from '@components/SearchInput';
-import { useState } from 'react';
-
-// TODO: Update type when implement function
 
 const Header = () => {
   const [isOpenCart, setIsOpenCart] = useState(false);
@@ -42,7 +42,7 @@ const Header = () => {
         </div>
         <div className='flex justify-end md:w-1/3'>
           {!isOpenCart ? (
-            <Button variant='outline' size='icon' onClick={handleToggleCart}>
+            <Button variant='outline' size='icon' onClick={() => {}}>
               <CartIcon />
             </Button>
           ) : (

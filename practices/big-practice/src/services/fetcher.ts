@@ -1,8 +1,12 @@
+// Libs
 import axios, { AxiosError } from 'axios';
 
-export const request = async (url: string) => {
+// Constants
+import { BASE_URL } from '@constants';
+
+export const fetcher = async (endpoint: string) => {
   try {
-    const res = await axios.get(url);
+    const res = await axios.get(BASE_URL + endpoint);
 
     return res.data;
   } catch (err) {

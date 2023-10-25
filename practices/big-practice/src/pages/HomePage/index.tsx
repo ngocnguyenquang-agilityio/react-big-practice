@@ -1,3 +1,6 @@
+// Libs
+import useSWR from 'swr';
+
 // Components
 import Collection from '@components/Collection';
 import ProductList from '@components/ProductList';
@@ -6,13 +9,16 @@ import Loading from '@components/Loading';
 // Layouts
 import HomeLayout from '@layouts/HomeLayout';
 
-// Hooks
-import { useLoader } from '@hooks/useLoader';
+// Services
+import { fetcher } from '@services/fetcher';
+
+// Constants
+import { DEFAULT_ENDPOINT } from '@constants';
 
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt'];
 
 const HomePage = () => {
-  const { data, isLoading } = useLoader();
+  const { data, isLoading } = useSWR(`${DEFAULT_ENDPOINT}`, fetcher);
 
   if (isLoading) return <Loading />;
 
