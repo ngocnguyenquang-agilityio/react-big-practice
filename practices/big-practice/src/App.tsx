@@ -5,15 +5,17 @@ import { SWRConfig } from 'swr';
 // Constants
 import { APP_ROUTERS } from '@constants';
 
+// Services
+import { fetcher } from '@services/fetcher';
+
 // Pages
 import HomePage from '@pages/HomePage';
 import Main from '@pages/Main';
 import ProductDetailsPage from '@pages/ProductDetailsPage';
-import { request } from '@services/request';
 
 function App() {
   return (
-    <SWRConfig value={{ provider: () => new Map(), fetcher: request }}>
+    <SWRConfig value={{ provider: () => new Map(), fetcher }}>
       <Router>
         <Routes>
           <Route element={<Main />}>
