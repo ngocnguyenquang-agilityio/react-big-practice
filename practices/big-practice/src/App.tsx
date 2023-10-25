@@ -9,10 +9,11 @@ import { APP_ROUTERS } from '@constants';
 import HomePage from '@pages/HomePage';
 import Main from '@pages/Main';
 import ProductDetailsPage from '@pages/ProductDetailsPage';
+import { request } from '@services/request';
 
 function App() {
   return (
-    <SWRConfig value={{ provider: () => new Map() }}>
+    <SWRConfig value={{ provider: () => new Map(), fetcher: request }}>
       <Router>
         <Routes>
           <Route element={<Main />}>

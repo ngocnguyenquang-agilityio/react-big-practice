@@ -17,6 +17,7 @@ export default defineConfig({
       '@services': `${path.resolve(__dirname, './src/services/')}`,
       '@hooks': `${path.resolve(__dirname, './src/hooks/')}`,
       '@stores': `${path.resolve(__dirname, './src/stores/')}`,
+      '@helpers': `${path.resolve(__dirname, './src/helpers/')}`,
     },
   },
 });

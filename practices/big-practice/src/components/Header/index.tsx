@@ -11,8 +11,10 @@ import SearchInput from '@components/SearchInput';
 
 // Store
 import { useEndpoint } from '@stores/endpoint';
+import { DEFAULT_ENDPOINT } from '@constants';
 
-// TODO: Update type when implement function
+// Helpers
+import { debounce } from '@helpers/debounce';
 
 const Header = () => {
   const [isOpenCart, setIsOpenCart] = useState(false);
@@ -21,10 +23,16 @@ const Header = () => {
   const handleSearch = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const inputValue = e.target.value;
-    setTimeout(() => {
-      updateEndpoint(`/search?q=${inputValue}`);
-    }, 1000);
+    
+    if (inputValue.trim() === '') {
+      updateEndpoint(DEFAULT_ENDPOINT);
+    } else {
+      updateEndpoint(`/search?q=${inputValue.trim()}`);
+    }
+    
   }, []);
+
+  const searchWithDebounce = debounce(handleSearch, 1000)
 
   const handleToggleCart = () => {
     setIsOpenCart(!isOpenCart);
@@ -61,7 +69,7 @@ const Header = () => {
           <SearchInput
             type='text'
             placeholder='Search Products...'
-            onChange={handleSearch}
+            onChange={searchWithDebounce}
           />
         </div>
         <div className='flex justify-end md:w-1/3'>

@@ -33,7 +33,8 @@
       "@utils": ["./src/utils"],
       "@hooks/*": ["./src/hooks/*"],
       "@lib/*": ["./src/lib/*"],
-      "@interfaces": ["./src/interfaces"]
+      "@interfaces": ["./src/interfaces"],
+      "@helpers/*": ["./src/helpers/*"],
     },
     "esModuleInterop": true
   },

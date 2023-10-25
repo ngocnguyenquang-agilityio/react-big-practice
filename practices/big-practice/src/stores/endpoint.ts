@@ -11,5 +11,5 @@ type Store = {
 
 export const useEndpoint = create<Store>((set) => ({
   endpoint: DEFAULT_ENDPOINT,
-  updateEndpoint: (value) => set((state) => ({ ...state, endpoint: value })),
+  updateEndpoint: (value) => set((state) => ({ ...state, endpoint: value === '' ? DEFAULT_ENDPOINT :  value})),
 }));
