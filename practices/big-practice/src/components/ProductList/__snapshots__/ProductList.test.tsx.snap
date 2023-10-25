@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList Component Should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <ul
+        class="grid grid-flow-row gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <li
+          class="aspect-square transition-opacity animate-fadeIn"
+        >
+          <div
+            class="relative inline-block h-full w-full"
+          >
+            <div
+              class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
+            >
+              <img
+                alt="Product 1"
+                class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                loading="lazy"
+                src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+              />
+              <div
+                class="absolute bottom-0 left-0 flex w-full px-4 pb-4"
+              >
+                <div
+                  class="flex items-center rounded-full border p-1 text-xs font-semibold backdrop-blur-md border-neutral-800 bg-black/70 text-white"
+                >
+                  <h3
+                    class="mr-4 line-clamp-2 flex-grow pl-2 leading-none tracking-tight"
+                  >
+                    Product 1
+                  </h3>
+                  <p
+                    class="flex-none rounded-full bg-blue-600 p-2 text-white"
+                  >
+                    20
+                    <span
+                      class="ml-1 inline @[275px]/label:inline"
+                    >
+                      USD
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="aspect-square transition-opacity animate-fadeIn"
+        >
+          <div
+            class="relative inline-block h-full w-full"
+          >
+            <div
+              class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
+            >
+              <img
+                alt="Product 2"
+                class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                loading="lazy"
+                src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+              />
+              <div
+                class="absolute bottom-0 left-0 flex w-full px-4 pb-4"
+              >
+                <div
+                  class="flex items-center rounded-full border p-1 text-xs font-semibold backdrop-blur-md border-neutral-800 bg-black/70 text-white"
+                >
+                  <h3
+                    class="mr-4 line-clamp-2 flex-grow pl-2 leading-none tracking-tight"
+                  >
+                    Product 2
+                  </h3>
+                  <p
+                    class="flex-none rounded-full bg-blue-600 p-2 text-white"
+                  >
+                    10
+                    <span
+                      class="ml-1 inline @[275px]/label:inline"
+                    >
+                      USD
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>,
+  "container": <div>
+    <ul
+      class="grid grid-flow-row gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      <li
+        class="aspect-square transition-opacity animate-fadeIn"
+      >
+        <div
+          class="relative inline-block h-full w-full"
+        >
+          <div
+            class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
+          >
+            <img
+              alt="Product 1"
+              class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+              loading="lazy"
+              src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+            />
+            <div
+              class="absolute bottom-0 left-0 flex w-full px-4 pb-4"
+            >
+              <div
+                class="flex items-center rounded-full border p-1 text-xs font-semibold backdrop-blur-md border-neutral-800 bg-black/70 text-white"
+              >
+                <h3
+                  class="mr-4 line-clamp-2 flex-grow pl-2 leading-none tracking-tight"
+                >
+                  Product 1
+                </h3>
+                <p
+                  class="flex-none rounded-full bg-blue-600 p-2 text-white"
+                >
+                  20
+                  <span
+                    class="ml-1 inline @[275px]/label:inline"
+                  >
+                    USD
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="aspect-square transition-opacity animate-fadeIn"
+      >
+        <div
+          class="relative inline-block h-full w-full"
+        >
+          <div
+            class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800"
+          >
+            <img
+              alt="Product 2"
+              class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+              loading="lazy"
+              src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+            />
+            <div
+              class="absolute bottom-0 left-0 flex w-full px-4 pb-4"
+            >
+              <div
+                class="flex items-center rounded-full border p-1 text-xs font-semibold backdrop-blur-md border-neutral-800 bg-black/70 text-white"
+              >
+                <h3
+                  class="mr-4 line-clamp-2 flex-grow pl-2 leading-none tracking-tight"
+                >
+                  Product 2
+                </h3>
+                <p
+                  class="flex-none rounded-full bg-blue-600 p-2 text-white"
+                >
+                  10
+                  <span
+                    class="ml-1 inline @[275px]/label:inline"
+                  >
+                    USD
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
