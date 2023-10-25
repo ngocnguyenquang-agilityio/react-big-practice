@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 
-export const fetcher = async (url: string) => {
+export const request = async (url: string) => {
   try {
     const res = await axios.get(url);
 
