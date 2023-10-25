@@ -11,11 +11,7 @@ const ProductDetailsPage = () => {
     color: ['black', 'white', 'blue'],
   };
 
-  return (
-    <ProductDetailLayout>
-      <ProductDetail product={mockProduct} />
-    </ProductDetailLayout>
-  );
+  return <ProductDetailLayout productDetail={<ProductDetail product={mockProduct} />} />;
 };
 
 export default ProductDetailsPage;
