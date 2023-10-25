@@ -2,13 +2,13 @@
 import useSWR from 'swr';
 
 // Constants
-import { URL } from '@constants';
+import { BASE_URL } from '@constants';
 
 // Services
 import { request } from '@services/request';
 
 export const useLoader = () => {
-  const results = useSWR(URL, request);
+  const results = useSWR(BASE_URL, request);
 
   return results;
 };
