@@ -1,14 +1,14 @@
 // Components
 import { Button } from '@components/Button';
-import { IProducts } from '@interfaces';
+import { IProduct } from '@interfaces';
 
-const ProductDetail = ({ product }: { product: IProducts }) => {
+const ProductDetail = ({ product }: { product: IProduct }) => {
   return (
     <div className='flex flex-col rounded-lg border p-8 border-neutral-800 bg-black md:p-12 lg:flex-row lg:gap-8'>
       <div className='h-full w-full basis-full lg:basis-4/6'>
         <div className='relative aspect-square h-full max-h-[550px] w-full overflow-hidden'>
           <img
-            src={product.image}
+            src={product.thumbnail}
             className='h-full w-full object-contain'
           />
         </div>
@@ -22,8 +22,8 @@ const ProductDetail = ({ product }: { product: IProducts }) => {
               <div className='group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600'>
                 <img
                   className='relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105'
-                  src={product.image}
-                  alt={product.name}
+                  src={product.thumbnail}
+                  alt={product.title}
                 />
               </div>
             </a>
@@ -40,7 +40,7 @@ const ProductDetail = ({ product }: { product: IProducts }) => {
             </p>
           </div>
         </div>
-        <div className='mb-8'>
+        {/* <div className='mb-8'>
           <p className='mb-4 text-sm text-white uppercase tracking-wide'>Color</p>
           <ul
             className='flex flex-wrap gap-3'
@@ -52,8 +52,8 @@ const ProductDetail = ({ product }: { product: IProducts }) => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className='mb-8'>
+        </div> */}
+        {/* <div className='mb-8'>
           <p className='mb-4 text-sm text-white uppercase tracking-wide'>Size</p>
           <ul
             className='flex flex-wrap gap-3'
@@ -65,7 +65,7 @@ const ProductDetail = ({ product }: { product: IProducts }) => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
         <Button size='xl'>Add To Cart</Button>
       </div>
     </div>

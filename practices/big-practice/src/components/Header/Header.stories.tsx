@@ -1,17 +1,17 @@
 // Types
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import Header from ".";
+import Header from '.';
 
 export default {
   title: 'Components/Header',
   component: Header,
-  render: () => <Header />
-} as Meta
+  render: () => <Header toggleCart={() => {}} />,
+} as Meta;
 
-type Story = StoryObj
+type Story = StoryObj;
 
 export const Default: Story = {
-  render: () => <Header />
-}
+  render: () => <Header toggleCart={() => {}} />,
+};
