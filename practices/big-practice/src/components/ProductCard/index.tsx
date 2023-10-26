@@ -5,8 +5,7 @@ const ProductCard = ({ title, price, thumbnail }: ProductCard): JSX.Element => {
     <div className='relative inline-block h-full w-full'>
       <div className='group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black relative border-neutral-800'>
         <img
-          // TODO: Add lazy load for image
-          className='relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105'
+          className='relative h-full w-full object-cover transition duration-300 ease-in-out group-hover:scale-105'
           loading='lazy'
           alt={title}
           src={thumbnail}
