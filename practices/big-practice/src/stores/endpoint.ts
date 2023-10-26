@@ -2,12 +2,12 @@
 import { create } from 'zustand';
 
 // Constants
-import { DEFAULT_ENDPOINT } from '@constants';
+import { buildAPIEndpoint } from '@helpers/buildQueryProductAPIEndpoint';
 
 type Store = {
   endpoint: string;
 };
 
 export const useEndpoint = create<Store>(() => ({
-  endpoint: DEFAULT_ENDPOINT,
+  endpoint: buildAPIEndpoint({ skip: 0 }),
 }));
