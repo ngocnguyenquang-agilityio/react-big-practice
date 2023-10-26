@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 // Components
 import Collection from '@components/Collection';
 import ProductList from '@components/ProductList';
-import Loading from '@components/Loading';
+import Skeleton from '@components/Skeleton';
 
 // Layouts
 import HomeLayout from '@layouts/HomeLayout';
@@ -20,11 +20,9 @@ const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt'];
 
 const HomePage = () => {
   const { endpoint } = useEndpoint();
-  const [searchParams] = useSearchParams()
-  const searchKeyword = searchParams.get('search')
-  const { data, isLoading } = useSWR(searchKeyword ? `search?q=${searchKeyword}` : endpoint, fetcher);
-
-  if (isLoading) return <Loading />;
+  const [searchParams] = useSearchParams();
+  const searchKeyword = searchParams.get('search');
+  const { data, isLoading } = useSWR(searchKeyword ? `/search?q=${searchKeyword}` : endpoint, fetcher);
 
   return (
     <HomeLayout
@@ -41,7 +39,7 @@ const HomePage = () => {
         />
       }
     >
-      <ProductList products={data.products} />
+      {isLoading ? <Skeleton /> : <ProductList products={data.products} />}
     </HomeLayout>
   );
 };
