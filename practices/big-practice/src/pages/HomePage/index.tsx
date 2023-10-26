@@ -1,5 +1,6 @@
 // Libs
 import useSWR from 'swr';
+import { useSearchParams } from 'react-router-dom';
 
 // Components
 import Collection from '@components/Collection';
@@ -12,13 +13,16 @@ import HomeLayout from '@layouts/HomeLayout';
 // Services
 import { fetcher } from '@services/fetcher';
 
-// Constants
-import { DEFAULT_ENDPOINT } from '@constants';
+// Stores
+import { useEndpoint } from '@stores/endpoint';
 
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt'];
 
 const HomePage = () => {
-  const { data, isLoading } = useSWR(`${DEFAULT_ENDPOINT}`, fetcher);
+  const { endpoint } = useEndpoint();
+  const [searchParams] = useSearchParams()
+  const searchKeyword = searchParams.get('search')
+  const { data, isLoading } = useSWR(searchKeyword ? `search?q=${searchKeyword}` : endpoint, fetcher);
 
   if (isLoading) return <Loading />;
 

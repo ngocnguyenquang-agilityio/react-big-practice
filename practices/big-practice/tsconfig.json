@@ -34,6 +34,7 @@
       "@hooks/*": ["./src/hooks/*"],
       "@lib/*": ["./src/lib/*"],
       "@interfaces": ["./src/interfaces"],
+      "@helpers/*": ["./src/helpers/*"],
     },
     "esModuleInterop": true
   },

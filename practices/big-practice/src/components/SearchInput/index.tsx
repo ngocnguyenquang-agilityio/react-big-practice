@@ -1,8 +1,8 @@
 // Icons
-import { SearchIcon } from "@assets/icons";
+import { SearchIcon } from '@assets/icons';
 
 // Components
-import { Input } from "@components/Input";
+import { Input } from '@components/Input';
 
 // Types
 import { InputProps } from "@components/Input";
