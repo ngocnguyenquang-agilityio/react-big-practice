@@ -1,28 +1,45 @@
 // Libs
 import useSWR from 'swr';
+import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 // Components
 import Collection from '@components/Collection';
 import ProductList from '@components/ProductList';
+import Pagination from '@components/Pagination';
 import Skeleton from '@components/Skeleton';
 
 // Layouts
 import HomeLayout from '@layouts/HomeLayout';
 
-// Services
-import { fetcher } from '@services/fetcher';
-
 // Stores
-import { useEndpoint } from '@stores/endpoint';
+import { buildQueryProductEndpoint } from '@helpers/buildQueryProductAPIEndpoint';
 
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt'];
 
 const HomePage = () => {
-  const { endpoint } = useEndpoint();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const searchKeyword = searchParams.get('search');
-  const { data, isLoading } = useSWR(searchKeyword ? `/search?q=${searchKeyword}` : endpoint, fetcher);
+  const standingPage = searchParams.get('page');
+  console.log(standingPage);
+
+  const category = searchParams.get('category');
+  const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
+  const { data, isLoading } = useSWR(endpoint);
+
+  const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.target as HTMLButtonElement;
+    const standingPage = target.value || '';
+
+    setSearchParams({ page: standingPage });
+  };
+
+  useEffect(() => {
+    if (searchParams.get('page') === null) {
+      searchParams.set('page', '1');
+      setSearchParams(searchParams);
+    }
+  }, [searchParams, setSearchParams]);
 
   return (
     <HomeLayout
@@ -39,7 +56,14 @@ const HomePage = () => {
         />
       }
     >
-      {isLoading ? <Skeleton numOfItems={9} /> : <ProductList products={data.products} />}
+      {isLoading ? <Skeleton /> : <ProductList products={data.products} />}
+      {!searchKeyword && (
+        <Pagination
+          totalPages={4}
+          standingPage={standingPage}
+          handleChangePagination={handleChangePagination}
+        />
+      )}
     </HomeLayout>
   );
 };

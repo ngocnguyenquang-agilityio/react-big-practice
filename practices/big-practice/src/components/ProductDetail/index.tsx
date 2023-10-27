@@ -40,32 +40,6 @@ const ProductDetail = ({ product }: { product: IProduct }) => {
             </p>
           </div>
         </div>
-        {/* <div className='mb-8'>
-          <p className='mb-4 text-sm text-white uppercase tracking-wide'>Color</p>
-          <ul
-            className='flex flex-wrap gap-3'
-            aria-label='color'
-          >
-            {product.color?.map((item) => (
-              <li>
-                <Button variant='secondary'>{item}</Button>
-              </li>
-            ))}
-          </ul>
-        </div> */}
-        {/* <div className='mb-8'>
-          <p className='mb-4 text-sm text-white uppercase tracking-wide'>Size</p>
-          <ul
-            className='flex flex-wrap gap-3'
-            aria-label='size'
-          >
-            {product.size?.map((item) => (
-              <li>
-                <Button variant='secondary'>{item}</Button>
-              </li>
-            ))}
-          </ul>
-        </div> */}
         <Button size='xl'>Add To Cart</Button>
       </div>
     </div>
