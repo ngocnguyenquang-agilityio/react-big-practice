@@ -4,7 +4,7 @@ import { RenderResult, render, within } from '@testing-library/react';
 import Skeleton from '.';
 
 const props = {
-  numOfItems: 2,
+  pagination: 2,
 };
 
 describe('Skeleton Component', () => {
