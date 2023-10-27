@@ -1,7 +1,7 @@
-const Skeleton = () => {
+const Skeleton = ({ numOfItems = 1 }: { numOfItems: number }) => {
   const listItems = [];
 
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 1; i <= numOfItems; i++) {
     listItems.push(
       <li
         className='aspect-square transition-opacity animate-fadeIn'
@@ -26,7 +26,14 @@ const Skeleton = () => {
     );
   }
 
-  return <ul className='grid grid-flow-row gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>{listItems}</ul>;
+  return (
+    <ul
+      className='grid grid-flow-row gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+      aria-label='skeleton'
+    >
+      {listItems}
+    </ul>
+  );
 };
 
 export default Skeleton;

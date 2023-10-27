@@ -9,7 +9,7 @@ import CartBody from '@components/Cart/CartBody';
 // Types
 import { IProduct } from '@interfaces';
 
-interface ICart {
+export interface ICart {
   handleToggleCart: () => void;
   cart?: IProduct[];
 }
