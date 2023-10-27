@@ -1,5 +1,6 @@
 // Libs
 import { ChangeEvent, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 // Icons
 import { CartIcon, LogoIcon } from '@assets/icons';
@@ -9,8 +10,7 @@ import { Button } from '@components/Button';
 import SearchInput from '@components/SearchInput';
 
 // Helpers
-import { debounce } from '@helpers/debounce';
-import { useSearchParams } from 'react-router-dom';
+import { debounce } from '@helpers/utils';
 
 const Header = ({ toggleCart }: { toggleCart: () => void }) => {
   const [searchParams, setSearchParams] = useSearchParams();

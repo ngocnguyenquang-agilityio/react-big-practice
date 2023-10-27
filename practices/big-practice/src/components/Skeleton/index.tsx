@@ -1,7 +1,7 @@
-const Skeleton = ({ numOfItems = 1 }: { numOfItems: number }) => {
+const Skeleton = ({ pagination = 1 }: { pagination: number }) => {
   const listItems = [];
 
-  for (let i = 1; i <= numOfItems; i++) {
+  for (let i = 1; i <= pagination; i++) {
     listItems.push(
       <li
         className='aspect-square transition-opacity animate-fadeIn'

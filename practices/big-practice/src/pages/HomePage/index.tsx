@@ -11,20 +11,21 @@ import Skeleton from '@components/Skeleton';
 
 // Layouts
 import HomeLayout from '@layouts/HomeLayout';
+import { buildQueryProductEndpoint } from '@helpers/products';
 
-// Stores
-import { buildQueryProductEndpoint } from '@helpers/buildQueryProductAPIEndpoint';
+// Helpers
 
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt'];
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+
   const searchKeyword = searchParams.get('search');
   const standingPage = searchParams.get('page');
-  console.log(standingPage);
-
   const category = searchParams.get('category');
+
   const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
+
   const { data, isLoading } = useSWR(endpoint);
 
   const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -34,6 +35,7 @@ const HomePage = () => {
     setSearchParams({ page: standingPage });
   };
 
+  // TODO: Remove
   useEffect(() => {
     if (searchParams.get('page') === null) {
       searchParams.set('page', '1');
@@ -56,7 +58,7 @@ const HomePage = () => {
         />
       }
     >
-      {isLoading ? <Skeleton /> : <ProductList products={data.products} />}
+      {isLoading ? <Skeleton pagination={9} /> : <ProductList products={data.products} />}
       {!searchKeyword && (
         <Pagination
           totalPages={4}

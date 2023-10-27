@@ -12,18 +12,19 @@ const Pagination = ({ totalPages, standingPage, handleChangePagination }: IPagin
     <nav className='pt-4 flex justify-end'>
       <ul className='inline-flex -space-x-px text-md gap-4'>
         {Array.apply(0, new Array(totalPages)).map((_, idx) => {
-          const isActivePage = (idx + 1).toString() === standingPage;
+          const currentPage = idx + 1;
+          const isActivePage = currentPage.toString() === standingPage;
 
           return (
             <li key={idx}>
               <Button
                 size='icon'
                 variant='secondary'
-                value={(idx + 1).toString()}
+                value={currentPage.toString()}
                 onClick={handleChangePagination}
                 className={isActivePage ? 'bg-blue-600' : ''}
               >
-                {(idx + 1).toString()}
+                {currentPage.toString()}
               </Button>
             </li>
           );

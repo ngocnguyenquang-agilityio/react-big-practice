@@ -1,4 +1,5 @@
-import { convertToSkip } from './convertToSkip';
+// Helpers
+import { convertToSkip } from './utils';
 
 interface IAPIEndpoint {
   standingPage?: null | string;

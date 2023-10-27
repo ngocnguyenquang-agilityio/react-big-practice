@@ -1,7 +1,8 @@
-import { buildQueryProductEndpoint } from '@helpers/buildQueryProductAPIEndpoint';
-import { convertToSkip } from '@helpers/convertToSkip';
+// Helpers
+import { buildQueryProductEndpoint } from '@helpers/products';
+import { convertToSkip } from '@helpers/utils';
 
-describe('Test helper functions', () => {
+describe('Test buildQueryProductAPIEndpoint functions', () => {
   test('buildQueryProductAPIEndpoint without value', () => {
     const test = {
       standingPage: '',
@@ -56,8 +57,10 @@ describe('Test helper functions', () => {
     const result = buildQueryProductEndpoint(test);
     expect(result).toEqual('/1');
   });
+});
 
-  test('convertToSkip function', () => {
+describe('Test convertToSkip function', () => {
+  test('convert string to number and time by 9', () => {
     const result = convertToSkip('2');
     expect(result).toEqual(9);
   });
