@@ -1,3 +1,4 @@
-export type { IProducts } from './product';
+export type { IProduct } from './product';
+export type { ProductCard } from './product-card';
 export type { ICartItem } from './cart-item';
 export type { IQuantityActionButton } from './quantity-action-button';

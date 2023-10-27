@@ -41,7 +41,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             <img
               class="h-full w-full object-cover"
               loading="lazy"
-              src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75"
+              src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
             />
           </div>
           <div
@@ -50,7 +50,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             <span
               class="leading-tight"
             >
-              Test Product Card
+              Product 1
             </span>
             <p
               class="text-sm text-neutral-400"
@@ -164,7 +164,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           <img
             class="h-full w-full object-cover"
             loading="lazy"
-            src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75"
+            src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
           />
         </div>
         <div
@@ -173,7 +173,7 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           <span
             class="leading-tight"
           >
-            Test Product Card
+            Product 1
           </span>
           <p
             class="text-sm text-neutral-400"

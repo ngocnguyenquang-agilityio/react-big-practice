@@ -1,3 +1,3 @@
-import { IItemInCart } from './cart-item';
+import { ICartItem } from './cart-item';
 
-export type IQuantityActionButton = Pick<IItemInCart, 'handleIncrease' | 'handleDecrease' | 'quantity'>;
+export type IQuantityActionButton = Pick<ICartItem, 'handleIncrease' | 'handleDecrease' | 'quantity'>;

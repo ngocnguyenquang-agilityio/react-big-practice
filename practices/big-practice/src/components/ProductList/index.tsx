@@ -1,15 +1,18 @@
-import ProductCard from '@components/ProductCard';
-import { IProducts } from '@interfaces';
+// Types
+import { IProduct } from '../../interfaces/product';
 
-const ProductList = ({ products = [] }: { products: IProducts[] }) => {
+// Components
+import ProductCard from '@components/ProductCard';
+
+const ProductList = ({ products = [] }: { products: IProduct[] }) => {
   return (
     <ul className='grid grid-flow-row gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
       {products.map((item) => (
-        <li className='aspect-square transition-opacity animate-fadeIn'>
+        <li className='aspect-square transition-opacity animate-fadeIn' key={item.id}>
           <ProductCard
-            name={item.name}
+            title={item.title}
             price={item.price}
-            image={item.image}
+            thumbnail={item.thumbnail}
           />
         </li>
       ))}

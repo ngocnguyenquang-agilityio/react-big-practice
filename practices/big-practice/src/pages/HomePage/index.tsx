@@ -1,27 +1,46 @@
+// Libs
+import useSWR from 'swr';
+import { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
 // Components
 import Collection from '@components/Collection';
 import ProductList from '@components/ProductList';
+import Pagination from '@components/Pagination';
+import Skeleton from '@components/Skeleton';
+
+// Layouts
 import HomeLayout from '@layouts/HomeLayout';
+import { buildQueryProductEndpoint } from '@helpers/products';
 
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt'];
-// TODO: Will remove after fetching
-const mockProductList = [
-  {
-    name: 'Test Product 1',
-    price: 20,
-    image:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75',
-  },
-
-  {
-    name: 'Test Product 2',
-    price: 10,
-    image:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75',
-  },
-];
 
 const HomePage = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const searchKeyword = searchParams.get('search');
+  const standingPage = searchParams.get('page');
+  const category = searchParams.get('category');
+
+  const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
+
+  const { data, isLoading } = useSWR(endpoint);
+
+  const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.target as HTMLButtonElement;
+    const standingPage = target.value || '';
+
+    setSearchParams({ page: standingPage });
+  };
+
+  // TODO: Remove
+  useEffect(() => {
+    if (searchParams.get('page') === null) {
+      searchParams.set('page', '1');
+      setSearchParams(searchParams);
+    }
+  }, [searchParams, setSearchParams]);
+
   return (
     <HomeLayout
       leftAside={
@@ -32,12 +51,19 @@ const HomePage = () => {
       }
       rightAside={
         <Collection
-          list={['Price: Low to Hight', 'Price: High to Low']}
+          list={['Price: Low to High', 'Price: High to Low']}
           title='Sort by'
         />
       }
     >
-      <ProductList products={mockProductList} />
+      {isLoading ? <Skeleton pagination={9} /> : <ProductList products={data.products} />}
+      {!searchKeyword && (
+        <Pagination
+          totalPages={4}
+          standingPage={standingPage}
+          handleChangePagination={handleChangePagination}
+        />
+      )}
     </HomeLayout>
   );
 };

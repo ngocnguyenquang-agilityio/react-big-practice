@@ -26,11 +26,11 @@ const CartItem = ({ product, quantity = 1, handleRemoveItemFromCart, handleDecre
           <img
             className='h-full w-full object-cover'
             loading='lazy'
-            src={product.image}
+            src={product.thumbnail}
           />
         </div>
         <div className='flex flex-1 flex-col text-base'>
-          <span className='leading-tight'>{product.name}</span>
+          <span className='leading-tight'>{product.title}</span>
           <p className='text-sm text-neutral-400'>Black / 7 x 9 inch</p>
         </div>
       </a>

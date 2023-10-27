@@ -1,25 +1,28 @@
 import { render } from '@testing-library/react';
 
 // Components
-import Cart from '.';
+import Cart, { ICart } from '.';
 
 const mockCart = [
   {
-    name: 'Test Product 1',
-    price: 20,
-    image:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75',
-  },
-
-  {
-    name: 'Test Product 2',
+    id: 1,
+    title: 'Product Detail',
     price: 10,
-    image:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fkeyboard.png%3Fv%3D1690003507&w=3840&q=75',
+    thumbnail:
+      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
+    category: 'Product',
+  },
+  {
+    id: 2,
+    title: 'Product Detail 2',
+    price: 20,
+    thumbnail:
+      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
+    category: 'Product',
   },
 ];
 
-const props = {
+const props: ICart = {
   handleToggleCart: jest.fn(),
   cart: mockCart,
 };
