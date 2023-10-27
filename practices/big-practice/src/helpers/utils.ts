@@ -25,3 +25,12 @@ export const debounce = <Params extends any[]>(
 export const convertToSkip = <T extends string>(value: T) => {
   return (parseInt(value) - 1) * 9;
 };
+
+/**
+ * Check whether the param has value or not
+ * @param value
+ * @returns
+ */
+export const isEmpty = (value: string | null | undefined) => {
+  return !value || value.length === 0;
+};

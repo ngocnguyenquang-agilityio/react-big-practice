@@ -1,6 +1,6 @@
 // Helpers
 import { buildQueryProductEndpoint } from '@helpers/products';
-import { convertToSkip } from '@helpers/utils';
+import { convertToSkip, isEmpty } from '@helpers/utils';
 
 describe('Test buildQueryProductAPIEndpoint functions', () => {
   test('buildQueryProductAPIEndpoint without value', () => {
@@ -63,6 +63,18 @@ describe('Test convertToSkip function', () => {
   test('convert string to number and time by 9', () => {
     const result = convertToSkip('2');
     expect(result).toEqual(9);
+  });
+});
+
+describe('Test isEmpty function', () => {
+  test('check the param with empty value ', () => {
+    const result = isEmpty('');
+    expect(result).toBeTruthy();
+  });
+
+  test('check the param with empty value ', () => {
+    const result = isEmpty('test value');
+    expect(result).toBeFalsy();
   });
 });
 

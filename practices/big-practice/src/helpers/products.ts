@@ -1,5 +1,5 @@
 // Helpers
-import { convertToSkip } from './utils';
+import { convertToSkip, isEmpty } from './utils';
 
 interface IAPIEndpoint {
   standingPage?: null | string;
@@ -7,15 +7,6 @@ interface IAPIEndpoint {
   productId?: null | string;
   category?: null | string;
 }
-
-/**
- * Check whether the param has value or not
- * @param value
- * @returns
- */
-const isEmpty = (value: string | null | undefined) => {
-  return !value || value.length === 0;
-};
 
 /**
  * Build products query endpoint

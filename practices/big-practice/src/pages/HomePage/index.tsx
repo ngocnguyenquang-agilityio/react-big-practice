@@ -13,8 +13,6 @@ import Skeleton from '@components/Skeleton';
 import HomeLayout from '@layouts/HomeLayout';
 import { buildQueryProductEndpoint } from '@helpers/products';
 
-// Helpers
-
 const mockListCollection = ['All', 'Hoodie', 'Jacket', 'Shirt'];
 
 const HomePage = () => {
