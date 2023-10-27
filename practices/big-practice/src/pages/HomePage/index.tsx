@@ -39,7 +39,7 @@ const HomePage = () => {
         />
       }
     >
-      {isLoading ? <Skeleton /> : <ProductList products={data.products} />}
+      {isLoading ? <Skeleton numOfItems={9} /> : <ProductList products={data.products} />}
     </HomeLayout>
   );
 };
