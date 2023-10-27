@@ -1,47 +1,41 @@
+import { convertToSkip } from './convertToSkip';
+
 interface IAPIEndpoint {
-  skip?: number;
-  query?: string;
-  productId?: number;
-  category?: string;
+  standingPage?: null | string;
+  searchKeyword?: null | string;
+  productId?: null | string;
+  category?: null | string;
 }
 
-export const buildAPIEndpoint = ({ skip = 0, query, productId, category }: IAPIEndpoint) => {
-  let endpoint = '';
+/**
+ * Check whether the param has value or not
+ * @param value
+ * @returns
+ */
+const isEmpty = (value: string | null | undefined) => {
+  return !value || value.length === 0;
+};
 
-  if (query) {
-    return (endpoint = `/search?q=${query}`);
+/**
+ * Build products query endpoint
+ * @param {IAPIEndpoint}
+ * @returns {string}
+ */
+export const buildQueryProductEndpoint = ({ standingPage, searchKeyword, productId, category }: IAPIEndpoint) => {
+  switch (true) {
+    case !isEmpty(searchKeyword):
+      return `/search?q=${searchKeyword}`;
+
+    case !isEmpty(standingPage):
+      return `?limit=9&skip=${convertToSkip(standingPage!)}&select=title,price,images,category,thumbnail,id`;
+
+    case !isEmpty(category):
+      return `/category/${category}`;
+
+    case !isEmpty(productId):
+      return `/${productId}`;
+
+    default:
+      return `?limit=9&skip=0&select=title,price,images,category,thumbnail,id`;
   }
-
-  if (productId) {
-    return `/${productId}`;
-  }
-
-  if (category) {
-    return (endpoint = `/category/${category}`);
-  }
-
-  return (endpoint = `?limit=9&skip=${skip}&select=title,price,images,category,thumbnail,id`);
-
-  // switch (endpoint) {
-  //   case skip.toString():
-  //     endpoint = `?limit=9&skip=${skip}&select=title,price,images,category,thumbnail,id`;
-  //     break;
-
-  //   case query:
-  //     endpoint = `/search?q=${query}`;
-  //     break;
-
-  //   case category:
-  //     endpoint = `/category/${category}`;
-  //     break;
-
-  //   case productId?.toString():
-  //     endpoint = `/${productId}`;
-  //     break;
-
-  //   default:
-  //     endpoint = `?limit=9&skip=0&select=title,price,images,category,thumbnail,id`;
-  // }
-
-  // return endpoint;
 };

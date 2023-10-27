@@ -19,7 +19,7 @@ exports[`ProductList Component Should match snapshot 1`] = `
             >
               <img
                 alt="Product 1"
-                class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                class="relative h-full w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
                 loading="lazy"
                 src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
               />
@@ -60,7 +60,7 @@ exports[`ProductList Component Should match snapshot 1`] = `
             >
               <img
                 alt="Product 2"
-                class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                class="relative h-full w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
                 loading="lazy"
                 src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
               />
@@ -108,7 +108,7 @@ exports[`ProductList Component Should match snapshot 1`] = `
           >
             <img
               alt="Product 1"
-              class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+              class="relative h-full w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
               loading="lazy"
               src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
             />
@@ -149,7 +149,7 @@ exports[`ProductList Component Should match snapshot 1`] = `
           >
             <img
               alt="Product 2"
-              class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+              class="relative h-full w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
               loading="lazy"
               src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
             />

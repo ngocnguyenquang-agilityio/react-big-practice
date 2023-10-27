@@ -14,7 +14,8 @@ import { useSearchParams } from 'react-router-dom';
 
 const Header = ({ toggleCart }: { toggleCart: () => void }) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  searchParams.get('search');
+
+  const searchKeyword = searchParams.get('search');
 
   const handleSearch = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -52,6 +53,7 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
             type='text'
             placeholder='Search Products...'
             onChange={searchWithDebounce}
+            defaultValue={searchKeyword || ''}
           />
         </div>
         <div className='flex justify-end md:w-1/3'>

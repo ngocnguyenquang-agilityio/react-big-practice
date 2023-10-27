@@ -41,7 +41,6 @@ exports[`Header component Should match snapshot 1`] = `
               </button>
               <a
                 class="ml-2 text-sm font-medium uppercase text-white"
-                href=""
               >
                 acme store
               </a>
@@ -71,6 +70,7 @@ exports[`Header component Should match snapshot 1`] = `
                 class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 py-2 text-sm text-white placeholder:text-neutral-400"
                 placeholder="Search Products..."
                 type="text"
+                value=""
               />
               <div
                 class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none"
@@ -169,7 +169,6 @@ exports[`Header component Should match snapshot 1`] = `
             </button>
             <a
               class="ml-2 text-sm font-medium uppercase text-white"
-              href=""
             >
               acme store
             </a>
@@ -199,6 +198,7 @@ exports[`Header component Should match snapshot 1`] = `
               class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 py-2 text-sm text-white placeholder:text-neutral-400"
               placeholder="Search Products..."
               type="text"
+              value=""
             />
             <div
               class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none"
