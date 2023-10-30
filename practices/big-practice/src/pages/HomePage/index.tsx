@@ -8,7 +8,6 @@ import Collection from '@components/Collection';
 import HomeLayout from '@layouts/HomeLayout';
 
 // Types
-import { COLLECTION_TYPE } from '@interfaces';
 import ProductListContainer from './ProductListContainer';
 
 // Constants
@@ -25,7 +24,6 @@ const HomePage = () => {
         <Collection
           list={CATEGORIES}
           title='Collection'
-          type={COLLECTION_TYPE.CATEGORY}
           selected={category}
         />
       }
@@ -36,7 +34,6 @@ const HomePage = () => {
             { value: 'high-to-low', label: 'Price: High to Low' },
           ]}
           title='Sort by'
-          type={COLLECTION_TYPE.SORT}
           selected={sort}
         />
       }

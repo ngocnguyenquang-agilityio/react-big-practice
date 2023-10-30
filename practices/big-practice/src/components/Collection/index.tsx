@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Types
 import { ICollection } from '@interfaces';
 
-const Collection = ({ title, list, type, selected }: ICollection): JSX.Element => {
+const Collection = ({ title, list, selected }: ICollection): JSX.Element => {
   return (
     <nav>
       <h3 className='text-xs text-neutral-400 md:block'>{title}</h3>
@@ -18,7 +18,7 @@ const Collection = ({ title, list, type, selected }: ICollection): JSX.Element =
             key={item.value}
           >
             <Link
-              to={`?${type}=${item.value}`}
+              to={`/category/${item.value}`}
               className='w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100'
             >
               {item.label}

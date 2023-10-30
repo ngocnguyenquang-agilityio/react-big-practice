@@ -22,6 +22,10 @@ export const router = createBrowserRouter([
         path: APP_ROUTERS.DETAILSPAGE,
         element: <ProductDetailsPage />,
       },
+      {
+        path: 'category/:category',
+        element: <HomePage />,
+      },
     ],
   },
 ]);
