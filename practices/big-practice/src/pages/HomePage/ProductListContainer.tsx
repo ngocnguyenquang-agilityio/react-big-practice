@@ -8,7 +8,7 @@ import ProductList from '@components/ProductList';
 import Skeleton from '@components/Skeleton';
 
 // Helpers
-import { buildQueryProductEndpoint } from '@helpers/products';
+import { buildQueryProductEndpoint, dynamicSort } from '@helpers/products';
 
 export const ProductListContainer = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -16,10 +16,13 @@ export const ProductListContainer = () => {
   const searchKeyword = searchParams.get('search');
   const standingPage = searchParams.get('page');
   const category = searchParams.get('category') || '';
+  const sort = searchParams.get('sort') || '';
 
   const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
 
   const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true });
+
+  // console.log('sort', data?.products.sort(dynamicSort('price')));
 
   const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
@@ -28,9 +31,26 @@ export const ProductListContainer = () => {
     setSearchParams({ category, page: standingPage });
   };
 
+  // const renderPagination = () => {
+  //   if (!searchKeyword) {
+  //     <Pagination
+  //       totalPages={4}
+  //       standingPage={standingPage || '1'}
+  //       handleChangePagination={handleChangePagination}
+  //     />;
+  //   } else return null;
+  // };
+
   return (
     <>
-      {isLoading ? <Skeleton pagination={9} /> : <ProductList products={data?.products || []} />}
+      {isLoading ? (
+        <Skeleton pagination={9} />
+      ) : (
+        <ProductList
+          products={data?.products || []}
+          sortBy={sort}
+        />
+      )}
       {!searchKeyword && (
         <Pagination
           totalPages={4}

@@ -11,20 +11,19 @@ import HomeLayout from '@layouts/HomeLayout';
 import { COLLECTION_TYPE } from '@interfaces';
 import ProductListContainer from './ProductListContainer';
 
-const categories = [
-  { value: 'smartphones', label: 'Phone' },
-  { value: 'laptops', label: 'Laptop' },
-];
+// Constants
+import { CATEGORIES } from '@constants';
 
 const HomePage = () => {
   const [searchParams] = useSearchParams();
   const category = searchParams.get('category') || '';
+  const sort = searchParams.get('sort') || '';
 
   return (
     <HomeLayout
       leftAside={
         <Collection
-          list={categories}
+          list={CATEGORIES}
           title='Collection'
           type={COLLECTION_TYPE.CATEGORY}
           selected={category}
@@ -38,6 +37,7 @@ const HomePage = () => {
           ]}
           title='Sort by'
           type={COLLECTION_TYPE.SORT}
+          selected={sort}
         />
       }
     >
