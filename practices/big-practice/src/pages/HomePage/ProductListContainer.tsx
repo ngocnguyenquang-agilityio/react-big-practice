@@ -1,10 +1,11 @@
 // Libs
 import useSWR from 'swr';
-import { Form, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 // Components
 import Pagination from '@components/Pagination';
 import ProductList from '@components/ProductList';
+import Skeleton from '@components/Skeleton';
 
 // Helpers
 import { buildQueryProductEndpoint } from '@helpers/products';
@@ -18,7 +19,7 @@ export const ProductListContainer = () => {
 
   const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
 
-  const { data } = useSWR(endpoint, { keepPreviousData: true });
+  const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true });
 
   const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
@@ -29,18 +30,14 @@ export const ProductListContainer = () => {
 
   return (
     <>
-      <ProductList products={data?.products || []} />
-      <Form
-        className={`delay-1000 relative right-0 bottom-0 ${
-          data?.products.length && !searchKeyword ? 'block' : 'hidden'
-        }`}
-      >
+      {isLoading ? <Skeleton pagination={9} /> : <ProductList products={data?.products || []} />}
+      {!searchKeyword && (
         <Pagination
           totalPages={4}
           standingPage={standingPage || '1'}
           handleChangePagination={handleChangePagination}
         />
-      </Form>
+      )}
     </>
   );
 };
