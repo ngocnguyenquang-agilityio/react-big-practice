@@ -38,7 +38,7 @@ describe('Collection component', () => {
 
   test('Should render correct number of items', async () => {
     const items = await screen.getByTestId('collection');
-    expect(items.children).toHaveLength(3);
+    expect(items.children).toHaveLength(4);
   });
 
   test('Should render correct title', () => {

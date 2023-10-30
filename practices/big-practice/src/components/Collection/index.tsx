@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Types
 import { ICollection } from '@interfaces';
 
-const Collection = ({ title, list, type }: ICollection): JSX.Element => {
+const Collection = ({ title, list, type, selected }: ICollection): JSX.Element => {
   return (
     <nav>
       <h3 className='text-xs text-neutral-400 md:block'>{title}</h3>
@@ -22,7 +22,7 @@ const Collection = ({ title, list, type }: ICollection): JSX.Element => {
         </li>
         {list.map((item, index) => (
           <li
-            className='mt-2 flex text-white'
+            className={`mt-2 flex text-white ${selected === item.value ? 'font-bold underline' : ''}`}
             key={index}
           >
             <Link

@@ -20,13 +20,23 @@ exports[`Collection component Should match snapshot 1`] = `
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
+              href="/"
+            >
+              All
+            </a>
+          </li>
+          <li
+            class="mt-2 flex text-white "
+          >
+            <a
+              class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
               href="/?category=all"
             >
               All
             </a>
           </li>
           <li
-            class="mt-2 flex text-white"
+            class="mt-2 flex text-white "
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
@@ -36,7 +46,7 @@ exports[`Collection component Should match snapshot 1`] = `
             </a>
           </li>
           <li
-            class="mt-2 flex text-white"
+            class="mt-2 flex text-white "
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
@@ -65,13 +75,23 @@ exports[`Collection component Should match snapshot 1`] = `
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
+            href="/"
+          >
+            All
+          </a>
+        </li>
+        <li
+          class="mt-2 flex text-white "
+        >
+          <a
+            class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
             href="/?category=all"
           >
             All
           </a>
         </li>
         <li
-          class="mt-2 flex text-white"
+          class="mt-2 flex text-white "
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
@@ -81,7 +101,7 @@ exports[`Collection component Should match snapshot 1`] = `
           </a>
         </li>
         <li
-          class="mt-2 flex text-white"
+          class="mt-2 flex text-white "
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"

@@ -12,4 +12,5 @@ export interface ICollection {
   title: string;
   list: IListCollection[];
   type: COLLECTION_TYPE;
+  selected?: string;
 }
