@@ -20,10 +20,10 @@ const Collection = ({ title, list, type, selected }: ICollection): JSX.Element =
             All
           </Link>
         </li>
-        {list.map((item, index) => (
+        {list.map((item) => (
           <li
             className={`mt-2 flex text-white ${selected === item.value ? 'font-bold underline' : ''}`}
-            key={index}
+            key={item.value}
           >
             <Link
               to={`?${type}=${item.value}`}

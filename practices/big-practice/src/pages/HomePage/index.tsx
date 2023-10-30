@@ -11,14 +11,9 @@ import HomeLayout from '@layouts/HomeLayout';
 import { COLLECTION_TYPE } from '@interfaces';
 import ProductListContainer from './ProductListContainer';
 
-const mockListCollection = [
+const categories = [
   { value: 'smartphones', label: 'Phone' },
   { value: 'laptops', label: 'Laptop' },
-];
-
-const mockSort = [
-  { value: 'low-to-high', label: 'Price: Low to High' },
-  { value: 'high-to-low', label: 'Price: High to Low' },
 ];
 
 const HomePage = () => {
@@ -29,7 +24,7 @@ const HomePage = () => {
     <HomeLayout
       leftAside={
         <Collection
-          list={mockListCollection}
+          list={categories}
           title='Collection'
           type={COLLECTION_TYPE.CATEGORY}
           selected={category}
@@ -37,7 +32,10 @@ const HomePage = () => {
       }
       rightAside={
         <Collection
-          list={mockSort}
+          list={[
+            { value: 'low-to-high', label: 'Price: Low to High' },
+            { value: 'high-to-low', label: 'Price: High to Low' },
+          ]}
           title='Sort by'
           type={COLLECTION_TYPE.SORT}
         />
