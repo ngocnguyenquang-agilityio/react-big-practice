@@ -8,7 +8,7 @@ import ProductList from '@components/ProductList';
 import Skeleton from '@components/Skeleton';
 
 // Helpers
-import { buildQueryProductEndpoint, dynamicSort } from '@helpers/products';
+import { buildQueryProductEndpoint } from '@helpers/products';
 
 export const ProductListContainer = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -22,13 +22,11 @@ export const ProductListContainer = () => {
 
   const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true });
 
-  // console.log('sort', data?.products.sort(dynamicSort('price')));
-
   const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
     const standingPage = target.value;
 
-    setSearchParams({ category, page: standingPage });
+    setSearchParams({ category, page: standingPage, sort });
   };
 
   // const renderPagination = () => {
