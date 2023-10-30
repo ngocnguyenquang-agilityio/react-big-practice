@@ -20,7 +20,7 @@ exports[`Collection component Should match snapshot 1`] = `
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href=""
+              href="/?category=all"
             >
               All
             </a>
@@ -30,9 +30,9 @@ exports[`Collection component Should match snapshot 1`] = `
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href=""
+              href="/?category=phones"
             >
-              Hoodie
+              Phone
             </a>
           </li>
           <li
@@ -40,19 +40,9 @@ exports[`Collection component Should match snapshot 1`] = `
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href=""
+              href="/?category=laptops"
             >
-              Jacket
-            </a>
-          </li>
-          <li
-            class="mt-2 flex text-white"
-          >
-            <a
-              class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href=""
-            >
-              Shirt
+              Laptop
             </a>
           </li>
         </ul>
@@ -75,7 +65,7 @@ exports[`Collection component Should match snapshot 1`] = `
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href=""
+            href="/?category=all"
           >
             All
           </a>
@@ -85,9 +75,9 @@ exports[`Collection component Should match snapshot 1`] = `
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href=""
+            href="/?category=phones"
           >
-            Hoodie
+            Phone
           </a>
         </li>
         <li
@@ -95,19 +85,9 @@ exports[`Collection component Should match snapshot 1`] = `
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href=""
+            href="/?category=laptops"
           >
-            Jacket
-          </a>
-        </li>
-        <li
-          class="mt-2 flex text-white"
-        >
-          <a
-            class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href=""
-          >
-            Shirt
+            Laptop
           </a>
         </li>
       </ul>
