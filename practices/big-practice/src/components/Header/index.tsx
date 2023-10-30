@@ -1,6 +1,6 @@
 // Libs
 import { ChangeEvent, useCallback } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 // Icons
 import { CartIcon, LogoIcon } from '@assets/icons';
@@ -30,22 +30,32 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
     <header className='relative flex items-center justify-between p-4 lg:px-6'>
       <div className='flex w-full items-center'>
         <div className='flex w-full md:w-1/3 items-center'>
-          <div className='mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6'>
-            <Button
-              variant='link'
-              size='icon'
-            >
-              <LogoIcon />
-            </Button>
+          <Link
+            to='/'
+            className='mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6'
+          >
+            <LogoIcon />
             <a className='ml-2 text-sm font-medium uppercase text-white'>acme store</a>
-          </div>
+          </Link>
           <ul className='gap-6 text-sm md:flex md:items-center'>
-            <li className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'>
+            <Link
+              to='/'
+              className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
+            >
               All
-            </li>
-            <li className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'>
-              Shirts
-            </li>
+            </Link>
+            <Link
+              to='?category=smartphones'
+              className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
+            >
+              Phone
+            </Link>
+            <Link
+              to='?category=laptops'
+              className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
+            >
+              Laptop
+            </Link>
           </ul>
         </div>
         <div className='justify-center md:flex md:w-1/3'>
