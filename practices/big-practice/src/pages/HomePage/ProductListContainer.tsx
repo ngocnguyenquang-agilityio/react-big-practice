@@ -29,16 +29,6 @@ export const ProductListContainer = () => {
     setSearchParams({ category, page: standingPage, sort });
   };
 
-  // const renderPagination = () => {
-  //   if (!searchKeyword) {
-  //     <Pagination
-  //       totalPages={4}
-  //       standingPage={standingPage || '1'}
-  //       handleChangePagination={handleChangePagination}
-  //     />;
-  //   } else return null;
-  // };
-
   return (
     <>
       {isLoading ? (
