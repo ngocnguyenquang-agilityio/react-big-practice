@@ -12,14 +12,6 @@ const Collection = ({ title, list, type, selected }: ICollection): JSX.Element =
         className='block'
         data-testid='collection'
       >
-        <li className='mt-2 flex text-white'>
-          <Link
-            to='/'
-            className='w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100'
-          >
-            All
-          </Link>
-        </li>
         {list.map((item) => (
           <li
             className={`mt-2 flex text-white ${selected === item.value ? 'font-bold underline' : ''}`}

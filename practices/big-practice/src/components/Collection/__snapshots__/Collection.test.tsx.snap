@@ -16,26 +16,6 @@ exports[`Collection component Should match snapshot 1`] = `
           data-testid="collection"
         >
           <li
-            class="mt-2 flex text-white"
-          >
-            <a
-              class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href="/"
-            >
-              All
-            </a>
-          </li>
-          <li
-            class="mt-2 flex text-white "
-          >
-            <a
-              class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href="/?category=all"
-            >
-              All
-            </a>
-          </li>
-          <li
             class="mt-2 flex text-white "
           >
             <a
@@ -70,26 +50,6 @@ exports[`Collection component Should match snapshot 1`] = `
         class="block"
         data-testid="collection"
       >
-        <li
-          class="mt-2 flex text-white"
-        >
-          <a
-            class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href="/"
-          >
-            All
-          </a>
-        </li>
-        <li
-          class="mt-2 flex text-white "
-        >
-          <a
-            class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href="/?category=all"
-          >
-            All
-          </a>
-        </li>
         <li
           class="mt-2 flex text-white "
         >
