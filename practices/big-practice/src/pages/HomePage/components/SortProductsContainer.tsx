@@ -40,9 +40,14 @@ const SortProductContainer = ({ sortConditions = [] }: { sortConditions: Array<{
   const [searchParams, setSearchParams] = useSearchParams();
   const sortBy = searchParams.get('sort') || '';
 
-  const handleSelectSort = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    setSearchParams({ sort: e.currentTarget.value });
-  }, []);
+  const handleSelectSort = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      searchParams.set('sort', e.currentTarget.value);
+      setSearchParams(searchParams);
+    },
+    [searchParams],
+  );
+
   return (
     <SortProducts
       selectingItem={sortBy}
