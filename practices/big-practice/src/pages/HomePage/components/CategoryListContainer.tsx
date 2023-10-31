@@ -2,7 +2,7 @@
 import { useParams } from 'react-router-dom';
 
 // Components
-import Collection from '@components/Collection';
+import Collection from './Collection';
 
 const CategoryListContainer = ({ categories }: { categories: Array<{ label: string; value: string }> }) => {
   const { category } = useParams();
