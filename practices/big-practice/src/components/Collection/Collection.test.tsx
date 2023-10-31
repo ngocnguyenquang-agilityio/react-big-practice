@@ -5,9 +5,6 @@ import { screen, render, RenderResult } from '@testing-library/react';
 // Components
 import Collection from '.';
 
-// Types
-import { COLLECTION_TYPE } from '@interfaces';
-
 const mockListCollection = [
   { value: 'phones', label: 'Phone' },
   { value: 'laptops', label: 'Laptop' },
@@ -21,7 +18,6 @@ describe('Collection component', () => {
         <Collection
           list={mockListCollection}
           title='Collection'
-          type={COLLECTION_TYPE.CATEGORY}
         />
       </MemoryRouter>,
     );

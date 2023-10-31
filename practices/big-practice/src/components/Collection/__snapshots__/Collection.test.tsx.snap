@@ -20,7 +20,7 @@ exports[`Collection component Should match snapshot 1`] = `
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href="/?category=phones"
+              href="/category/phones"
             >
               Phone
             </a>
@@ -30,7 +30,7 @@ exports[`Collection component Should match snapshot 1`] = `
           >
             <a
               class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-              href="/?category=laptops"
+              href="/category/laptops"
             >
               Laptop
             </a>
@@ -55,7 +55,7 @@ exports[`Collection component Should match snapshot 1`] = `
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href="/?category=phones"
+            href="/category/phones"
           >
             Phone
           </a>
@@ -65,7 +65,7 @@ exports[`Collection component Should match snapshot 1`] = `
         >
           <a
             class="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100"
-            href="/?category=laptops"
+            href="/category/laptops"
           >
             Laptop
           </a>
