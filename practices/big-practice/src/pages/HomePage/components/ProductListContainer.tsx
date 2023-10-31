@@ -1,4 +1,5 @@
 // Libs
+import { useCallback } from 'react';
 import useSWR from 'swr';
 import { useParams, useSearchParams } from 'react-router-dom';
 
@@ -15,18 +16,21 @@ export const ProductListContainer = () => {
   const { category = '' } = useParams();
 
   const searchKeyword = searchParams.get('search');
-  const standingPage = searchParams.get('page');
+  const standingPage = searchParams.get('page') || '';
   const sort = searchParams.get('sort') || '';
 
   const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
 
   const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true });
-  const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const target = e.target as HTMLButtonElement;
-    const standingPage = target.value;
 
-    setSearchParams({ category, page: standingPage, sort });
-  };
+  const handleChangePagination = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      searchParams.set('page', e.currentTarget.value);
+
+      setSearchParams(searchParams);
+    },
+    [searchParams],
+  );
 
   return (
     <>
