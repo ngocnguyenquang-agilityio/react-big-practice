@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 
 // Components
 import Collection from '@components/Collection';
+import SortProducts from './components/SortProducts';
 
 // Layouts
 import HomeLayout from '@layouts/HomeLayout';
@@ -14,9 +15,16 @@ import ProductListContainer from './ProductListContainer';
 import { CATEGORIES } from '@constants';
 
 const HomePage = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const category = searchParams.get('category') || '';
-  const sort = searchParams.get('sort') || '';
+
+  const sortAscProduct = () => {
+    setSearchParams({ sort: 'low-to-high' });
+  };
+
+  const sortDescProduct = () => {
+    setSearchParams({ sort: 'high-to-low' });
+  };
 
   return (
     <HomeLayout
@@ -28,13 +36,9 @@ const HomePage = () => {
         />
       }
       rightAside={
-        <Collection
-          list={[
-            { value: 'low-to-high', label: 'Price: Low to High' },
-            { value: 'high-to-low', label: 'Price: High to Low' },
-          ]}
-          title='Sort by'
-          selected={sort}
+        <SortProducts
+          sortAscProduct={sortAscProduct}
+          sortDescProduct={sortDescProduct}
         />
       }
     >

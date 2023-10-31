@@ -21,7 +21,6 @@ export const ProductListContainer = () => {
   const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
 
   const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true });
-
   const handleChangePagination = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
     const standingPage = target.value;
@@ -39,7 +38,7 @@ export const ProductListContainer = () => {
           sortBy={sort}
         />
       )}
-      {!searchKeyword && (
+      {data?.products.length !== 9 || !searchKeyword && (
         <Pagination
           totalPages={4}
           standingPage={standingPage || '1'}

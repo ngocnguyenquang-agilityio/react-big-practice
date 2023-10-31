@@ -32,6 +32,7 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
         <div className='flex w-full md:w-1/3 items-center'>
           <Link
             to='/'
+            reloadDocument
             className='mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6'
           >
             <LogoIcon />
