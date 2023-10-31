@@ -1,3 +1,8 @@
+// Libs
+import { useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
+// Components
 import { Button } from '@components/Button';
 
 type SortProducts = {
@@ -18,7 +23,7 @@ const SortProducts = ({ sortCondition = [], selectingItem, onSelectSort }: SortP
           >
             <Button
               variant='link'
-              className='w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100'
+              className='font-normal p-0 text-sm underline-offset-4 hover:underline hover:text-neutral-100'
               value={item.value}
               onClick={onSelectSort}
             >
@@ -31,4 +36,20 @@ const SortProducts = ({ sortCondition = [], selectingItem, onSelectSort }: SortP
   );
 };
 
-export default SortProducts;
+const SortProductContainer = ({ sortConditions = [] }: { sortConditions: Array<{ label: string; value: string }> }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const sortBy = searchParams.get('sort') || '';
+
+  const handleSelectSort = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    setSearchParams({ sort: e.currentTarget.value });
+  }, []);
+  return (
+    <SortProducts
+      selectingItem={sortBy}
+      sortCondition={sortConditions}
+      onSelectSort={handleSelectSort}
+    />
+  );
+};
+
+export default SortProductContainer;

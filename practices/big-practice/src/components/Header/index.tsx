@@ -12,6 +12,9 @@ import SearchInput from '@components/SearchInput';
 // Helpers
 import { debounce } from '@helpers/utils';
 
+// Constants
+import { APP_ROUTERS } from '@constants';
+
 const Header = ({ toggleCart }: { toggleCart: () => void }) => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -32,7 +35,7 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
       <div className='flex w-full items-center'>
         <div className='flex w-full md:w-1/3 items-center'>
           <Link
-            to='/'
+            to={APP_ROUTERS.HOMEPAGE}
             reloadDocument
             className='mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6'
           >
@@ -41,19 +44,19 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
           </Link>
           <ul className='gap-6 text-sm md:flex md:items-center'>
             <Link
-              to='/'
+              to={APP_ROUTERS.HOMEPAGE}
               className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
             >
               All
             </Link>
             <Link
-              to='/category/smartphones'
+              to={APP_ROUTERS.PHONE}
               className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
             >
               Phone
             </Link>
             <Link
-              to='/category/laptops'
+              to={APP_ROUTERS.LAPTOP}
               className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
             >
               Laptop

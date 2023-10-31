@@ -1,4 +1,5 @@
 // Libs
+import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { screen, render, RenderResult } from '@testing-library/react';
 
@@ -16,8 +17,8 @@ describe('Collection component', () => {
     comp = render(
       <MemoryRouter>
         <Collection
-          list={mockListCollection}
-          title='Collection'
+          categories={mockListCollection}
+          selectingItem='smartphones'
         />
       </MemoryRouter>,
     );

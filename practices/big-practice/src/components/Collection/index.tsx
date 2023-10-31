@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 // Types
 import { ICategoryList } from '@interfaces';
 
+// Helpers
+import { isEmpty } from '@helpers/utils';
+
 const Collection = ({ categories = [], selectingItem }: ICategoryList): JSX.Element => {
   return (
     <nav>
@@ -18,7 +21,7 @@ const Collection = ({ categories = [], selectingItem }: ICategoryList): JSX.Elem
             key={item.value}
           >
             <Link
-              to={item.value ? '/' : `/category/${item.value}`}
+              to={isEmpty(item.value) ? '/' : `/category/${item.value}`}
               className='w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100'
             >
               {item.label}

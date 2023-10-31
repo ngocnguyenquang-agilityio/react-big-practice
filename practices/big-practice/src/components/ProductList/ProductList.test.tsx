@@ -35,7 +35,12 @@ const mockProducts = [
 describe('ProductList Component', () => {
   let comp: RenderResult;
   beforeEach(() => {
-    comp = render(<ProductList products={mockProducts} />);
+    comp = render(
+      <ProductList
+        products={mockProducts}
+        sortBy='low-to-high'
+      />,
+    );
   });
 
   test('Should render successfully', () => {

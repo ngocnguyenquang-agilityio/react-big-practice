@@ -1,48 +1,21 @@
-// Libs
-import { useCallback } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
-
 // Components
-import Collection from '@components/Collection';
-import SortProducts from './components/SortProducts';
+import SortProducts from './components/SortProductsContainer';
 
 // Layouts
 import HomeLayout from '@layouts/HomeLayout';
 
 // Types
-import ProductListContainer from './ProductListContainer';
+import ProductListContainer from './components/ProductListContainer';
 
 // Constants
 import { CATEGORIES, SORT_CONDITIONS } from '@constants';
+import CategoryListContainer from './components/CategoryListContainer';
 
 const HomePage = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const sort = searchParams.get('sort') || '';
-  const { category = '' } = useParams();
-
-  const handleSelectSort = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    const target = e.target as HTMLButtonElement;
-    const sortValue = target.value;
-
-    setSearchParams({ sort: sortValue });
-  }, []);
-
   return (
     <HomeLayout
-      leftAside={
-        <Collection
-          categories={CATEGORIES}
-          selectingItem={category}
-        />
-      }
-      rightAside={
-        <SortProducts
-          sortCondition={SORT_CONDITIONS}
-          selectingItem={sort}
-          onSelectSort={handleSelectSort}
-        />
-      }
+      leftAside={<CategoryListContainer categories={CATEGORIES} />}
+      rightAside={<SortProducts sortConditions={SORT_CONDITIONS} />}
     >
       <div className='relative'>
         <ProductListContainer />

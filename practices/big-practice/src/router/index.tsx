@@ -23,11 +23,11 @@ export const router = createBrowserRouter([
         element: <ProductDetailsPage />,
       },
       {
-        path: 'category',
+        path: APP_ROUTERS.CATEGORY,
         element: <HomePage />,
       },
       {
-        path: 'category/:category',
+        path: `${APP_ROUTERS.CATEGORY}/:category`,
         element: <HomePage />,
       },
     ],
