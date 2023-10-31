@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
 import Collection from '.';
+import { MemoryRouter } from 'react-router-dom';
 
 const mockListCollection = [
   { value: 'all', label: 'All' },
@@ -12,6 +13,13 @@ const mockListCollection = [
 const meta = {
   title: 'Components/Collection',
   component: Collection,
+  decorators: [
+    (Story) => (
+      <MemoryRouter initialEntries={['/']}>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 } satisfies Meta<typeof Collection>;
 
 export default meta;
