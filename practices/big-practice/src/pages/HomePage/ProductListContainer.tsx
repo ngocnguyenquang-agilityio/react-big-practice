@@ -1,6 +1,6 @@
 // Libs
 import useSWR from 'swr';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 // Components
 import Pagination from '@components/Pagination';
@@ -12,11 +12,12 @@ import { buildQueryProductEndpoint } from '@helpers/products';
 
 export const ProductListContainer = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { category = '' } = useParams();
+  // const { category = '' } = useParams();
 
   const searchKeyword = searchParams.get('search');
   const standingPage = searchParams.get('page');
   const sort = searchParams.get('sort') || '';
+  const category = searchParams.get('category') || '';
 
   const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
 
@@ -38,13 +39,14 @@ export const ProductListContainer = () => {
           sortBy={sort}
         />
       )}
-      {data?.products.length !== 9 || !searchKeyword && (
-        <Pagination
-          totalPages={4}
-          standingPage={standingPage || '1'}
-          handleChangePagination={handleChangePagination}
-        />
-      )}
+      {data?.products.length !== 9 ||
+        (!searchKeyword && (
+          <Pagination
+            totalPages={4}
+            standingPage={standingPage || '1'}
+            handleChangePagination={handleChangePagination}
+          />
+        ))}
     </>
   );
 };

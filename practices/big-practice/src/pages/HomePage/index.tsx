@@ -1,5 +1,6 @@
 // Libs
-import { useSearchParams } from 'react-router-dom';
+import { useCallback } from 'react';
+import { useParams, useSearchParams } from 'react-router-dom';
 
 // Components
 import Collection from '@components/Collection';
@@ -12,33 +13,34 @@ import HomeLayout from '@layouts/HomeLayout';
 import ProductListContainer from './ProductListContainer';
 
 // Constants
-import { CATEGORIES } from '@constants';
+import { CATEGORIES, SORT_CONDITIONS } from '@constants';
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const category = searchParams.get('category') || '';
+  const sort = searchParams.get('sort') || '';
+  const { category = '' } = useParams();
 
-  const sortAscProduct = () => {
-    setSearchParams({ sort: 'low-to-high' });
-  };
+  const handleSelectSort = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const target = e.target as HTMLButtonElement;
+    const sortValue = target.value;
 
-  const sortDescProduct = () => {
-    setSearchParams({ sort: 'high-to-low' });
-  };
+    setSearchParams({ sort: sortValue });
+  }, []);
 
   return (
     <HomeLayout
       leftAside={
         <Collection
-          list={CATEGORIES}
-          title='Collection'
-          selected={category}
+          categories={CATEGORIES}
+          selectingItem={category}
         />
       }
       rightAside={
         <SortProducts
-          sortAscProduct={sortAscProduct}
-          sortDescProduct={sortDescProduct}
+          sortCondition={SORT_CONDITIONS}
+          selectingItem={sort}
+          onSelectSort={handleSelectSort}
         />
       }
     >

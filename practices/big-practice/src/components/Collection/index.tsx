@@ -2,23 +2,23 @@
 import { Link } from 'react-router-dom';
 
 // Types
-import { ICollection } from '@interfaces';
+import { ICategoryList } from '@interfaces';
 
-const Collection = ({ title, list, selected }: ICollection): JSX.Element => {
+const Collection = ({ categories = [], selectingItem }: ICategoryList): JSX.Element => {
   return (
     <nav>
-      <h3 className='text-xs text-neutral-400 md:block'>{title}</h3>
+      <h3 className='text-xs text-neutral-400 md:block'>Category</h3>
       <ul
         className='block'
         data-testid='collection'
       >
-        {list.map((item) => (
+        {categories.map((item) => (
           <li
-            className={`mt-2 flex text-white ${selected === item.value ? 'font-bold underline' : ''}`}
+            className={`mt-2 flex text-white ${selectingItem === item.value ? 'font-bold underline' : ''}`}
             key={item.value}
           >
             <Link
-              to={`/category/${item.value}`}
+              to={item.value ? '/' : `/category/${item.value}`}
               className='w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100'
             >
               {item.label}

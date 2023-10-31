@@ -1,5 +1,9 @@
 export const CATEGORIES = [
   {
+    value: '',
+    label: 'All',
+  },
+  {
     value: 'smartphones',
     label: 'Phones',
   },

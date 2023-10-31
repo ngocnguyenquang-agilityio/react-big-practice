@@ -1,6 +1,6 @@
 // Libs
 import { ChangeEvent, useCallback } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 // Icons
 import { CartIcon, LogoIcon } from '@assets/icons';
@@ -13,7 +13,8 @@ import SearchInput from '@components/SearchInput';
 import { debounce } from '@helpers/utils';
 
 const Header = ({ toggleCart }: { toggleCart: () => void }) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   const searchKeyword = searchParams.get('search');
 
@@ -21,7 +22,7 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
     e.preventDefault();
     const inputValue = e.target.value;
 
-    setSearchParams({ search: inputValue.trim() });
+    navigate(`/?search=${inputValue.trim()}`);
   }, []);
 
   const searchWithDebounce = debounce(handleSearch, 1000);
@@ -46,13 +47,13 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
               All
             </Link>
             <Link
-              to='?category=smartphones'
+              to='/category/smartphones'
               className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
             >
               Phone
             </Link>
             <Link
-              to='?category=laptops'
+              to='/category/laptops'
               className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
             >
               Laptop
