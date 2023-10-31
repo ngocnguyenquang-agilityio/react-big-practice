@@ -1,12 +1,10 @@
 // Libs
+import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { screen, render, RenderResult } from '@testing-library/react';
 
 // Components
 import Collection from '.';
-
-// Types
-import { COLLECTION_TYPE } from '@interfaces';
 
 const mockListCollection = [
   { value: 'phones', label: 'Phone' },
@@ -19,9 +17,8 @@ describe('Collection component', () => {
     comp = render(
       <MemoryRouter>
         <Collection
-          list={mockListCollection}
-          title='Collection'
-          type={COLLECTION_TYPE.CATEGORY}
+          categories={mockListCollection}
+          selectingItem='smartphones'
         />
       </MemoryRouter>,
     );

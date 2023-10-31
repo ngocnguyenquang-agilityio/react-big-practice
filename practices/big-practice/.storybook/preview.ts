@@ -13,17 +13,17 @@ const preview: Preview = {
     backgrounds: {
       default: 'custom',
       values: [
-        { 
-          name: 'custom', 
-          value: '#171717' 
+        {
+          name: 'custom',
+          value: '#171717',
         },
         {
           name: 'white',
-          value: '#FFF'
-        }
+          value: '#FFF',
+        },
       ],
     },
-  },
+  }
 };
 
 export default preview;

@@ -1,4 +1,7 @@
 export const APP_ROUTERS = {
   HOMEPAGE: '/',
-  DETAILSPAGE: '/details'
+  DETAILS_PAGE: '/details',
+  CATEGORY: '/category',
+  PHONE: '/category/smartphones',
+  LAPTOP: '/category/laptops',
 };
