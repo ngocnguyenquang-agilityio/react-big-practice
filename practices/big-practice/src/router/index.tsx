@@ -6,9 +6,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import { APP_ROUTERS } from '@constants';
 
 // Components
-import Main from '@pages/Main';
-const HomePage = lazy(() => import('@pages/HomePage'));
-const ProductDetailsPage = lazy(() => import('@pages/ProductDetailsPage'));
+import Main from './Main';
+const HomePage = lazy(() => import('./HomePage'));
+const ProductDetailsPage = lazy(() => import('./ProductDetailsPage'));
 
 export const router = createBrowserRouter([
   {
