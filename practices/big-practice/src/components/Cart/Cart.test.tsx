@@ -1,26 +1,10 @@
-import { render } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 // Components
 import Cart, { ICart } from '.';
 
-const mockCart = [
-  {
-    id: 1,
-    title: 'Product Detail',
-    price: 10,
-    thumbnail:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-    category: 'Product',
-  },
-  {
-    id: 2,
-    title: 'Product Detail 2',
-    price: 20,
-    thumbnail:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-    category: 'Product',
-  },
-];
+// Mocks
+import { mockCart } from '@mocks';
 
 const props: ICart = {
   handleToggleCart: jest.fn(),
@@ -36,5 +20,24 @@ describe('Cart Component', () => {
   test('Should match snapshot', () => {
     const comp = render(<Cart {...props} />);
     expect(comp).toMatchSnapshot();
+  });
+
+  test('Should render empty cart if no data', () => {
+    const mockFunc = jest.fn();
+    render(
+      <Cart
+        cart={[]}
+        handleToggleCart={mockFunc}
+      />,
+    );
+    const emptyCart = screen.queryByText('Your cart is empty.');
+    expect(emptyCart).toBeTruthy();
+  });
+
+  test('Should call handleToggleCart', () => {
+    render(<Cart {...props} />);
+    const button = screen.getByTestId('close-cart-btn');
+    fireEvent.click(button);
+    expect(props.handleToggleCart).toBeCalledTimes(1);
   });
 });

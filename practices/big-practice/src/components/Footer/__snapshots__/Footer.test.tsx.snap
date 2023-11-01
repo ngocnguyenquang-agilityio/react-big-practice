@@ -11,61 +11,59 @@ exports[`Footer component Should match snapshot 1`] = `
         <div
           class="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t px-6 py-12 text-sm border-neutral-700 md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0"
         >
-          <div>
-            <button
-              class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 h-11 w-11 rounded-md"
+          <button
+            class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 h-11 w-11 rounded-md"
+          >
+            <div
+              class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[40px] w-[40px] rounded-xl"
             >
-              <div
-                class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[40px] w-[40px] rounded-xl"
+              <svg
+                aria-label="Acme Store logo"
+                class="h-5 w-5 fill-white h-[16px] w-[16px]"
+                name="logo-icon"
+                viewBox="0 0 32 28"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  aria-label="Acme Store logo"
-                  class="h-5 w-5 fill-white h-[16px] w-[16px]"
-                  name="logo-icon"
-                  viewBox="0 0 32 28"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21.5758 9.75769L16 0L0 28H11.6255L21.5758 9.75769Z"
-                  />
-                  <path
-                    d="M26.2381 17.9167L20.7382 28H32L26.2381 17.9167Z"
-                  />
-                </svg>
-              </div>
-            </button>
-          </div>
-          <div>
-            <nav>
-              <ul>
-                <li
-                  class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-                >
-                  Home
-                </li>
-                <li
-                  class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-                >
-                  About
-                </li>
-                <li
-                  class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-                >
-                  Terms & Conditions
-                </li>
-                <li
-                  class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-                >
-                  Privacy Policy
-                </li>
-                <li
-                  class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-                >
-                  FAQ
-                </li>
-              </ul>
-            </nav>
-          </div>
+                <path
+                  d="M21.5758 9.75769L16 0L0 28H11.6255L21.5758 9.75769Z"
+                />
+                <path
+                  d="M26.2381 17.9167L20.7382 28H32L26.2381 17.9167Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <nav>
+            <ul
+              data-testid="footer-items"
+            >
+              <li
+                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+              >
+                Home
+              </li>
+              <li
+                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+              >
+                About
+              </li>
+              <li
+                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+              >
+                Terms & Conditions
+              </li>
+              <li
+                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+              >
+                Privacy Policy
+              </li>
+              <li
+                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+              >
+                FAQ
+              </li>
+            </ul>
+          </nav>
           <div
             class="md:ml-auto"
           >
@@ -98,61 +96,59 @@ exports[`Footer component Should match snapshot 1`] = `
       <div
         class="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t px-6 py-12 text-sm border-neutral-700 md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0"
       >
-        <div>
-          <button
-            class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 h-11 w-11 rounded-md"
+        <button
+          class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 h-11 w-11 rounded-md"
+        >
+          <div
+            class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[40px] w-[40px] rounded-xl"
           >
-            <div
-              class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[40px] w-[40px] rounded-xl"
+            <svg
+              aria-label="Acme Store logo"
+              class="h-5 w-5 fill-white h-[16px] w-[16px]"
+              name="logo-icon"
+              viewBox="0 0 32 28"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                aria-label="Acme Store logo"
-                class="h-5 w-5 fill-white h-[16px] w-[16px]"
-                name="logo-icon"
-                viewBox="0 0 32 28"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.5758 9.75769L16 0L0 28H11.6255L21.5758 9.75769Z"
-                />
-                <path
-                  d="M26.2381 17.9167L20.7382 28H32L26.2381 17.9167Z"
-                />
-              </svg>
-            </div>
-          </button>
-        </div>
-        <div>
-          <nav>
-            <ul>
-              <li
-                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-              >
-                Home
-              </li>
-              <li
-                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-              >
-                About
-              </li>
-              <li
-                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-              >
-                Terms & Conditions
-              </li>
-              <li
-                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-              >
-                Privacy Policy
-              </li>
-              <li
-                class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
-              >
-                FAQ
-              </li>
-            </ul>
-          </nav>
-        </div>
+              <path
+                d="M21.5758 9.75769L16 0L0 28H11.6255L21.5758 9.75769Z"
+              />
+              <path
+                d="M26.2381 17.9167L20.7382 28H32L26.2381 17.9167Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <nav>
+          <ul
+            data-testid="footer-items"
+          >
+            <li
+              class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+            >
+              Home
+            </li>
+            <li
+              class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+            >
+              About
+            </li>
+            <li
+              class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+            >
+              Terms & Conditions
+            </li>
+            <li
+              class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+            >
+              Privacy Policy
+            </li>
+            <li
+              class="block p-2 text-lg underline-offset-4 hover:underline hover:text-neutral-300 md:inline-block md:text-sm cursor-pointer"
+            >
+              FAQ
+            </li>
+          </ul>
+        </nav>
         <div
           class="md:ml-auto"
         >

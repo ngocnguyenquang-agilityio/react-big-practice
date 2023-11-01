@@ -36,14 +36,15 @@ exports[`Header component Should match snapshot 1`] = `
                   />
                 </svg>
               </div>
-              <a
+              <span
                 class="ml-2 text-sm font-medium uppercase text-white"
               >
                 acme store
-              </a>
+              </span>
             </a>
             <ul
               class="gap-6 text-sm md:flex md:items-center"
+              data-testid="header-items"
             >
               <a
                 class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
@@ -53,13 +54,13 @@ exports[`Header component Should match snapshot 1`] = `
               </a>
               <a
                 class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
-                href="/?category=smartphones"
+                href="/category/smartphones"
               >
                 Phone
               </a>
               <a
                 class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
-                href="/?category=laptops"
+                href="/category/laptops"
               >
                 Laptop
               </a>
@@ -169,14 +170,15 @@ exports[`Header component Should match snapshot 1`] = `
                 />
               </svg>
             </div>
-            <a
+            <span
               class="ml-2 text-sm font-medium uppercase text-white"
             >
               acme store
-            </a>
+            </span>
           </a>
           <ul
             class="gap-6 text-sm md:flex md:items-center"
+            data-testid="header-items"
           >
             <a
               class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
@@ -186,13 +188,13 @@ exports[`Header component Should match snapshot 1`] = `
             </a>
             <a
               class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
-              href="/?category=smartphones"
+              href="/category/smartphones"
             >
               Phone
             </a>
             <a
               class="underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer"
-              href="/?category=laptops"
+              href="/category/laptops"
             >
               Laptop
             </a>

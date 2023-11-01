@@ -13,9 +13,9 @@ import SearchInput from '@components/SearchInput';
 import { debounce } from '@helpers/utils';
 
 // Constants
-import { APP_ROUTERS } from '@constants';
+import { APP_ROUTERS, headerItems } from '@constants';
 
-const Header = ({ toggleCart }: { toggleCart: () => void }) => {
+const Header = ({ onToggleCart }: { onToggleCart: () => void }) => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -40,27 +40,21 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
             className='mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6'
           >
             <LogoIcon />
-            <a className='ml-2 text-sm font-medium uppercase text-white'>acme store</a>
+            <span className='ml-2 text-sm font-medium uppercase text-white'>acme store</span>
           </Link>
-          <ul className='gap-6 text-sm md:flex md:items-center'>
-            <Link
-              to={APP_ROUTERS.HOMEPAGE}
-              className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
-            >
-              All
-            </Link>
-            <Link
-              to={APP_ROUTERS.PHONE}
-              className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
-            >
-              Phone
-            </Link>
-            <Link
-              to={APP_ROUTERS.LAPTOP}
-              className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
-            >
-              Laptop
-            </Link>
+          <ul
+            data-testid='header-items'
+            className='gap-6 text-sm md:flex md:items-center'
+          >
+            {headerItems.map((item) => (
+              <Link
+                to={item.url}
+                key={item.url}
+                className='underline-offset-4 hover:underline text-neutral-400 hover:text-neutral-300 cursor-pointer'
+              >
+                {item.label}
+              </Link>
+            ))}
           </ul>
         </div>
         <div className='justify-center md:flex md:w-1/3'>
@@ -75,7 +69,7 @@ const Header = ({ toggleCart }: { toggleCart: () => void }) => {
           <Button
             variant='outline'
             size='icon'
-            onClick={toggleCart}
+            onClick={onToggleCart}
           >
             <CartIcon />
           </Button>

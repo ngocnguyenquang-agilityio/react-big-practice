@@ -1,36 +1,10 @@
-import { RenderResult, render } from '@testing-library/react';
+import { RenderResult, render, screen } from '@testing-library/react';
 
 // Component
 import ProductList from '.';
 
-const mockProducts = [
-  {
-    id: 1,
-    title: 'Product 1',
-    price: 20,
-    category: 'phone',
-    images: [
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-    ],
-    thumbnail:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-  },
-  {
-    id: 2,
-    title: 'Product 2',
-    price: 20,
-    category: 'phone',
-    images: [
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-    ],
-    thumbnail:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-  },
-];
+// Mocks
+import { mockProducts } from '@mocks';
 
 describe('ProductList Component', () => {
   let comp: RenderResult;
@@ -49,5 +23,10 @@ describe('ProductList Component', () => {
 
   test('Should match snapshot', () => {
     expect(comp).toMatchSnapshot();
+  });
+
+  test('Should render correct number of items in list', async () => {
+    const items = await screen.getByTestId('product-list');
+    expect(items.children).toHaveLength(3);
   });
 });

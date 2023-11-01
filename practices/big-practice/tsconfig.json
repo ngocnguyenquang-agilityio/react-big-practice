@@ -34,11 +34,12 @@
       "@hooks/*": ["./src/hooks/*"],
       "@lib/*": ["./src/lib/*"],
       "@interfaces": ["./src/interfaces"],
-      "@helpers/*": ["./src/helpers/*"]
+      "@helpers/*": ["./src/helpers/*"],
+      "@mocks": ["./src/mocks"]
     },
     "esModuleInterop": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx"]
+  "exclude": ["src/**/*.stories.tsx"]
 }

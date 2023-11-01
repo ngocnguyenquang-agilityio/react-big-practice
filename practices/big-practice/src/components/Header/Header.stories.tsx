@@ -1,9 +1,12 @@
+// Libs
+import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
+
 // Types
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
 import Header from '.';
-import { MemoryRouter } from 'react-router-dom';
 
 export default {
   title: 'Components/Header',
@@ -21,6 +24,6 @@ type Story = StoryObj;
 
 export const Default: Story = {
   args: {
-    toggleCart: () => {},
+    onToggleCart: () => {},
   },
 };

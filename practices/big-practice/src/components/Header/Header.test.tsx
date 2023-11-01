@@ -1,16 +1,14 @@
 // Libs
-import React from 'react';
-import { RenderResult, render } from '@testing-library/react';
+import { RenderResult, fireEvent, render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 
 // Components
 import Header from '.';
-import { BrowserRouter } from 'react-router-dom';
-
-// TODO: Update props and more test case when implement functions
 
 const props = {
-  toggleCart: jest.fn(),
+  onToggleCart: jest.fn(),
 };
+
 describe('Header component', () => {
   let comp: RenderResult;
   beforeEach(() => {
@@ -27,5 +25,16 @@ describe('Header component', () => {
 
   test('Should match snapshot', () => {
     expect(comp).toMatchSnapshot();
+  });
+
+  test('Should render number of footer items correctly', async () => {
+    const items = await screen.getByTestId('header-items');
+    expect(items.children).toHaveLength(3);
+  });
+
+  test('Should call toggleCart', () => {
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
+    expect(props.onToggleCart).toBeCalledTimes(1);
   });
 });

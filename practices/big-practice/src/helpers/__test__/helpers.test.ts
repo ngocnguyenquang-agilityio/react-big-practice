@@ -1,6 +1,6 @@
 // Helpers
 import { buildQueryProductEndpoint } from '@helpers/products';
-import { convertToSkip, isEmpty } from '@helpers/utils';
+import { convertToSkip, debounce, isEmpty } from '@helpers/utils';
 
 describe('Test buildQueryProductAPIEndpoint functions', () => {
   test('buildQueryProductAPIEndpoint without value', () => {
@@ -78,4 +78,15 @@ describe('Test isEmpty function', () => {
   });
 });
 
-// TODO: UT for debounce function
+describe('Test debounce function', () => {
+  const mockFn = jest.fn();
+  const debounceFn = debounce(mockFn, 1000);
+
+  jest.useFakeTimers();
+  debounceFn();
+  expect(mockFn).not.toHaveBeenCalled();
+
+  jest.runAllTimers();
+  expect(mockFn).toHaveBeenCalledTimes(1);
+  jest.useRealTimers();
+});
