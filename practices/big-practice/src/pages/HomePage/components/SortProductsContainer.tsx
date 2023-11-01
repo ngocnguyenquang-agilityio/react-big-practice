@@ -11,11 +11,14 @@ type SortProducts = {
   onSelectSort: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const SortProducts = ({ sortCondition = [], selectingItem, onSelectSort }: SortProducts): JSX.Element => {
+export const SortProducts = ({ sortCondition = [], selectingItem, onSelectSort }: SortProducts): JSX.Element => {
   return (
     <nav>
       <h3 className='text-xs text-neutral-400 md:block'>Sort By</h3>
-      <ul className='block'>
+      <ul
+        className='block'
+        data-testid='sort-products'
+      >
         {sortCondition.map((item) => (
           <li
             className={`mt-2 flex text-white ${item.value === selectingItem ? 'font-bold underline' : ''}`}

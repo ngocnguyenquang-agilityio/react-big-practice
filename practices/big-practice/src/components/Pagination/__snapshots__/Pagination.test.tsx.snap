@@ -10,6 +10,7 @@ exports[`Pagination Component Should match snapshot 1`] = `
       >
         <ul
           class="inline-flex -space-x-px text-md gap-4"
+          data-testid="pagination"
         >
           <li>
             <button
@@ -53,6 +54,7 @@ exports[`Pagination Component Should match snapshot 1`] = `
     >
       <ul
         class="inline-flex -space-x-px text-md gap-4"
+        data-testid="pagination"
       >
         <li>
           <button

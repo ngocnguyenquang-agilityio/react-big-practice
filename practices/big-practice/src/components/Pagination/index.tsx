@@ -10,7 +10,10 @@ interface IPagination {
 const Pagination = ({ totalPages, standingPage, handleChangePagination }: IPagination) => {
   return (
     <nav className='pt-4 flex justify-end'>
-      <ul className='inline-flex -space-x-px text-md gap-4'>
+      <ul
+        data-testid='pagination'
+        className='inline-flex -space-x-px text-md gap-4'
+      >
         {Array.apply(0, new Array(totalPages)).map((_, idx) => {
           const currentPage = idx + 1;
           const isActivePage = currentPage.toString() === standingPage;

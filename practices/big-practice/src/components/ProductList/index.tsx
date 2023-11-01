@@ -6,7 +6,10 @@ import ProductCard from '@components/ProductCard';
 
 const ProductList = ({ products = [], sortBy }: { products: IProduct[]; sortBy: string }) => {
   return (
-    <ul className='grid grid-flow-row gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+    <ul
+      data-testid='product-list'
+      className='grid grid-flow-row gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+    >
       {products
         .sort((a, b): any => {
           if (sortBy === 'low-to-high') {
