@@ -1,4 +1,5 @@
 // Libs
+import { ErrorBoundary } from 'react-error-boundary';
 import { RouterProvider } from 'react-router-dom';
 import { SWRConfig } from 'swr';
 
@@ -10,9 +11,11 @@ import { router } from './router';
 
 function App() {
   return (
-    <SWRConfig value={{ provider: () => new Map(), fetcher }}>
-      <RouterProvider router={router} />
-    </SWRConfig>
+    <ErrorBoundary fallback={<div>Something wrong</div>}>
+      <SWRConfig value={{ provider: () => new Map(), fetcher }}>
+        <RouterProvider router={router} />
+      </SWRConfig>
+    </ErrorBoundary>
   );
 }
 
