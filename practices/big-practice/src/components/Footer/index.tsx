@@ -1,3 +1,6 @@
+// Libs
+import { memo } from 'react';
+
 // Icons
 import { LogoIcon } from '@assets/icons';
 
@@ -7,7 +10,7 @@ import { Button } from '@components/Button';
 // Constants
 import { footerItems } from '@constants';
 
-const Footer = (): JSX.Element => {
+const Footer = memo((): JSX.Element => {
   return (
     <footer className='text-sm text-neutral-400'>
       <div className='mx-auto flex w-full max-w-7xl flex-col gap-6 border-t px-6 py-12 text-sm border-neutral-700 md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0'>
@@ -41,6 +44,6 @@ const Footer = (): JSX.Element => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;

@@ -1,5 +1,5 @@
 // Libs
-import { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 // Components
@@ -11,7 +11,7 @@ type SortProducts = {
   onSelectSort: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export const SortProducts = ({ sortCondition = [], selectingItem, onSelectSort }: SortProducts): JSX.Element => {
+export const SortProducts = memo(({ sortCondition = [], selectingItem, onSelectSort }: SortProducts): JSX.Element => {
   return (
     <nav>
       <h3 className='text-xs text-neutral-400 md:block'>Sort By</h3>
@@ -37,7 +37,7 @@ export const SortProducts = ({ sortCondition = [], selectingItem, onSelectSort }
       </ul>
     </nav>
   );
-};
+});
 
 const SortProductContainer = ({ sortConditions = [] }: { sortConditions: Array<{ label: string; value: string }> }) => {
   const [searchParams, setSearchParams] = useSearchParams();

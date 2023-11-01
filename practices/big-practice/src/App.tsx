@@ -1,5 +1,4 @@
 // Libs
-import { Suspense } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { SWRConfig } from 'swr';
 

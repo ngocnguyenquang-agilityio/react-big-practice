@@ -1,5 +1,5 @@
 // Libs
-import { ChangeEvent, useCallback } from 'react';
+import { ChangeEvent, memo, useCallback } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 // Icons
@@ -15,7 +15,7 @@ import { debounce } from '@helpers/utils';
 // Constants
 import { APP_ROUTERS, headerItems } from '@constants';
 
-const Header = ({ onToggleCart }: { onToggleCart: () => void }) => {
+const Header = memo(({ onToggleCart }: { onToggleCart: () => void }) => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -77,6 +77,6 @@ const Header = ({ onToggleCart }: { onToggleCart: () => void }) => {
       </div>
     </header>
   );
-};
+});
 
 export default Header;
