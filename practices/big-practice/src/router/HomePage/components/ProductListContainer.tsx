@@ -1,7 +1,7 @@
 // Libs
 import { useCallback } from 'react';
 import useSWR from 'swr';
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 
 // Components
 import Pagination from '@components/Pagination';
@@ -14,17 +14,15 @@ import { buildQueryProductEndpoint } from '@helpers/products';
 export const ProductListContainer = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { category = '' } = useParams();
-  const { product } = useParams();
 
   const searchKeyword = searchParams.get('search');
   const standingPage = searchParams.get('page') || '';
   const sort = searchParams.get('sort') || '';
   // const product = searchParams.get('productId') || '';
 
-  const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: product });
+  const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category });
 
   const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true });
-  console.log('endpoint', product);
 
   const handleChangePagination = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -35,12 +33,6 @@ export const ProductListContainer = () => {
     [searchParams],
   );
 
-  const handleClickCard = (e) => {
-    searchParams.set('product', e.currentTarget.value.toString());
-    setSearchParams(searchParams);
-    console.log(product);
-  };
-
   return (
     <>
       {isLoading ? (
@@ -49,7 +41,6 @@ export const ProductListContainer = () => {
         <ProductList
           products={data?.products || []}
           sortBy={sort}
-          handleClickCard={handleClickCard}
         />
       )}
       {data?.products.length !== 9 ||
