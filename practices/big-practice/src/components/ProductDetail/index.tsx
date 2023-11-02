@@ -29,7 +29,7 @@ const ProductDetail = ({ product }: { product: IProduct }) => {
       </div>
       <div className='basis-full lg:basis-2/6'>
         <div className='mb-6 flex flex-col border-b pb-6 border-neutral-700'>
-          <h1 className='mb-2 text-5xl text-white font-medium'>Acme Circles T-Shirt</h1>
+          <h1 className='mb-2 text-5xl text-white font-medium'>{product.title}</h1>
           <p className='mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white'>
             {'$' + `${product.price}`}
             <span className='ml-1 inline'>USD</span>
