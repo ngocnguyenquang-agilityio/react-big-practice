@@ -1,4 +1,4 @@
-const Skeleton = ({ pagination = 1 }: { pagination: number }) => {
+const Skeleton = ({ pagination = 1 }: { pagination?: number }) => {
   const listItems = [];
 
   for (let i = 1; i <= pagination; i++) {

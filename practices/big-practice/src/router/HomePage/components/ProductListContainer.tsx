@@ -19,7 +19,7 @@ export const ProductListContainer = () => {
   const standingPage = searchParams.get('page') || '';
   const sort = searchParams.get('sort') || '';
 
-  const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category, productId: null });
+  const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category });
 
   const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true });
 

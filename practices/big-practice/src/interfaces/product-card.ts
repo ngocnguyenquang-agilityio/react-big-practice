@@ -1,3 +1,3 @@
-import { IProduct } from "./product";
+import { IProduct } from './product';
 
-export type ProductCard = Pick<IProduct, 'title' | 'thumbnail' |'price'>
+export type ProductCard = Pick<IProduct, 'title' | 'thumbnail' | 'price'>;
