@@ -1,8 +1,8 @@
-export const Icon = ({svg}: {svg: string}) => {
+export const Icon = ({ svg, name }: { svg: string; name: string }) => {
   return (
-    <img className='w-5 h-5'
+    <img
       src={svg}
-      alt='search-icon'
+      alt={name}
     />
   );
 };

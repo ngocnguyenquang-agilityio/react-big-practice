@@ -27,7 +27,10 @@ const Cart = ({ handleToggleCart, cart = [] }: ICart) => {
             size='icon'
             onClick={handleToggleCart}
           >
-            <Icon svg={crossIcon} />
+            <Icon
+              svg={crossIcon}
+              name='cross-icon'
+            />
           </Button>
         </div>
       </div>

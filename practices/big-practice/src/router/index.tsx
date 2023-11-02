@@ -8,6 +8,7 @@ import { APP_ROUTERS } from '@constants';
 // Components
 import Main from './Main';
 import { ErrorBoundary } from '@components/ErrorBoundary';
+
 const HomePage = lazy(() => import('./HomePage'));
 const ProductDetailsPage = lazy(() => import('./ProductDetailsPage'));
 

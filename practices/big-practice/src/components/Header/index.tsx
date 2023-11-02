@@ -83,7 +83,12 @@ const Header = memo(({ onToggleCart }: { onToggleCart: () => void }) => {
             size='icon'
             onClick={onToggleCart}
           >
-            <Icon svg={cartIcon} />
+            <div className='relative flex h-11 w-11 items-center justify-center rounded-md border   transition-colors border-neutral-700 text-white'>
+              <Icon
+                svg={cartIcon}
+                name='cart-icon'
+              />
+            </div>
           </Button>
         </div>
       </div>

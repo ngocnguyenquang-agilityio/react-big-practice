@@ -16,7 +16,10 @@ const CartItem = ({ product, quantity = 1, handleRemoveItemFromCart, handleDecre
           className='ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200'
           onClick={handleRemoveItemFromCart}
         >
-          <Icon svg={removeIcon} />
+          <Icon
+            svg={removeIcon}
+            name='remove-icon'
+          />
         </button>
       </div>
       <a

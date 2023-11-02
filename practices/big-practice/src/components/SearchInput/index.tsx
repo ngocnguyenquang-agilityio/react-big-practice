@@ -13,7 +13,10 @@ const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
     <div className='relative w-full'>
       <Input {...rest} />
       <div className='absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none'>
-        <Icon svg={searchIcon} />
+        <Icon
+          svg={searchIcon}
+          name='search-icon'
+        />
       </div>
     </div>
   );

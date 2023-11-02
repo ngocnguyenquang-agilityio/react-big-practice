@@ -17,7 +17,10 @@ const QuantityActionButton = ({ quantity, handleDecrease, handleIncrease }: IQua
         variant='link'
         onClick={handleDecrease}
       >
-        <Icon svg={minusIcon} />
+        <Icon
+          svg={minusIcon}
+          name='minus-icon'
+        />
       </Button>
       <p className='w-6 text-center'>
         <span className='w-full text-sm text-white'>{quantity}</span>
@@ -27,7 +30,10 @@ const QuantityActionButton = ({ quantity, handleDecrease, handleIncrease }: IQua
         variant='link'
         onClick={handleIncrease}
       >
-        <Icon svg={plusIcon} />
+        <Icon
+          svg={plusIcon}
+          name='plus-icon'
+        />
       </Button>
     </div>
   );
