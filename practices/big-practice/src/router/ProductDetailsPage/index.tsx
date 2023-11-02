@@ -14,11 +14,11 @@ const ProductDetailsPage = () => {
   const { productId } = useParams();
   const endpoint = buildQueryProductEndpoint({ productId });
 
-  const { data: product, isLoading, isValidating } = useSWR(endpoint, { keepPreviousData: true });
+  const { data: product, isLoading } = useSWR(endpoint, { keepPreviousData: true });
 
   return (
     <>
-      {isLoading || isValidating ? (
+      {isLoading ? (
         <Skeleton />
       ) : (
         <ProductDetailLayout productDetail={!isLoading && <ProductDetail product={product} />} />
