@@ -8,7 +8,7 @@ import { mockCart } from '@mocks';
 
 const props: ICart = {
   handleToggleCart: jest.fn(),
-  cart: mockCart,
+  productCartItems: mockCart,
 };
 
 describe('Cart Component', () => {
@@ -26,7 +26,7 @@ describe('Cart Component', () => {
     const mockFunc = jest.fn();
     render(
       <Cart
-        cart={[]}
+        productCartItems={[]}
         handleToggleCart={mockFunc}
       />,
     );

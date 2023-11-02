@@ -8,7 +8,7 @@ import { IProductCartItem } from '@interfaces';
 import QuantityActionButton from '@components/QuantityActionButton';
 import { Icon } from '@components/Icon';
 
-const ProductCartItem = ({ product, quantity = 1 }: IProductCartItem) => {
+const ProductCartItem = ({ product, quantity }: IProductCartItem) => {
   return (
     <div className='relative flex w-full flex-row justify-between px-1 py-4'>
       <div className='absolute z-40 -mt-2 ml-[55px]'>

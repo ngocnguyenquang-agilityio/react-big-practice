@@ -12,7 +12,7 @@ const CartBody = () => {
       <ul className='flex-grow overflow-auto py-4'>
         {cartItems.map((item) => (
           <li className='flex w-full flex-col border-b border-neutral-700'>
-            <ProductCartItem product={item.product} />
+            <ProductCartItem product={item.product} quantity={item.quantity} />
           </li>
         ))}
       </ul>

@@ -23,5 +23,6 @@ export default {
   testEnvironment: 'jest-environment-jsdom',
   transform: {
     '^.+\\.(t|j)sx?$': 'ts-jest',
+    '.+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
 };
