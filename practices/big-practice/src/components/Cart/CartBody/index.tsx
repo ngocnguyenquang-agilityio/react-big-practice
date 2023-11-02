@@ -20,7 +20,7 @@ const CartBody = () => {
         <div className='mb-3 flex items-center justify-between border-b pb-1 border-neutral-700'>
           <p>Taxes</p>
           <p className='text-right text-base text-white'>
-            $7.00
+            $0.00
             <span className='ml-1 inline'>USD</span>
           </p>
         </div>
@@ -31,7 +31,7 @@ const CartBody = () => {
         <div className='mb-3 flex items-center justify-between border-b pb-1 pt-1 border-neutral-700'>
           <p>Total</p>
           <p className='text-right text-base text-white'>
-            $7.00
+            ${cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0)}
             <span className='ml-1 inline'>USD</span>
           </p>
         </div>
