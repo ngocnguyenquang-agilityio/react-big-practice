@@ -92,7 +92,7 @@ const Header = memo(({ onToggleCart }: { onToggleCart: () => void }) => {
                 svg={cartIcon}
                 name='cart-icon'
               />
-              {cartItems ? (
+              {cartItems.length !== 0 ? (
                 <div className='absolute right-0 top-0 -mr-2 -mt-2 h-4 w-4 rounded bg-blue-600 text-[11px] font-small text-white'>
                   {cartItems.reduce((total, currentItem) => (total += currentItem.quantity), 0)}
                 </div>
