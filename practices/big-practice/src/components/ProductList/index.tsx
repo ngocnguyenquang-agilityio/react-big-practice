@@ -3,8 +3,22 @@ import { IProduct } from '@interfaces';
 
 // Components
 import ProductCard from '@components/ProductCard';
+import { Link, useNavigate } from 'react-router-dom';
 
-const ProductList = ({ products = [], sortBy }: { products: IProduct[]; sortBy: string }) => {
+const ProductList = ({
+  products = [],
+  sortBy,
+  handleClickCard,
+}: {
+  products: IProduct[];
+  sortBy: string;
+  handleClickCard: any;
+}) => {
+  // const navigate = useNavigate();
+  // const handleClickCard = (e) => {
+  //   navigate(`/product/${e.currentTarget.value.toString()}`);
+  // };
+
   return (
     <ul
       data-testid='product-list'
@@ -23,6 +37,8 @@ const ProductList = ({ products = [], sortBy }: { products: IProduct[]; sortBy: 
           <li
             className='aspect-square transition-opacity animate-fadeIn'
             key={item.id}
+            value={item.id}
+            onClick={handleClickCard}
           >
             <ProductCard
               title={item.title}
