@@ -8,11 +8,11 @@ import CartBody from '@components/Cart/CartBody';
 import { Icon } from '@components/Icon';
 
 // Types
-import { IProduct } from '@interfaces';
+import { ICartItem } from '@interfaces';
 
 export interface ICart {
   handleToggleCart: () => void;
-  cart?: IProduct[];
+  cart?: ICartItem[];
 }
 
 const Cart = ({ handleToggleCart, cart = [] }: ICart) => {

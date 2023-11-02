@@ -1,8 +1,24 @@
+// Stores
+import { useCart } from '@stores/cart';
+
 // Components
 import { Button } from '@components/Button';
+
+// Types
 import { IProduct } from '@interfaces';
 
 const ProductDetail = ({ product }: { product: IProduct }) => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart({
+        product,
+        quantity: 1,
+      });
+    }
+  };
+
   return (
     <div className='flex flex-col rounded-lg border p-8 border-neutral-800 bg-black md:p-12 lg:flex-row lg:gap-8'>
       <div className='h-full w-full basis-full lg:basis-4/6'>
@@ -35,7 +51,12 @@ const ProductDetail = ({ product }: { product: IProduct }) => {
             <span className='ml-1 inline'>USD</span>
           </p>
         </div>
-        <Button size='xl'>Add To Cart</Button>
+        <Button
+          size='xl'
+          onClick={handleAddToCart}
+        >
+          Add To Cart
+        </Button>
       </div>
     </div>
   );

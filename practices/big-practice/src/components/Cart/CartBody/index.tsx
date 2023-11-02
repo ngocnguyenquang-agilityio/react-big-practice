@@ -1,38 +1,20 @@
+// Stores
+import { useCart } from '@stores/cart';
+
 // Components
 import CartItem from '../CartItem';
 
 const CartBody = () => {
-  // TODO: Handle increase number of item by 1
-  const handleIncrease = () => {};
-
-  // TODO: Handle decrease number of item by 1
-  const handleDecrease = () => {};
-
-  // TODO: Handle remove item from cart
-  const handleRemoveItemFromCart = () => {};
-
-  // TODO: Remove when data is fetched
-  const mockProduct = {
-    id: 1,
-    title: 'Product Detail',
-    price: 20,
-    thumbnail:
-      'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
-    category: 'Product',
-  };
+  const { cart } = useCart();
 
   return (
     <div className='flex h-full flex-col justify-between overflow-hidden p-1'>
       <ul className='flex-grow overflow-auto py-4'>
-        {/* TODO: map function with list products */}
-        <li className='flex w-full flex-col border-b border-neutral-700'>
-          <CartItem
-            product={mockProduct}
-            handleDecrease={handleDecrease}
-            handleIncrease={handleIncrease}
-            handleRemoveItemFromCart={handleRemoveItemFromCart}
-          />
-        </li>
+        {cart.map((item) => (
+          <li className='flex w-full flex-col border-b border-neutral-700'>
+            <CartItem product={item.product} />
+          </li>
+        ))}
       </ul>
       <div className='py-4 text-sm text-neutral-400'>
         <div className='mb-3 flex items-center justify-between border-b pb-1 border-neutral-700'>
