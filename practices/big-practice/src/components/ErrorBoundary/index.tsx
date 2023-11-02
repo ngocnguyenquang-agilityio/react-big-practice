@@ -1,11 +1,16 @@
+// Libs
+import { useNavigate, useRouteError } from 'react-router-dom';
+
 // Components
 import { Button } from '@components/Button';
+
+// Constants
 import { APP_ROUTERS } from '@constants';
-import { useNavigate, useRouteError } from 'react-router-dom';
 
 export const ErrorBoundary = () => {
   const error = useRouteError();
   const navigate = useNavigate();
+
   const onClickReloadPage = () => {
     navigate(APP_ROUTERS.HOMEPAGE);
   };
