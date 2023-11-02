@@ -16,7 +16,19 @@ export const useCart = create<Store>((set) => ({
   isOpenCart: false,
   toggleCart: () => set((state) => ({ isOpenCart: !state.isOpenCart })),
   addToCart: (item: IProductCartItem) =>
-    set((state) => ({
-      cartItems: [...state.cartItems, item],
-    })),
+    set((state) => {
+      const findItem = state.cartItems.find((it) => it.product.id === item.product.id);
+      if (!!findItem) {
+        const newItem = {
+          product: findItem.product,
+          quantity: findItem.quantity + 1,
+        };
+        return {
+          cartItems: [...state.cartItems.filter((it) => it.product.id !== item.product.id), newItem],
+        };
+      }
+      return {
+        cartItems: [...state.cartItems, item],
+      };
+    }),
 }));
