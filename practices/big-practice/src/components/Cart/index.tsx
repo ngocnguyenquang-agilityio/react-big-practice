@@ -8,14 +8,14 @@ import CartBody from '@components/Cart/CartBody';
 import { Icon } from '@components/Icon';
 
 // Types
-import { ICartItem } from '@interfaces';
+import { IProductCartItem } from '@interfaces';
 
 export interface ICart {
   handleToggleCart: () => void;
-  cart?: ICartItem[];
+  productCartItems?: IProductCartItem[];
 }
 
-const Cart = ({ handleToggleCart, cart = [] }: ICart) => {
+const Cart = ({ handleToggleCart, productCartItems = [] }: ICart) => {
   return (
     <aside className='fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l p-4 lg:px-6 backdrop-blur-xl border-neutral-700 bg-black/80 text-white md:w-[390px] translate-x-0 z-10'>
       <div className='flex items-center justify-between'>
@@ -34,7 +34,7 @@ const Cart = ({ handleToggleCart, cart = [] }: ICart) => {
           </Button>
         </div>
       </div>
-      {cart.length > 0 ? <CartBody /> : <CartEmpty />}
+      {productCartItems.length > 0 ? <CartBody /> : <CartEmpty />}
     </aside>
   );
 };

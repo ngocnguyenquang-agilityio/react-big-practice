@@ -2,17 +2,17 @@
 import { useCart } from '@stores/cart';
 
 // Components
-import CartItem from '../CartItem';
+import ProductCartItem from '../ProductCartItem';
 
 const CartBody = () => {
-  const { cart } = useCart();
+  const { cartItems } = useCart();
 
   return (
     <div className='flex h-full flex-col justify-between overflow-hidden p-1'>
       <ul className='flex-grow overflow-auto py-4'>
-        {cart.map((item) => (
+        {cartItems.map((item) => (
           <li className='flex w-full flex-col border-b border-neutral-700'>
-            <CartItem product={item.product} />
+            <ProductCartItem product={item.product} />
           </li>
         ))}
       </ul>

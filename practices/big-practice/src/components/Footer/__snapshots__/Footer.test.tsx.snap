@@ -15,7 +15,7 @@ exports[`Footer component Should match snapshot 1`] = `
             class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 h-11 w-11 rounded-md"
           >
             <div
-              class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[40px] w-[40px] rounded-xl"
+              class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[30px] w-[30px] rounded-lg"
             >
               <svg
                 aria-label="Acme Store logo"
@@ -100,7 +100,7 @@ exports[`Footer component Should match snapshot 1`] = `
           class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 h-11 w-11 rounded-md"
         >
           <div
-            class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[40px] w-[40px] rounded-xl"
+            class="flex flex-none items-center justify-center border border-neutral-700 bg-black h-[30px] w-[30px] rounded-lg"
           >
             <svg
               aria-label="Acme Store logo"

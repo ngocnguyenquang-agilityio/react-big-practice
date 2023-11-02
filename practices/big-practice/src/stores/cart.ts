@@ -2,21 +2,21 @@
 import { create } from 'zustand';
 
 // Types
-import { ICartItem } from '@interfaces';
+import { IProductCartItem } from '@interfaces';
 
 type Store = {
-  cart: ICartItem[];
+  cartItems: IProductCartItem[];
   isOpenCart: boolean;
   toggleCart: () => void;
-  addToCart: (item: ICartItem) => void;
+  addToCart: (item: IProductCartItem) => void;
 };
 
 export const useCart = create<Store>((set) => ({
-  cart: [],
+  cartItems: [],
   isOpenCart: false,
   toggleCart: () => set((state) => ({ isOpenCart: !state.isOpenCart })),
-  addToCart: (item: ICartItem) =>
+  addToCart: (item: IProductCartItem) =>
     set((state) => ({
-      cart: [...state.cart, item],
+      cartItems: [...state.cartItems, item],
     })),
 }));

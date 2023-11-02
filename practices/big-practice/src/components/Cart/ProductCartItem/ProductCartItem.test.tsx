@@ -1,30 +1,27 @@
 import { render } from '@testing-library/react';
 
 // Components
-import CartItem from '.';
+import ProductCartItem from '.';
 
 // Types
-import { ICartItem } from '@interfaces';
+import { IProductCartItem } from '@interfaces';
 
 // Mocks
 import { mockProduct } from '@mocks';
 
-const props: ICartItem = {
+const props: IProductCartItem = {
   product: mockProduct,
   quantity: 1,
-  handleRemoveItemFromCart: jest.fn(),
-  handleDecrease: jest.fn(),
-  handleIncrease: jest.fn(),
 };
 
 describe('ProductCard Component', () => {
   test('Should render successfully', () => {
-    const comp = render(<CartItem {...props} />);
+    const comp = render(<ProductCartItem {...props} />);
     expect(comp).toBeTruthy();
   });
 
   test('Should match snapshot', () => {
-    const comp = render(<CartItem {...props} />);
+    const comp = render(<ProductCartItem {...props} />);
     expect(comp).toMatchSnapshot();
   });
 
