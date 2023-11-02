@@ -18,7 +18,6 @@ export const ProductListContainer = () => {
   const searchKeyword = searchParams.get('search');
   const standingPage = searchParams.get('page') || '';
   const sort = searchParams.get('sort') || '';
-  // const product = searchParams.get('productId') || '';
 
   const endpoint = buildQueryProductEndpoint({ searchKeyword, standingPage, category });
 

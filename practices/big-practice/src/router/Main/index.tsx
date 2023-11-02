@@ -8,11 +8,11 @@ import Loading from '@components/Loading';
 
 const Main = () => {
   return (
-    <MainLayout>
-      <Suspense fallback={<Loading />}>
+    <Suspense fallback={<Loading />}>
+      <MainLayout>
         <Outlet />
-      </Suspense>
-    </MainLayout>
+      </MainLayout>
+    </Suspense>
   );
 };
 
