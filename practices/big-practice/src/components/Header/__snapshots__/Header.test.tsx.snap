@@ -95,12 +95,17 @@ exports[`Header component Should match snapshot 1`] = `
               class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 border border-neutral-700 transition-colors h-11 w-11 rounded-md"
             >
               <div
-                class="relative flex h-11 w-11 items-center justify-center rounded-md border   transition-colors border-neutral-700 text-white"
+                class="relative flex h-11 w-11 items-center justify-center rounded-md border transition-colors border-neutral-700 text-white"
               >
                 <img
                   alt="cart-icon"
                   src=""
                 />
+                <div
+                  class="absolute right-0 top-0 -mr-2 -mt-2 h-4 w-4 rounded bg-blue-600 text-[11px] font-small text-white"
+                >
+                  0
+                </div>
               </div>
             </button>
           </div>
@@ -199,12 +204,17 @@ exports[`Header component Should match snapshot 1`] = `
             class="inline-flex items-center text-white justify-center text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 border border-neutral-700 transition-colors h-11 w-11 rounded-md"
           >
             <div
-              class="relative flex h-11 w-11 items-center justify-center rounded-md border   transition-colors border-neutral-700 text-white"
+              class="relative flex h-11 w-11 items-center justify-center rounded-md border transition-colors border-neutral-700 text-white"
             >
               <img
                 alt="cart-icon"
                 src=""
               />
+              <div
+                class="absolute right-0 top-0 -mr-2 -mt-2 h-4 w-4 rounded bg-blue-600 text-[11px] font-small text-white"
+              >
+                0
+              </div>
             </div>
           </button>
         </div>
