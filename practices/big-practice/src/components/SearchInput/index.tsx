@@ -1,21 +1,25 @@
 // Icons
-import { SearchIcon } from '@assets/icons';
+import { Icon } from '@components/Icon';
+import searchIcon from '@assets/searchIcon.svg';
 
 // Components
 import { Input } from '@components/Input';
 
 // Types
-import { InputProps } from "@components/Input";
+import { InputProps } from '@components/Input';
 
 const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
   return (
     <div className='relative w-full'>
       <Input {...rest} />
       <div className='absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none'>
-        <SearchIcon />
+        <Icon
+          svg={searchIcon}
+          name='search-icon'
+        />
       </div>
     </div>
-  )
+  );
 };
 
 export default SearchInput;

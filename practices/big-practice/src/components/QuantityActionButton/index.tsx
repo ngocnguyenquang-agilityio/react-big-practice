@@ -1,8 +1,10 @@
 // Icons
-import { MinusIcon, PlusIcon } from '@assets/icons';
+import minusIcon from '@assets/minusIcon.svg';
+import plusIcon from '@assets/plusIcon.svg';
 
 // Components
 import { Button } from '@components/Button';
+import { Icon } from '@components/Icon';
 
 // Types
 import { IQuantityActionButton } from '@interfaces';
@@ -15,7 +17,10 @@ const QuantityActionButton = ({ quantity, handleDecrease, handleIncrease }: IQua
         variant='link'
         onClick={handleDecrease}
       >
-        <MinusIcon />
+        <Icon
+          svg={minusIcon}
+          name='minus-icon'
+        />
       </Button>
       <p className='w-6 text-center'>
         <span className='w-full text-sm text-white'>{quantity}</span>
@@ -25,7 +30,10 @@ const QuantityActionButton = ({ quantity, handleDecrease, handleIncrease }: IQua
         variant='link'
         onClick={handleIncrease}
       >
-        <PlusIcon />
+        <Icon
+          svg={plusIcon}
+          name='plus-icon'
+        />
       </Button>
     </div>
   );

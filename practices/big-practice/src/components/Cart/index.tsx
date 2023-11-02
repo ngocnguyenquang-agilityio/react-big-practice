@@ -1,10 +1,11 @@
 // Icons
-import { CrossIcon } from '@assets/icons';
+import crossIcon from '@assets/crossIcon.svg';
 
 // Components
 import { Button } from '@components/Button';
 import CartEmpty from '@components/Cart/CartEmpty';
 import CartBody from '@components/Cart/CartBody';
+import { Icon } from '@components/Icon';
 
 // Types
 import { IProduct } from '@interfaces';
@@ -26,7 +27,10 @@ const Cart = ({ handleToggleCart, cart = [] }: ICart) => {
             size='icon'
             onClick={handleToggleCart}
           >
-            <CrossIcon />
+            <Icon
+              svg={crossIcon}
+              name='cross-icon'
+            />
           </Button>
         </div>
       </div>

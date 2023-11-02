@@ -1,11 +1,12 @@
 // Icons
-import { RemoveIcon } from '@assets/icons';
+import removeIcon from '@assets/removeIcon.svg';
 
 // Types
 import { ICartItem } from '@interfaces';
 
 // Components
 import QuantityActionButton from '@components/QuantityActionButton';
+import { Icon } from '@components/Icon';
 
 const CartItem = ({ product, quantity = 1, handleRemoveItemFromCart, handleDecrease, handleIncrease }: ICartItem) => {
   return (
@@ -15,7 +16,10 @@ const CartItem = ({ product, quantity = 1, handleRemoveItemFromCart, handleDecre
           className='ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200'
           onClick={handleRemoveItemFromCart}
         >
-          <RemoveIcon />
+          <Icon
+            svg={removeIcon}
+            name='remove-icon'
+          />
         </button>
       </div>
       <a
