@@ -1,5 +1,8 @@
+// Libs
+import { memo } from 'react';
+
 // Stores
-import { useCart } from '@stores/cart';
+import { useCartStore } from '@stores/cartStore';
 
 // Icons
 import removeIcon from '@assets/removeIcon.svg';
@@ -11,11 +14,25 @@ import { IProductCartItem } from '@interfaces';
 import QuantityActionButton from '@components/QuantityActionButton';
 import { Icon } from '@components/Icon';
 
-const ProductCartItem = ({ id, product, quantity }: IProductCartItem) => {
-  const { removeFromCart } = useCart();
+const ProductCartItem = memo(function ProductCartItemRenderer({
+  id,
+  thumbnail,
+  title,
+  quantity,
+  price,
+}: IProductCartItem) {
+  const { removeFromCart, increaseQuantity, decreaseQuantity } = useCartStore();
 
   const handleRemoveFromCart = () => {
     removeFromCart(id);
+  };
+
+  const handleIncreaseQuantity = () => {
+    increaseQuantity(id);
+  };
+
+  const handleDecreaseQuantity = () => {
+    decreaseQuantity(id);
   };
 
   return (
@@ -39,28 +56,27 @@ const ProductCartItem = ({ id, product, quantity }: IProductCartItem) => {
           <img
             className='h-full w-full object-cover'
             loading='lazy'
-            src={product.thumbnail}
+            src={thumbnail}
           />
         </div>
         <div className='flex flex-1 flex-col text-base'>
-          <span className='leading-tight'>{product.title}</span>
+          <span className='leading-tight'>{title}</span>
           <p className='text-sm text-neutral-400'>Black / 7 x 9 inch</p>
         </div>
       </a>
       <div className='flex h-16 flex-col justify-between'>
         <p className='flex justify-end space-y-2 text-right text-sm'>
-          {product.price}
+          {price}
           <span className='ml-1 inline'>USD</span>
         </p>
         <QuantityActionButton
           quantity={quantity}
-          // TODO: Handle increase and decrease quantity
-          handleDecrease={() => {}}
-          handleIncrease={() => {}}
+          handleIncrease={handleIncreaseQuantity}
+          handleDecrease={handleDecreaseQuantity}
         />
       </div>
     </div>
   );
-};
+});
 
 export default ProductCartItem;

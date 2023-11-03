@@ -1,8 +1,5 @@
-// Libs
-import { useId } from 'react';
-
 // Stores
-import { useCart } from '@stores/cart';
+import { useCartStore } from '@stores/cartStore';
 
 // Components
 import { Button } from '@components/Button';
@@ -11,22 +8,21 @@ import { Button } from '@components/Button';
 import { IProduct } from '@interfaces';
 
 const ProductDetail = ({ product }: { product: IProduct }) => {
-  const { addToCart } = useCart();
-  const productCartId = useId();
+  const { addToCart, toggleCart } = useCartStore();
 
   const handleAddToCart = () => {
     if (product) {
       addToCart({
-        id: productCartId,
-        product,
+        ...product,
         quantity: 1,
       });
+      toggleCart();
     }
   };
 
   return (
     <div className='flex flex-col rounded-lg border p-8 border-neutral-800 bg-black md:p-12 lg:flex-row lg:gap-8'>
-      <div className='h-full w-full basis-full lg:basis-4/6'>
+      <div className='h-full w-full basis-full'>
         <div className='relative h-full max-h-[500px] w-full overflow-hidden flex items-center justify-between mx-auto'>
           <img
             src={product.thumbnail}
@@ -55,6 +51,9 @@ const ProductDetail = ({ product }: { product: IProduct }) => {
             {'$' + `${product.price}`}
             <span className='ml-1 inline'>USD</span>
           </p>
+        </div>
+        <div className='prose mx-auto max-w-6xl text-base leading-7 prose-headings:mt-8 prose-headings:font-semibold prose-headings:tracking-wide prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-a:underline hover:prose-a:text-neutral-300 prose-ol:mt-8 prose-ol:list-decimal prose-ol:pl-6 prose-ul:mt-8 prose-ul:list-disc prose-ul:pl-6 text-white prose-headings:text-white prose-a:text-white prose-strong:text-white mb-6 text-sm leading-tight text-white/[60%]'>
+          {product.description}
         </div>
         <Button
           size='xl'
