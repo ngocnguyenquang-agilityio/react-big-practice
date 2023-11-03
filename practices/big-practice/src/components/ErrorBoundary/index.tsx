@@ -1,5 +1,5 @@
 // Libs
-import { useNavigate, useRouteError } from 'react-router-dom';
+import { isRouteErrorResponse, useNavigate, useRouteError } from 'react-router-dom';
 
 // Components
 import { Button } from '@components/Button';
@@ -15,11 +15,24 @@ export const ErrorBoundary = () => {
     navigate(APP_ROUTERS.HOMEPAGE);
   };
 
+  const errorMessage = (error: unknown) => {
+    if (isRouteErrorResponse(error)) {
+      return `${error.status} ${error.statusText}`;
+    } else if (error instanceof Error) {
+      return error.message;
+    } else if (typeof error === 'string') {
+      return error;
+    } else {
+      console.error(error);
+      return 'Unknown error';
+    }
+  };
+
   return (
     <div className='error-page min-h-screen flex items-center justify-center'>
       <div className='text-center'>
         <h1 className='text-5xl font-semibold text-red-600 mb-4'>Something went wrong</h1>
-        <details className='text-2xl text-gray-300 font-semibold'>{error.message}</details>
+        <details className='text-2xl text-gray-300 font-semibold'>{errorMessage(error)}</details>
         <Button
           className='mt-4'
           onClick={onClickReloadPage}
