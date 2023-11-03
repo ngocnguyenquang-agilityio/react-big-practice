@@ -1,14 +1,15 @@
 // Stores
-import { useCart } from '@stores/cart';
+import { useCartStore } from '@stores/cartStore';
 
 // Components
 import ProductCartItem from '../ProductCartItem';
 import CartEmpty from '../CartEmpty';
+import { Button } from '@components/Button';
 
 const CartBody = () => {
-  const { cartItems } = useCart();
+  const { cartItems } = useCartStore();
 
-  const totalPrice = cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
+  const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return cartItems.length > 0 ? (
     <div className='flex h-full flex-col justify-between overflow-hidden p-1'>
@@ -18,11 +19,7 @@ const CartBody = () => {
             key={item.id}
             className='flex w-full flex-col border-b border-neutral-700'
           >
-            <ProductCartItem
-              id={item.id}
-              product={item.product}
-              quantity={item.quantity}
-            />
+            <ProductCartItem {...item} />
           </li>
         ))}
       </ul>
@@ -45,6 +42,7 @@ const CartBody = () => {
             <span className='ml-1 inline'>USD</span>
           </p>
         </div>
+        <Button size='xl'>Proceed to Checkout</Button>
       </div>
     </div>
   ) : (
