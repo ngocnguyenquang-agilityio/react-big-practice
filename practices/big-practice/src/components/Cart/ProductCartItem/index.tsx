@@ -12,6 +12,7 @@ const ProductCartItem = ({ product, quantity }: IProductCartItem) => {
   return (
     <div className='relative flex w-full flex-row justify-between px-1 py-4'>
       <div className='absolute z-40 -mt-2 ml-[55px]'>
+        {/* TODO: Handle remove item from cart */}
         <button
           className='ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200'
           onClick={() => {}}
@@ -45,6 +46,7 @@ const ProductCartItem = ({ product, quantity }: IProductCartItem) => {
         </p>
         <QuantityActionButton
           quantity={quantity}
+          // TODO: Handle increase and decrease quantity
           handleDecrease={() => {}}
           handleIncrease={() => {}}
         />

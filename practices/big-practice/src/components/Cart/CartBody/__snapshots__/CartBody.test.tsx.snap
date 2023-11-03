@@ -6,123 +6,79 @@ exports[`CartBody Component Should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex h-full flex-col justify-between overflow-hidden p-1"
+        class="mt-20 flex w-full flex-col items-center justify-center overflow-hidden"
       >
-        <ul
-          class="flex-grow overflow-auto py-4"
-        />
-        <div
-          class="py-4 text-sm text-neutral-400"
+        <svg
+          class="lucide lucide-shopping-cart"
+          fill="none"
+          height="64"
+          name="cart-icon"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="64"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="mb-3 flex items-center justify-between border-b pb-1 border-neutral-700"
-          >
-            <p>
-              Taxes
-            </p>
-            <p
-              class="text-right text-base text-white"
-            >
-              $0.00
-              <span
-                class="ml-1 inline"
-              >
-                USD
-              </span>
-            </p>
-          </div>
-          <div
-            class="mb-3 flex items-center justify-between border-b pb-1 pt-1 border-neutral-700"
-          >
-            <p>
-              Shipping
-            </p>
-            <p
-              class="text-right"
-            >
-              Calculated at checkout
-            </p>
-          </div>
-          <div
-            class="mb-3 flex items-center justify-between border-b pb-1 pt-1 border-neutral-700"
-          >
-            <p>
-              Total
-            </p>
-            <p
-              class="text-right text-base text-white"
-            >
-              $
-              0
-              <span
-                class="ml-1 inline"
-              >
-                USD
-              </span>
-            </p>
-          </div>
-        </div>
+          <circle
+            cx="8"
+            cy="21"
+            r="1"
+          />
+          <circle
+            cx="19"
+            cy="21"
+            r="1"
+          />
+          <path
+            d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+          />
+        </svg>
+        <p
+          class="mt-6 text-center text-2xl font-bold"
+        >
+          Your cart is empty.
+        </p>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="flex h-full flex-col justify-between overflow-hidden p-1"
+      class="mt-20 flex w-full flex-col items-center justify-center overflow-hidden"
     >
-      <ul
-        class="flex-grow overflow-auto py-4"
-      />
-      <div
-        class="py-4 text-sm text-neutral-400"
+      <svg
+        class="lucide lucide-shopping-cart"
+        fill="none"
+        height="64"
+        name="cart-icon"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="64"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div
-          class="mb-3 flex items-center justify-between border-b pb-1 border-neutral-700"
-        >
-          <p>
-            Taxes
-          </p>
-          <p
-            class="text-right text-base text-white"
-          >
-            $0.00
-            <span
-              class="ml-1 inline"
-            >
-              USD
-            </span>
-          </p>
-        </div>
-        <div
-          class="mb-3 flex items-center justify-between border-b pb-1 pt-1 border-neutral-700"
-        >
-          <p>
-            Shipping
-          </p>
-          <p
-            class="text-right"
-          >
-            Calculated at checkout
-          </p>
-        </div>
-        <div
-          class="mb-3 flex items-center justify-between border-b pb-1 pt-1 border-neutral-700"
-        >
-          <p>
-            Total
-          </p>
-          <p
-            class="text-right text-base text-white"
-          >
-            $
-            0
-            <span
-              class="ml-1 inline"
-            >
-              USD
-            </span>
-          </p>
-        </div>
-      </div>
+        <circle
+          cx="8"
+          cy="21"
+          r="1"
+        />
+        <circle
+          cx="19"
+          cy="21"
+          r="1"
+        />
+        <path
+          d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+        />
+      </svg>
+      <p
+        class="mt-6 text-center text-2xl font-bold"
+      >
+        Your cart is empty.
+      </p>
     </div>
   </div>,
   "debug": [Function],

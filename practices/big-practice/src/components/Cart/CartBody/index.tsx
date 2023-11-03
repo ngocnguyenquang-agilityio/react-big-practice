@@ -3,16 +3,22 @@ import { useCart } from '@stores/cart';
 
 // Components
 import ProductCartItem from '../ProductCartItem';
+import CartEmpty from '../CartEmpty';
 
 const CartBody = () => {
   const { cartItems } = useCart();
 
-  return (
+  const totalPrice = cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
+
+  return cartItems.length > 0 ? (
     <div className='flex h-full flex-col justify-between overflow-hidden p-1'>
       <ul className='flex-grow overflow-auto py-4'>
         {cartItems.map((item) => (
           <li className='flex w-full flex-col border-b border-neutral-700'>
-            <ProductCartItem product={item.product} quantity={item.quantity} />
+            <ProductCartItem
+              product={item.product}
+              quantity={item.quantity}
+            />
           </li>
         ))}
       </ul>
@@ -31,12 +37,14 @@ const CartBody = () => {
         <div className='mb-3 flex items-center justify-between border-b pb-1 pt-1 border-neutral-700'>
           <p>Total</p>
           <p className='text-right text-base text-white'>
-            ${cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0)}
+            ${totalPrice}
             <span className='ml-1 inline'>USD</span>
           </p>
         </div>
       </div>
     </div>
+  ) : (
+    <CartEmpty />
   );
 };
 

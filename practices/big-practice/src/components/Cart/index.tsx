@@ -3,19 +3,14 @@ import crossIcon from '@assets/crossIcon.svg';
 
 // Components
 import { Button } from '@components/Button';
-import CartEmpty from '@components/Cart/CartEmpty';
 import CartBody from '@components/Cart/CartBody';
 import { Icon } from '@components/Icon';
 
-// Types
-import { IProductCartItem } from '@interfaces';
-
 export interface ICart {
   handleToggleCart: () => void;
-  productCartItems?: IProductCartItem[];
 }
 
-const Cart = ({ handleToggleCart, productCartItems = [] }: ICart) => {
+const Cart = ({ handleToggleCart }: ICart) => {
   return (
     <aside className='fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l p-4 lg:px-6 backdrop-blur-xl border-neutral-700 bg-black/80 text-white md:w-[390px] translate-x-0 z-10'>
       <div className='flex items-center justify-between'>
@@ -34,7 +29,7 @@ const Cart = ({ handleToggleCart, productCartItems = [] }: ICart) => {
           </Button>
         </div>
       </div>
-      {productCartItems.length > 0 ? <CartBody /> : <CartEmpty />}
+      <CartBody />
     </aside>
   );
 };
