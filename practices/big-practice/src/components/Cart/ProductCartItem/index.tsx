@@ -2,19 +2,20 @@
 import removeIcon from '@assets/removeIcon.svg';
 
 // Types
-import { ICartItem } from '@interfaces';
+import { IProductCartItem } from '@interfaces';
 
 // Components
 import QuantityActionButton from '@components/QuantityActionButton';
 import { Icon } from '@components/Icon';
 
-const CartItem = ({ product, quantity = 1, handleRemoveItemFromCart, handleDecrease, handleIncrease }: ICartItem) => {
+const ProductCartItem = ({ product, quantity }: IProductCartItem) => {
   return (
     <div className='relative flex w-full flex-row justify-between px-1 py-4'>
       <div className='absolute z-40 -mt-2 ml-[55px]'>
+        {/* TODO: Handle remove item from cart */}
         <button
           className='ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200'
-          onClick={handleRemoveItemFromCart}
+          onClick={() => {}}
         >
           <Icon
             svg={removeIcon}
@@ -45,12 +46,13 @@ const CartItem = ({ product, quantity = 1, handleRemoveItemFromCart, handleDecre
         </p>
         <QuantityActionButton
           quantity={quantity}
-          handleDecrease={handleDecrease}
-          handleIncrease={handleIncrease}
+          // TODO: Handle increase and decrease quantity
+          handleDecrease={() => {}}
+          handleIncrease={() => {}}
         />
       </div>
     </div>
   );
 };
 
-export default CartItem;
+export default ProductCartItem;

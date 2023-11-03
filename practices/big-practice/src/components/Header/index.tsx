@@ -15,8 +15,11 @@ import { debounce } from '@helpers/utils';
 
 // Constants
 import { APP_ROUTERS, headerItems } from '@constants';
+import { useCart } from '@stores/cart';
 
 const Header = memo(({ onToggleCart }: { onToggleCart: () => void }) => {
+  const { cartItems } = useCart();
+
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -30,6 +33,8 @@ const Header = memo(({ onToggleCart }: { onToggleCart: () => void }) => {
   }, []);
 
   const searchWithDebounce = debounce(handleSearch, 1000);
+
+  const numberOfItemsInCart = cartItems.reduce((total, currentItem) => (total += currentItem.quantity), 0);
 
   return (
     <header className='relative flex items-center justify-between p-4 lg:px-6'>
@@ -83,11 +88,16 @@ const Header = memo(({ onToggleCart }: { onToggleCart: () => void }) => {
             size='icon'
             onClick={onToggleCart}
           >
-            <div className='relative flex h-11 w-11 items-center justify-center rounded-md border   transition-colors border-neutral-700 text-white'>
+            <div className='relative flex h-11 w-11 items-center justify-center rounded-md border transition-colors border-neutral-700 text-white'>
               <Icon
                 svg={cartIcon}
                 name='cart-icon'
               />
+              {cartItems.length > 0 && (
+                <div className='absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-600 rounded-full -top-2 -right-2 dark:border-gray-900'>
+                  {numberOfItemsInCart > 9 ? '9+' : numberOfItemsInCart}
+                </div>
+              )}
             </div>
           </Button>
         </div>

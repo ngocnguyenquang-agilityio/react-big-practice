@@ -5,7 +5,6 @@ import plusIcon from '@assets/plusIcon.svg';
 // Components
 import { Button } from '@components/Button';
 import { Icon } from '@components/Icon';
-
 // Types
 import { IQuantityActionButton } from '@interfaces';
 

@@ -14,21 +14,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           <button
             class="ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200"
           >
-            <svg
-              aria-hidden="true"
-              class="hover:text-accent-3 mx-[1px] h-4 w-4 text-white dark:text-black"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 18L18 6M6 6l12 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <img
+              alt="remove-icon"
+              src=""
+            />
           </button>
         </div>
         <a
@@ -78,21 +67,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             <button
               class="text-white text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 py-2 ease flex h-full min-w-[36px] max-w-[36px] flex-none items-center justify-center rounded-full px-2 transition-all duration-200 hover:border-neutral-800 hover:opacity-80 ml-auto"
             >
-              <svg
-                aria-hidden="true"
-                class="h-4 w-4 dark:text-neutral-500"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19.5 12h-15"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <img
+                alt="minus-icon"
+                src=""
+              />
             </button>
             <p
               class="w-6 text-center"
@@ -106,21 +84,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             <button
               class="text-white text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 py-2 ease flex h-full min-w-[36px] max-w-[36px] flex-none items-center justify-center rounded-full px-2 transition-all duration-200 hover:border-neutral-800 hover:opacity-80"
             >
-              <svg
-                aria-hidden="true"
-                class="h-4 w-4 dark:text-neutral-500"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 4.5v15m7.5-7.5h-15"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <img
+                alt="plus-icon"
+                src=""
+              />
             </button>
           </div>
         </div>
@@ -137,21 +104,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
         <button
           class="ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200"
         >
-          <svg
-            aria-hidden="true"
-            class="hover:text-accent-3 mx-[1px] h-4 w-4 text-white dark:text-black"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 18L18 6M6 6l12 12"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <img
+            alt="remove-icon"
+            src=""
+          />
         </button>
       </div>
       <a
@@ -201,21 +157,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           <button
             class="text-white text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 py-2 ease flex h-full min-w-[36px] max-w-[36px] flex-none items-center justify-center rounded-full px-2 transition-all duration-200 hover:border-neutral-800 hover:opacity-80 ml-auto"
           >
-            <svg
-              aria-hidden="true"
-              class="h-4 w-4 dark:text-neutral-500"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M19.5 12h-15"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <img
+              alt="minus-icon"
+              src=""
+            />
           </button>
           <p
             class="w-6 text-center"
@@ -229,21 +174,10 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           <button
             class="text-white text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 underline-offset-4 hover:underline dark:text-neutral-100 py-2 ease flex h-full min-w-[36px] max-w-[36px] flex-none items-center justify-center rounded-full px-2 transition-all duration-200 hover:border-neutral-800 hover:opacity-80"
           >
-            <svg
-              aria-hidden="true"
-              class="h-4 w-4 dark:text-neutral-500"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 4.5v15m7.5-7.5h-15"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <img
+              alt="plus-icon"
+              src=""
+            />
           </button>
         </div>
       </div>

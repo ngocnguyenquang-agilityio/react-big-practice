@@ -1,4 +1,5 @@
 import { RenderResult, render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
 
 // Component
 import ProductList from '.';
@@ -10,10 +11,12 @@ describe('ProductList Component', () => {
   let comp: RenderResult;
   beforeEach(() => {
     comp = render(
-      <ProductList
-        products={mockProducts}
-        sortBy='low-to-high'
-      />,
+      <MemoryRouter>
+        <ProductList
+          products={mockProducts}
+          sortBy='low-to-high'
+        />
+      </MemoryRouter>,
     );
   });
 

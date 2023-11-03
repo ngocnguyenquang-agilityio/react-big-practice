@@ -12,11 +12,14 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           class="h-full w-full basis-full lg:basis-4/6"
         >
           <div
-            class="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
+            class="relative h-full max-h-[500px] w-full overflow-hidden flex items-center justify-between mx-auto"
           >
             <img
-              class="h-full w-full object-contain"
+              alt="Product 1 - phone"
+              class="mx-auto"
+              height="500"
               src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+              width="600"
             />
           </div>
           <ul
@@ -25,20 +28,15 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             <li
               class="h-20 w-20"
             >
-              <a
-                class="h-full w-full"
-                href=""
+              <div
+                class="cursor-pointer group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
               >
-                <div
-                  class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
-                >
-                  <img
-                    alt="Product 1"
-                    class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
-                    src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
-                  />
-                </div>
-              </a>
+                <img
+                  alt="Product 1"
+                  class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                  src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+                />
+              </div>
             </li>
           </ul>
         </div>
@@ -51,20 +49,18 @@ exports[`ProductCard Component Should match snapshot 1`] = `
             <h1
               class="mb-2 text-5xl text-white font-medium"
             >
-              Acme Circles T-Shirt
+              Product 1
             </h1>
-            <div
+            <p
               class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"
             >
-              <p>
-                $20
-                <span
-                  class="ml-1 inline"
-                >
-                  USD
-                </span>
-              </p>
-            </div>
+              $20
+              <span
+                class="ml-1 inline"
+              >
+                USD
+              </span>
+            </p>
           </div>
           <button
             class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-blue-600 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 w-full h-11 rounded-full"
@@ -83,11 +79,14 @@ exports[`ProductCard Component Should match snapshot 1`] = `
         class="h-full w-full basis-full lg:basis-4/6"
       >
         <div
-          class="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
+          class="relative h-full max-h-[500px] w-full overflow-hidden flex items-center justify-between mx-auto"
         >
           <img
-            class="h-full w-full object-contain"
+            alt="Product 1 - phone"
+            class="mx-auto"
+            height="500"
             src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+            width="600"
           />
         </div>
         <ul
@@ -96,20 +95,15 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           <li
             class="h-20 w-20"
           >
-            <a
-              class="h-full w-full"
-              href=""
+            <div
+              class="cursor-pointer group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
             >
-              <div
-                class="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border hover:border-blue-600 bg-black border-2 border-blue-600"
-              >
-                <img
-                  alt="Product 1"
-                  class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
-                  src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
-                />
-              </div>
-            </a>
+              <img
+                alt="Product 1"
+                class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
+                src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
+              />
+            </div>
           </li>
         </ul>
       </div>
@@ -122,20 +116,18 @@ exports[`ProductCard Component Should match snapshot 1`] = `
           <h1
             class="mb-2 text-5xl text-white font-medium"
           >
-            Acme Circles T-Shirt
+            Product 1
           </h1>
-          <div
+          <p
             class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"
           >
-            <p>
-              $20
-              <span
-                class="ml-1 inline"
-              >
-                USD
-              </span>
-            </p>
-          </div>
+            $20
+            <span
+              class="ml-1 inline"
+            >
+              USD
+            </span>
+          </p>
         </div>
         <button
           class="inline-flex items-center text-white justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-offset-slate-950 focus-visible:ring-slate-300 bg-blue-600 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 w-full h-11 rounded-full"

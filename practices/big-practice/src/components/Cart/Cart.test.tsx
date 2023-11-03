@@ -3,12 +3,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 // Components
 import Cart, { ICart } from '.';
 
-// Mocks
-import { mockCart } from '@mocks';
-
 const props: ICart = {
   handleToggleCart: jest.fn(),
-  cart: mockCart,
 };
 
 describe('Cart Component', () => {
@@ -24,12 +20,7 @@ describe('Cart Component', () => {
 
   test('Should render empty cart if no data', () => {
     const mockFunc = jest.fn();
-    render(
-      <Cart
-        cart={[]}
-        handleToggleCart={mockFunc}
-      />,
-    );
+    render(<Cart handleToggleCart={mockFunc} />);
     const emptyCart = screen.queryByText('Your cart is empty.');
     expect(emptyCart).toBeTruthy();
   });
