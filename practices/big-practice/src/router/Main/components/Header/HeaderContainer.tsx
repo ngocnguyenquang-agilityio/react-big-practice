@@ -38,8 +38,8 @@ export const Header = memo(
   }) => {
     return (
       <header className='relative flex items-center justify-between p-4 lg:px-6'>
-        <div className='flex w-full items-center'>
-          <div className='flex w-full md:w-1/3'>
+        <div className='flex w-full md:items-center'>
+          <div className='flex sm:w-1/3 '>
             <Link
               to={APP_ROUTERS.HOMEPAGE}
               reloadDocument
@@ -57,11 +57,11 @@ export const Header = memo(
                   <path d='M26.2381 17.9167L20.7382 28H32L26.2381 17.9167Z' />
                 </svg>
               </div>
-              <span className='ml-2 text-sm font-medium uppercase text-white md:hidden lg:block'>acme store</span>
+              <span className='ml-2 text-sm font-medium uppercase text-white hidden lg:block'>acme store</span>
             </Link>
             <ul
               data-testid='header-items'
-              className='hidden gap-6 text-sm md:flex md:items-center'
+              className='hidden gap-6 text-sm lg:flex md:items-center'
             >
               {headerItems.map((item) => (
                 <Link
@@ -75,7 +75,7 @@ export const Header = memo(
             </ul>
           </div>
 
-          <div className='hidden justify-center md:flex md:w-1/3'>
+          <div className='justify-center md:flex sm:w-1/3'>
             <form className='w-max-[550px] relative w-full lg:w-80 xl:w-full'>
               <SearchInput
                 type='text'
@@ -86,7 +86,7 @@ export const Header = memo(
             </form>
           </div>
 
-          <div className='flex justify-end md:w-1/3'>
+          <div className='flex justify-end sm:w-1/3'>
             <Button
               variant='outline'
               size='icon'
