@@ -10,7 +10,7 @@ import { InputProps } from '@components/Input';
 
 const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
   return (
-    <div className='relative w-full'>
+    <>
       <Input {...rest} />
       <div className='absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none'>
         <Icon
@@ -18,7 +18,7 @@ const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
           name='search-icon'
         />
       </div>
-    </div>
+    </>
   );
 };
 

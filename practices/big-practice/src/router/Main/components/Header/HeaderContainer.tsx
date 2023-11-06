@@ -39,7 +39,7 @@ export const Header = memo(
     return (
       <header className='relative flex items-center justify-between p-4 lg:px-6'>
         <div className='flex w-full items-center'>
-          <div className='flex w-full md:w-1/3 items-center'>
+          <div className='flex w-full md:w-1/3'>
             <Link
               to={APP_ROUTERS.HOMEPAGE}
               reloadDocument
@@ -57,11 +57,11 @@ export const Header = memo(
                   <path d='M26.2381 17.9167L20.7382 28H32L26.2381 17.9167Z' />
                 </svg>
               </div>
-              <span className='ml-2 text-sm font-medium uppercase text-white'>acme store</span>
+              <span className='ml-2 text-sm font-medium uppercase text-white md:hidden lg:block'>acme store</span>
             </Link>
             <ul
               data-testid='header-items'
-              className='gap-6 text-sm md:flex md:items-center'
+              className='hidden gap-6 text-sm md:flex md:items-center'
             >
               {headerItems.map((item) => (
                 <Link
@@ -74,17 +74,18 @@ export const Header = memo(
               ))}
             </ul>
           </div>
-          <form
-            className='justify-center md:flex md:w-1/3'
-            onSubmit={() => {}}
-          >
-            <SearchInput
-              type='text'
-              placeholder='Search Products...'
-              onChange={handleSearch}
-              defaultValue={defaultValueSearch}
-            />
-          </form>
+
+          <div className='hidden justify-center md:flex md:w-1/3'>
+            <form className='w-max-[550px] relative w-full lg:w-80 xl:w-full'>
+              <SearchInput
+                type='text'
+                placeholder='Search Products...'
+                onChange={handleSearch}
+                defaultValue={defaultValueSearch}
+              />
+            </form>
+          </div>
+
           <div className='flex justify-end md:w-1/3'>
             <Button
               variant='outline'
@@ -97,7 +98,10 @@ export const Header = memo(
                   name='cart-icon'
                 />
                 {cartItems.length > 0 && (
-                  <div data-testid='number-of-items' className='absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-600 rounded-full -top-2 -right-2 dark:border-gray-900'>
+                  <div
+                    data-testid='number-of-items'
+                    className='absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-600 rounded-full -top-2 -right-2 dark:border-gray-900'
+                  >
                     {numberOfItemsInCart > 9 ? '9+' : numberOfItemsInCart}
                   </div>
                 )}
