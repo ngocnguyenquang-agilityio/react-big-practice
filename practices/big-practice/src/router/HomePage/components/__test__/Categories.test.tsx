@@ -10,15 +10,18 @@ const mockListCollection = [
   { value: 'laptops', label: 'Laptop' },
 ];
 
+const props = {
+  categories: mockListCollection,
+  selectingItem: 'smartphones',
+  onSelectCategory: jest.fn(),
+};
+
 describe('Categories component', () => {
   let comp: RenderResult;
   beforeEach(() => {
     comp = render(
       <MemoryRouter>
-        <Categories
-          categories={mockListCollection}
-          selectingItem='smartphones'
-        />
+        <Categories {...props} />
       </MemoryRouter>,
     );
   });

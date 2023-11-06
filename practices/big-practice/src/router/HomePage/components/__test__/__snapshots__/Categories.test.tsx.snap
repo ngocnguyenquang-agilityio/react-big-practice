@@ -7,12 +7,12 @@ exports[`Categories component Should match snapshot 1`] = `
     <div>
       <nav>
         <h3
-          class="text-xs text-neutral-400 md:block"
+          class="hidden text-xs text-neutral-400 md:block"
         >
           Category
         </h3>
         <ul
-          class="block"
+          class="hidden md:block"
           data-testid="categories"
         >
           <li
@@ -36,18 +36,42 @@ exports[`Categories component Should match snapshot 1`] = `
             </a>
           </li>
         </ul>
+        <div
+          class="md:hidden"
+        >
+          <div
+            class="relative"
+          >
+            <select
+              class="bg-transparent flex w-full items-center justify-between rounded border px-4 py-2 text-sm border-white/30"
+            >
+              <option
+                class="mt-2 flex text-white bg-black"
+                value="phones"
+              >
+                Phone
+              </option>
+              <option
+                class="mt-2 flex text-white bg-black"
+                value="laptops"
+              >
+                Laptop
+              </option>
+            </select>
+          </div>
+        </div>
       </nav>
     </div>
   </body>,
   "container": <div>
     <nav>
       <h3
-        class="text-xs text-neutral-400 md:block"
+        class="hidden text-xs text-neutral-400 md:block"
       >
         Category
       </h3>
       <ul
-        class="block"
+        class="hidden md:block"
         data-testid="categories"
       >
         <li
@@ -71,6 +95,30 @@ exports[`Categories component Should match snapshot 1`] = `
           </a>
         </li>
       </ul>
+      <div
+        class="md:hidden"
+      >
+        <div
+          class="relative"
+        >
+          <select
+            class="bg-transparent flex w-full items-center justify-between rounded border px-4 py-2 text-sm border-white/30"
+          >
+            <option
+              class="mt-2 flex text-white bg-black"
+              value="phones"
+            >
+              Phone
+            </option>
+            <option
+              class="mt-2 flex text-white bg-black"
+              value="laptops"
+            >
+              Laptop
+            </option>
+          </select>
+        </div>
+      </div>
     </nav>
   </div>,
   "debug": [Function],
