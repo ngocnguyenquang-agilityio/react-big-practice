@@ -5,29 +5,6 @@ exports[`SearchInput component Should match snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="relative w-full"
-      >
-        <input
-          class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 py-2 text-sm text-white placeholder:text-neutral-400"
-          placeholder="Search products ..."
-          type="text"
-        />
-        <div
-          class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none"
-        >
-          <img
-            alt="search-icon"
-            src=""
-          />
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="relative w-full"
-    >
       <input
         class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 py-2 text-sm text-white placeholder:text-neutral-400"
         placeholder="Search products ..."
@@ -41,6 +18,21 @@ exports[`SearchInput component Should match snapshot 1`] = `
           src=""
         />
       </div>
+    </div>
+  </body>,
+  "container": <div>
+    <input
+      class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 py-2 text-sm text-white placeholder:text-neutral-400"
+      placeholder="Search products ..."
+      type="text"
+    />
+    <div
+      class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none"
+    >
+      <img
+        alt="search-icon"
+        src=""
+      />
     </div>
   </div>,
   "debug": [Function],
