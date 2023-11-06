@@ -37,8 +37,8 @@ export const Header = memo(
     handleSearch: (e: ChangeEvent<HTMLInputElement>) => void;
   }) => {
     return (
-      <header className='relative flex items-center justify-between p-4 lg:px-6'>
-        <div className='flex w-full items-center'>
+      <header className='flex items-center p-4 lg:px-6'>
+        <div className='flex w-full items-center justify-between '>
           <div className='flex sm:w-1/3 '>
             <Link
               to={APP_ROUTERS.HOMEPAGE}
