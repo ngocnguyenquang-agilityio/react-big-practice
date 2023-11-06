@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import Header from '.';
+import { Header } from './HeaderContainer';
 
 export default {
   title: 'Components/Header',

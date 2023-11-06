@@ -3,9 +3,16 @@ import { RenderResult, fireEvent, render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom';
 
 // Components
-import Header from '.';
+import { Header } from './HeaderContainer';
+
+// Mocks
+import { mockCartItems } from '@mocks';
 
 const props = {
+  cartItems: mockCartItems,
+  defaultValueSearch: '',
+  numberOfItemsInCart: 2,
+  handleSearch: jest.fn(),
   onToggleCart: jest.fn(),
 };
 
@@ -36,5 +43,10 @@ describe('Header component', () => {
     const button = screen.getByRole('button');
     fireEvent.click(button);
     expect(props.onToggleCart).toBeCalledTimes(1);
+  });
+
+  test('Should render correct number of items in cart', () => {
+    const item = screen.getByTestId('number-of-items');
+    expect(item.textContent).toBe('2');
   });
 });
