@@ -38,12 +38,12 @@ export const Header = memo(
   }) => {
     return (
       <header className='relative flex items-center justify-between p-4 lg:px-6'>
-        <div className='flex w-full md:items-center'>
+        <div className='flex w-full items-center'>
           <div className='flex sm:w-1/3 '>
             <Link
               to={APP_ROUTERS.HOMEPAGE}
               reloadDocument
-              className='mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6'
+              className='mr-2 flex w-full items-center justify-center sm:w-auto lg:mr-6'
             >
               <div className='flex flex-none items-center justify-center border border-neutral-700 bg-black h-[40px] w-[40px] rounded-xl'>
                 <svg
@@ -61,7 +61,7 @@ export const Header = memo(
             </Link>
             <ul
               data-testid='header-items'
-              className='hidden gap-6 text-sm lg:flex md:items-center'
+              className='hidden gap-6 text-sm lg:flex sm:items-center'
             >
               {headerItems.map((item) => (
                 <Link
@@ -75,7 +75,7 @@ export const Header = memo(
             </ul>
           </div>
 
-          <div className='justify-center md:flex sm:w-1/3'>
+          <div className='justify-center sm:flex sm:w-1/3'>
             <form className='w-max-[550px] relative w-full lg:w-80 xl:w-full'>
               <SearchInput
                 type='text'
