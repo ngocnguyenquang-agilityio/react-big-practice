@@ -1,22 +1,21 @@
 // Types
 import type { Meta, StoryObj } from '@storybook/react';
-import type { InputProps } from '@components/Input';
 
 // Components
 import SearchInput from '.';
 
-export default {
+const meta = {
   title: 'Components/SearchInput',
   component: SearchInput,
-  render: (args) => <SearchInput onChange={() => { }} {...args} />
-} as Meta
+} satisfies Meta<typeof SearchInput>;
 
-type Story = StoryObj<InputProps>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
     type: 'text',
     placeholder: 'Search Input',
-    onChange: () => { }
-  }
-}
+    onChange: () => {},
+  },
+};

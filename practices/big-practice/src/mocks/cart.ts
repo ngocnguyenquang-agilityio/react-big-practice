@@ -6,6 +6,7 @@ export const mockCartItems = [
     thumbnail:
       'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
     category: 'Product',
+    quantity: 1,
   },
   {
     id: 2,
@@ -14,5 +15,6 @@ export const mockCartItems = [
     thumbnail:
       'https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75',
     category: 'Product',
+    quantity: 3,
   },
 ];

@@ -29,7 +29,7 @@
 
 ## Targets
 
-- Apply all React knowledge learned 
+- Apply all React knowledge learned
 - Apply Jest and React Testing Library for unit testing
 - Unit test coverage should greater than 80%
 - Apply SWR for fetching data
@@ -91,13 +91,15 @@ cd practices/big-practice
 All commands are run from the root of the project, from a terminal:
 
 | **Command**             | **Action**                                   |
-| --------------------    | -------------------------------------------- |
+| ----------------------- | -------------------------------------------- |
 | npm i                   | Installs dependencies                        |
 | npm run dev             | Starts local dev server                      |
 | npm run build           | Build your production site to `./dist/`      |
 | npm run preview         | Preview your build locally, before deploying |
 | npm run storybook       | Start Storybook dev at: `localhost: 6006`    |
 | npm run build-storybook | Build Storybook                              |
+| npm run test            | Start testing                                |
+| npm run test:update     | Start testing and update snapshot            |
 | npm run lint            | Detect code format error                     |
 | npm run lint:fix        | Detect and fix code format error             |
 | npm run test            | Run unit tests                               |
