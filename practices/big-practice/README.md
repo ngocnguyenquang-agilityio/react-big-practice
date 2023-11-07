@@ -1,8 +1,7 @@
 # Overview
 
-- This document provides information about React Practice 03
-- Continue with React [Practice 02](https://docs.google.com/document/d/1GTWoVyu5h6ESgMrfwD-cCnBwB8WXOxb-TYDn3MR4xOA/edit), build a card generator.
-- [Documentation details](https://docs.google.com/document/d/1k_jyba70rEcuOfFv65Vj03rZpPDN_1f44vZPReqRirc/edit#)
+- This document provides information about React Practice
+- [Documentation details](https://docs.google.com/document/d/1EbAyzRCHAkfTcfHfmZjkQ0wwMqUAxY0BO4Yk0B55Gs0/edit#heading=h.ar0k1bmftkqn)
 
 ## Table of Contents
 
@@ -18,7 +17,7 @@
 ## Main app features
 
 - User can view products list
-- User can product details
+- User can view product details
 - User can sort products
   - Sort by price: Low to High
   - Sort by price: High to Low
@@ -39,7 +38,7 @@
 ## Timeline
 
 - Estimate time: 8 days of working
-- Actual time: TBD
+- Actual time: 14 days of working
 
 ## Tech Stacks
 
