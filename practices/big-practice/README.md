@@ -1,8 +1,7 @@
 # Overview
 
-- This document provides information about React Practice 03
-- Continue with React [Practice 02](https://docs.google.com/document/d/1GTWoVyu5h6ESgMrfwD-cCnBwB8WXOxb-TYDn3MR4xOA/edit), build a card generator.
-- [Documentation details](https://docs.google.com/document/d/1k_jyba70rEcuOfFv65Vj03rZpPDN_1f44vZPReqRirc/edit#)
+- This document provides information about React Practice
+- [Documentation details](https://docs.google.com/document/d/1EbAyzRCHAkfTcfHfmZjkQ0wwMqUAxY0BO4Yk0B55Gs0/edit#heading=h.ar0k1bmftkqn)
 
 ## Table of Contents
 
@@ -18,7 +17,7 @@
 ## Main app features
 
 - User can view products list
-- User can product details
+- User can view product details
 - User can sort products
   - Sort by price: Low to High
   - Sort by price: High to Low
@@ -29,7 +28,7 @@
 
 ## Targets
 
-- Apply all React knowledge learned 
+- Apply all React knowledge learned
 - Apply Jest and React Testing Library for unit testing
 - Unit test coverage should greater than 80%
 - Apply SWR for fetching data
@@ -39,7 +38,7 @@
 ## Timeline
 
 - Estimate time: 8 days of working
-- Actual time: TBD
+- Actual time: 14 days of working
 
 ## Tech Stacks
 
@@ -91,13 +90,15 @@ cd practices/big-practice
 All commands are run from the root of the project, from a terminal:
 
 | **Command**             | **Action**                                   |
-| --------------------    | -------------------------------------------- |
+| ----------------------- | -------------------------------------------- |
 | npm i                   | Installs dependencies                        |
 | npm run dev             | Starts local dev server                      |
 | npm run build           | Build your production site to `./dist/`      |
 | npm run preview         | Preview your build locally, before deploying |
 | npm run storybook       | Start Storybook dev at: `localhost: 6006`    |
 | npm run build-storybook | Build Storybook                              |
+| npm run test            | Start testing                                |
+| npm run test:update     | Start testing and update snapshot            |
 | npm run lint            | Detect code format error                     |
 | npm run lint:fix        | Detect and fix code format error             |
 | npm run test            | Run unit tests                               |

@@ -1,3 +1,4 @@
+import { withRouter } from 'storybook-addon-react-router-v6';
 // Types
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -5,11 +6,12 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ProductList from '.';
 
 // Mocks
-import { mockProducts } from './mockProducts';
+import { mockProducts } from '../../mocks';
 
 const meta = {
   title: 'Components/ProductList',
   component: ProductList,
+  decorators: [withRouter],
 } satisfies Meta<typeof ProductList>;
 
 export default meta;
