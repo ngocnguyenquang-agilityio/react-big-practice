@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ProductList from '.';
 
 // Mocks
-import { mockProducts } from './mockProducts';
+import { mockProducts } from '../../mocks';
 
 const meta = {
   title: 'Components/ProductList',
