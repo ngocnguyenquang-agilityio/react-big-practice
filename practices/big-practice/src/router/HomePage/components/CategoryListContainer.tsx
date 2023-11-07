@@ -46,6 +46,7 @@ export const Categories = memo(
                 <option
                   className='mt-2 flex text-white bg-black'
                   value={item.value}
+                  key={item.value}
                 >
                   {item.label}
                 </option>

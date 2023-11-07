@@ -15,7 +15,9 @@ exports[`SearchInput component Should match snapshot 1`] = `
       >
         <img
           alt="search-icon"
+          height="16"
           src=""
+          width="16"
         />
       </div>
     </div>
@@ -31,7 +33,9 @@ exports[`SearchInput component Should match snapshot 1`] = `
     >
       <img
         alt="search-icon"
+        height="16"
         src=""
+        width="16"
       />
     </div>
   </div>,

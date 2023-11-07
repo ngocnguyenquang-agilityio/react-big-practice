@@ -83,7 +83,9 @@ exports[`Header component Should match snapshot 1`] = `
               >
                 <img
                   alt="search-icon"
+                  height="16"
                   src=""
+                  width="16"
                 />
               </div>
             </form>
@@ -99,7 +101,9 @@ exports[`Header component Should match snapshot 1`] = `
               >
                 <img
                   alt="cart-icon"
+                  height="16"
                   src=""
+                  width="16"
                 />
                 <div
                   class="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-600 rounded-full -top-2 -right-2 dark:border-gray-900"
@@ -193,7 +197,9 @@ exports[`Header component Should match snapshot 1`] = `
             >
               <img
                 alt="search-icon"
+                height="16"
                 src=""
+                width="16"
               />
             </div>
           </form>
@@ -209,7 +215,9 @@ exports[`Header component Should match snapshot 1`] = `
             >
               <img
                 alt="cart-icon"
+                height="16"
                 src=""
+                width="16"
               />
               <div
                 class="absolute inline-flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-600 rounded-full -top-2 -right-2 dark:border-gray-900"

@@ -44,8 +44,8 @@ describe('Sort Product component', () => {
 
   test('Should call onSelectSort', async () => {
     await screen.getByTestId('sort-products');
-    const button = screen.getByText(/Low to High/i)
-    fireEvent.click(button)
+    const button = screen.getByRole('button', { name: /Low to High/i });
+    fireEvent.click(button);
     expect(props.onSelectSort).toBeCalledTimes(1);
   });
 });
