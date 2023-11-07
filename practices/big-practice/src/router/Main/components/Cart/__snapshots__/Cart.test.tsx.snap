@@ -28,7 +28,9 @@ exports[`Cart Component Should match snapshot 1`] = `
               >
                 <img
                   alt="cross-icon"
+                  height="16"
                   src=""
+                  width="16"
                 />
               </button>
             </div>
@@ -97,7 +99,9 @@ exports[`Cart Component Should match snapshot 1`] = `
             >
               <img
                 alt="cross-icon"
+                height="16"
                 src=""
+                width="16"
               />
             </button>
           </div>
