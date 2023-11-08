@@ -2,7 +2,7 @@
 import { isRouteErrorResponse, useNavigate, useRouteError } from 'react-router-dom';
 
 // Components
-import { Button } from '@components/Button';
+import { Button } from '@components/Button/Button';
 
 // Constants
 import { APP_ROUTERS } from '@constants';

@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 
 // Components
-import Cart, { ICart } from '.';
+import Cart, { ICart } from './Cart';
 
 const props: ICart = {
   handleToggleCart: jest.fn(),

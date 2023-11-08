@@ -3,9 +3,9 @@ import useSWR from 'swr';
 import { useParams } from 'react-router-dom';
 
 // Components
-import ProductDetail from '@components/ProductDetail';
-import ProductDetailLayout from '@layouts/ProductDetailLayout';
-import Skeleton from '@components/Skeleton';
+import ProductDetail from '@components/ProductDetail/ProductDetail';
+import ProductDetailLayout from '@layouts/ProductDetailLayout/ProductDetailLayout';
+import Skeleton from '@components/Skeleton/Skeleton';
 
 // Helpers
 import { buildQueryProductEndpoint } from '@helpers/products';

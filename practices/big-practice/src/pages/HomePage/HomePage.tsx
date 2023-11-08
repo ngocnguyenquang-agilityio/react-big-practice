@@ -2,7 +2,7 @@
 import SortProducts from './components/SortProductsContainer';
 
 // Layouts
-import HomeLayout from '@layouts/HomeLayout';
+import HomeLayout from '@layouts/HomeLayout/HomeLayout';
 
 // Types
 import ProductListContainer from './components/ProductListContainer';

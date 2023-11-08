@@ -2,7 +2,7 @@ import { RenderResult, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 
 // Component
-import ProductList from '.';
+import ProductList from './ProductList';
 
 // Mocks
 import { mockProducts } from '@mocks';

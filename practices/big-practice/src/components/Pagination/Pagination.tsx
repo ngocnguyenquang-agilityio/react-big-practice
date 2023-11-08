@@ -1,5 +1,5 @@
 // Component
-import { Button } from '@components/Button';
+import { Button } from '@components/Button/Button';
 
 interface IPagination {
   totalPages: number;

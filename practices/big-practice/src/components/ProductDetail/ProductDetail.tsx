@@ -2,7 +2,7 @@
 import { useCartStore } from '@stores/cartStore';
 
 // Components
-import { Button } from '@components/Button';
+import { Button } from '@components/Button/Button';
 
 // Types
 import { IProduct } from '@interfaces';

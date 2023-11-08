@@ -2,9 +2,9 @@
 import crossIcon from '@assets/crossIcon.svg';
 
 // Components
-import { Button } from '@components/Button';
-import { Icon } from '@components/Icon';
-import CartBody from './CartBody';
+import { Button } from '@components/Button/Button';
+import { Icon } from '@components/Icon/Icon';
+import CartBody from './CartBody/CartBody';
 
 export interface ICart {
   handleToggleCart: () => void;

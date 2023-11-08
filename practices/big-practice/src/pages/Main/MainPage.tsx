@@ -3,11 +3,11 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 // Components
-import MainLayout from '@layouts/MainLayout';
-import Loading from '@components/Loading';
+import MainLayout from '@layouts/MainLayout/MainLayout';
+import Loading from '@components/Loading/Loading';
 import HeaderContainer from './components/Header/HeaderContainer';
-import Footer from './components/Footer';
-import Cart from './components/Cart';
+import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
 
 // Stores
 import { useCartStore } from '@stores/cartStore';

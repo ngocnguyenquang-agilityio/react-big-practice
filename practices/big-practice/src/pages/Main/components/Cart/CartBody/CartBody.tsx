@@ -2,9 +2,9 @@
 import { useCartStore } from '@stores/cartStore';
 
 // Components
-import ProductCartItem from '../ProductCartItem';
-import CartEmpty from '../CartEmpty';
-import { Button } from '@components/Button';
+import ProductCartItem from '../ProductCartItem/ProductCartItem';
+import CartEmpty from '../CartEmpty/CartEmpty';
+import { Button } from '@components/Button/Button';
 
 const CartBody = () => {
   const { cartItems } = useCartStore();

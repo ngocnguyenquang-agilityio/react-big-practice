@@ -6,9 +6,9 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import cartIcon from '@assets/cartIcon.svg';
 
 // Components
-import { Button } from '@components/Button';
-import { Icon } from '@components/Icon';
-import SearchInput from '@components/SearchInput';
+import { Button } from '@components/Button/Button';
+import { Icon } from '@components/Icon/Icon';
+import SearchInput from '@components/SearchInput/SearchInput';
 
 // Helpers
 import { debounce } from '@helpers/utils';

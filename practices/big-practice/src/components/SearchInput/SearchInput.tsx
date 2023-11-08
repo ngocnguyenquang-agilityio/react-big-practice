@@ -1,12 +1,12 @@
 // Icons
-import { Icon } from '@components/Icon';
+import { Icon } from '@components/Icon/Icon';
 import searchIcon from '@assets/searchIcon.svg';
 
 // Components
-import { Input } from '@components/Input';
+import { Input } from '@components/Input/Input';
 
 // Types
-import { InputProps } from '@components/Input';
+import { InputProps } from '@components/Input/Input';
 
 const SearchInput = ({ ...rest }: InputProps): React.ReactElement => {
   return (
