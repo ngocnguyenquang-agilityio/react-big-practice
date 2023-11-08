@@ -23,16 +23,8 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: APP_ROUTERS.DETAILS_PAGE,
-        element: <ProductDetailsPage />,
-      },
-      {
         path: `${APP_ROUTERS.DETAILS_PAGE}/:productId`,
         element: <ProductDetailsPage />,
-      },
-      {
-        path: APP_ROUTERS.CATEGORY,
-        element: <HomePage />,
       },
       {
         path: `${APP_ROUTERS.CATEGORY}/:category`,
