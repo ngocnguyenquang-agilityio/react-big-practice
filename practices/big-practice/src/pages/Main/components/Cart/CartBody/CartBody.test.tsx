@@ -1,7 +1,7 @@
 import { RenderResult, render, screen } from '@testing-library/react';
 
 // Components
-import CartBody from '.';
+import CartBody from './CartBody';
 import { useCartStore } from '@stores/cartStore';
 
 jest.mock('@stores/cartStore');

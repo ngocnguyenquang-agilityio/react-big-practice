@@ -4,9 +4,9 @@ import useSWR from 'swr';
 import { useParams, useSearchParams } from 'react-router-dom';
 
 // Components
-import Pagination from '@components/Pagination';
-import ProductList from '@components/ProductList';
-import Skeleton from '@components/Skeleton';
+import Pagination from '@components/Pagination/Pagination';
+import ProductList from '@components/ProductList/ProductList';
+import Skeleton from '@components/Skeleton/Skeleton';
 
 // Helpers
 import { buildQueryProductEndpoint } from '@helpers/products';

@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import CartItem from '.';
+import CartItem from './ProductCartItem';
 
 const meta = {
   title: 'Components/CartItem',

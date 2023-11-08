@@ -6,11 +6,11 @@ import { createBrowserRouter } from 'react-router-dom';
 import { APP_ROUTERS } from '@constants';
 
 // Components
-import Main from './Main';
-import { ErrorBoundary } from '@components/ErrorBoundary';
+import Main from './Main/MainPage';
+import { ErrorBoundary } from '@components/ErrorBoundary/ErrorBoundary';
 
-const HomePage = lazy(() => import('./HomePage'));
-const ProductDetailsPage = lazy(() => import('./ProductDetailsPage'));
+const HomePage = lazy(() => import('./HomePage/HomePage'));
+const ProductDetailsPage = lazy(() => import('./ProductDetailsPage/ProductDetailsPage'));
 
 export const router = createBrowserRouter([
   {

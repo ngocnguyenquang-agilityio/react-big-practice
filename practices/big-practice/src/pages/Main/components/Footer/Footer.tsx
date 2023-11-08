@@ -2,7 +2,7 @@
 import { memo } from 'react';
 
 // Components
-import { Button } from '@components/Button';
+import { Button } from '@components/Button/Button';
 
 // Constants
 import { footerItems } from '@constants';

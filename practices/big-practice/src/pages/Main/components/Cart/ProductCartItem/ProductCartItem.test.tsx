@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 
 // Components
-import ProductCartItem from '.';
+import ProductCartItem from './ProductCartItem';
 
 // Types
 import { IProductCartItem } from '@interfaces';

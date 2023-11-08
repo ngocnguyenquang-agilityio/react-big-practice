@@ -12,7 +12,7 @@ import { IProductCartItem } from '@interfaces';
 
 // Components
 import QuantityActionButton from '@components/QuantityActionButton';
-import { Icon } from '@components/Icon';
+import { Icon } from '@components/Icon/Icon';
 
 const ProductCartItem = memo(function ProductCartItemRenderer({
   id,

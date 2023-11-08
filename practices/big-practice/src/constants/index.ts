@@ -1,4 +1,4 @@
-export * from './route';
+export * from './routes';
 export * from './url';
 export * from './categories';
 export * from './sortConditions';

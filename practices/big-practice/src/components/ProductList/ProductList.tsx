@@ -2,11 +2,11 @@
 import { IProduct } from '@interfaces';
 
 // Components
-import ProductCard from '@components/ProductCard';
+import ProductCard from '@components/ProductCard/ProductCard';
 import { Link } from 'react-router-dom';
 
 // Constants
-import { APP_ROUTERS } from '../../constants/route';
+import { APP_ROUTERS } from '../../constants/routes';
 
 const ProductList = ({ products = [], sortBy }: { products: IProduct[]; sortBy?: string }) => {
   return (
