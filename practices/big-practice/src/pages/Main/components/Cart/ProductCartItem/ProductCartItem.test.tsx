@@ -25,5 +25,23 @@ describe('ProductCard Component', () => {
     expect(comp).toMatchSnapshot();
   });
 
-  // TODO: Update more test cases when implement functions
+  test('Should render correct quantity of product', () => {
+    const comp = render(<ProductCartItem {...props} />);
+    const price = comp.getByTestId('item-price');
+    expect(price).toBeTruthy();
+    expect(price.textContent).toEqual('$ 20USD');
+  });
+
+  test('Should render correct title of product', () => {
+    const comp = render(<ProductCartItem {...props} />);
+    const title = comp.getByTestId('item-title');
+    expect(title).toBeTruthy();
+    expect(title.textContent).toEqual('Product 1');
+  });
+
+  test('Should render correct image of product', () => {
+    const comp = render(<ProductCartItem {...props} />);
+    const img = comp.getByTestId('item-thumbnail');
+    expect(img).toHaveAttribute('alt', 'Product 1-thumbnail');
+  });
 });

@@ -2,9 +2,9 @@
 import { useCartStore } from '@stores/cartStore';
 
 // Components
-import ProductCartItem from '../ProductCartItem/ProductCartItem';
 import CartEmpty from '../CartEmpty/CartEmpty';
 import { Button } from '@components/Button/Button';
+import ProductCartItemContainer from '../ProductCartItem/ProductCartItem';
 
 const CartBody = () => {
   const { cartItems } = useCartStore();
@@ -19,7 +19,7 @@ const CartBody = () => {
             key={item.id}
             className='flex w-full flex-col border-b border-neutral-700'
           >
-            <ProductCartItem {...item} />
+            <ProductCartItemContainer {...item} />
           </li>
         ))}
       </ul>
