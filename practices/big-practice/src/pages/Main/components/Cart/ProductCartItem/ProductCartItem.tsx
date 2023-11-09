@@ -1,4 +1,5 @@
 // Libs
+import useSWR from 'swr';
 import { memo } from 'react';
 
 // Stores
@@ -14,14 +15,81 @@ import { IProductCartItem } from '@interfaces';
 import QuantityActionButton from '@components/QuantityActionButton';
 import { Icon } from '@components/Icon/Icon';
 
-const ProductCartItem = memo(function ProductCartItemRenderer({
-  id,
+// Helpers
+import { buildQueryProductEndpoint } from '@helpers/products';
+import { isEmpty } from '@helpers/utils';
+
+interface ProductCartItemProps extends IProductCartItem {
+  handleRemoveFromCart: () => void;
+  handleIncreaseQuantity: () => void;
+  handleDecreaseQuantity: () => void;
+}
+
+export const ProductCartItem = memo(function ProductCartItemRenderer({
   thumbnail,
+  price,
   title,
   quantity,
-  price,
-}: IProductCartItem) {
-  const { removeFromCart, increaseQuantity, decreaseQuantity } = useCartStore();
+  handleRemoveFromCart,
+  handleIncreaseQuantity,
+  handleDecreaseQuantity,
+}: Partial<ProductCartItemProps>) {
+  return (
+    <div className='relative flex w-full flex-row justify-between px-1 py-4'>
+      <div className='absolute z-40 -mt-2 ml-[55px]'>
+        <button
+          className='ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200'
+          onClick={handleRemoveFromCart}
+        >
+          <Icon
+            svg={removeIcon}
+            name='remove-icon'
+          />
+        </button>
+      </div>
+      <div className='z-30 flex flex-row space-x-4'>
+        <div className='relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 hover:bg-neutral-800'>
+          <img
+            className='h-full w-full object-cover'
+            data-testid='item-thumbnail'
+            loading='lazy'
+            src={thumbnail}
+            alt={`${title}-thumbnail`}
+          />
+        </div>
+        <div
+          className='flex flex-1 flex-col text-base'
+          data-testid='item-title'
+        >
+          <span className='leading-tight'>{title}</span>
+        </div>
+      </div>
+      <div className='flex h-16 flex-col justify-between'>
+        <p
+          className='flex justify-end space-y-2 text-right text-sm'
+          data-testid='item-price'
+        >
+          $ {price}
+          <span className='ml-1 inline'>USD</span>
+        </p>
+        <QuantityActionButton
+          quantity={quantity || 1}
+          handleIncrease={handleIncreaseQuantity!}
+          handleDecrease={handleDecreaseQuantity!}
+        />
+      </div>
+    </div>
+  );
+});
+
+const ProductCartItemContainer = ({ id, quantity, price, title, thumbnail }: IProductCartItem) => {
+  const { removeFromCart, increaseQuantity, decreaseQuantity, updateProductInCart } = useCartStore();
+
+  const endpoint = buildQueryProductEndpoint({ productId: id });
+  const { data: product } = useSWR(endpoint, {
+    keepPreviousData: true,
+    onSuccess: updateProductInCart,
+  });
 
   const handleRemoveFromCart = () => {
     removeFromCart(id);
@@ -36,47 +104,16 @@ const ProductCartItem = memo(function ProductCartItemRenderer({
   };
 
   return (
-    <div className='relative flex w-full flex-row justify-between px-1 py-4'>
-      <div className='absolute z-40 -mt-2 ml-[55px]'>
-        <button
-          className='ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-neutral-500 transition-all duration-200'
-          onClick={handleRemoveFromCart}
-        >
-          <Icon
-            svg={removeIcon}
-            name='remove-icon'
-          />
-        </button>
-      </div>
-      <a
-        className='z-30 flex flex-row space-x-4'
-        href=''
-      >
-        <div className='relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 hover:bg-neutral-800'>
-          <img
-            className='h-full w-full object-cover'
-            loading='lazy'
-            src={thumbnail}
-          />
-        </div>
-        <div className='flex flex-1 flex-col text-base'>
-          <span className='leading-tight'>{title}</span>
-          <p className='text-sm text-neutral-400'>Black / 7 x 9 inch</p>
-        </div>
-      </a>
-      <div className='flex h-16 flex-col justify-between'>
-        <p className='flex justify-end space-y-2 text-right text-sm'>
-          {price}
-          <span className='ml-1 inline'>USD</span>
-        </p>
-        <QuantityActionButton
-          quantity={quantity}
-          handleIncrease={handleIncreaseQuantity}
-          handleDecrease={handleDecreaseQuantity}
-        />
-      </div>
-    </div>
+    <ProductCartItem
+      quantity={quantity}
+      title={isEmpty(product) ? title : product.title}
+      thumbnail={isEmpty(product) ? thumbnail : product.thumbnail}
+      price={isEmpty(product) ? price : product.price}
+      handleDecreaseQuantity={handleDecreaseQuantity}
+      handleIncreaseQuantity={handleIncreaseQuantity}
+      handleRemoveFromCart={handleRemoveFromCart}
+    />
   );
-});
+};
 
-export default ProductCartItem;
+export default ProductCartItemContainer;
