@@ -1,5 +1,6 @@
 // Libs
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 // Components
 import { Button } from '@components/Button/Button';
@@ -12,7 +13,18 @@ import logoIcon from '@assets/logoIcon.svg';
 // Constants
 import { APP_ROUTERS } from '@constants';
 
-export const ShippingForm = () => {
+interface IShippingFormSubmit {
+  emailOrPhone: string | number;
+  email: string;
+  firstName: string;
+  lastName: string;
+  address: string;
+  city: string;
+}
+
+export const ShippingForm = ({ onSubmit }: { onSubmit: () => void }) => {
+  const { register } = useForm<IShippingFormSubmit>();
+
   return (
     <>
       <div className='flex items-center justify-center border border-neutral-700 bg-black h-[50px] w-[50px] rounded-xl'>
@@ -28,21 +40,24 @@ export const ShippingForm = () => {
           />
         </Link>
       </div>
-      <form>
+      <form onSubmit={onSubmit}>
         <fieldset className='mt-6'>
           <legend className='text-lg font-bold mb-2'>Contact</legend>
           <label
-            htmlFor='email-or-phone'
+            htmlFor='emailOrPhone'
             className='block mb-2 text-sm font-medium text-neutral-400'
           >
             Email or phone
           </label>
           <Input
             type='text'
-            name='email-or-phone'
             id='email-or-phone'
             placeholder='Email or mobile phone number'
             className='py-3 focus:outline-none focus:border-blue-600'
+            {...register('emailOrPhone', {
+              required: true,
+              maxLength: 20,
+            })}
           />
         </fieldset>
 
@@ -57,10 +72,16 @@ export const ShippingForm = () => {
             </label>
             <Input
               type='text'
-              name='email'
               id='email'
               placeholder='name@flowbite.com'
               className='py-3 focus:outline-none focus:border-blue-600'
+              {...register('email', {
+                required: true,
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: 'Invalid email address',
+                },
+              })}
             />
           </div>
           <div className='grid md:grid-cols-2 md:gap-6'>
@@ -73,7 +94,7 @@ export const ShippingForm = () => {
               </label>
               <Input
                 id='first-name'
-                name='first-name'
+                name='firstName'
                 placeholder='First name'
                 className='py-3 focus:outline-none focus:border-blue-600'
               />
@@ -88,9 +109,16 @@ export const ShippingForm = () => {
               <Input
                 type='text'
                 id='last-name'
-                name='last-name'
                 placeholder='Last name'
                 className='py-3 focus:outline-none focus:border-blue-600'
+                {...register('lastName', {
+                  required: true,
+                  maxLength: 20,
+                  pattern: {
+                    value: /^[A-Za-z]+$/i,
+                    message: 'Invalid last name',
+                  },
+                })}
               />
             </div>
           </div>
@@ -104,9 +132,11 @@ export const ShippingForm = () => {
             <Input
               type='text'
               id='address'
-              name='address'
               placeholder='Address'
               className='py-3 focus:outline-none focus:border-blue-600'
+              {...register('address', {
+                required: true,
+              })}
             />
           </div>
           <div className='mb-6'>
@@ -134,9 +164,11 @@ export const ShippingForm = () => {
             <Input
               type='text'
               id='city'
-              name='city'
               placeholder='City'
               className='py-3 focus:outline-none focus:border-blue-600'
+              {...register('city', {
+                required: true,
+              })}
             />
           </div>
           <div className='flex justify-end'>
@@ -154,7 +186,13 @@ export const ShippingForm = () => {
 };
 
 const ShippingFormContainer = () => {
-  return <ShippingForm />;
+  const { handleSubmit } = useForm<IShippingFormSubmit>();
+  const onSubmit = (data: IShippingFormSubmit) => {
+    // TODO: Handle Submit form
+    console.log(data);
+  };
+
+  return <ShippingForm onSubmit={handleSubmit(onSubmit)} />;
 };
 
 export default ShippingFormContainer;
