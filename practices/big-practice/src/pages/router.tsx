@@ -11,6 +11,7 @@ import { ErrorBoundary } from '@components/ErrorBoundary/ErrorBoundary';
 
 const HomePage = lazy(() => import('./HomePage/HomePage'));
 const ProductDetailsPage = lazy(() => import('./ProductDetailsPage/ProductDetailsPage'));
+const CheckoutPage = lazy(() => import('./CheckoutPage/CheckoutPage'));
 
 export const router = createBrowserRouter([
   {
@@ -31,5 +32,9 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
     ],
+  },
+  {
+    path: '/checkout',
+    element: <CheckoutPage />,
   },
 ]);
