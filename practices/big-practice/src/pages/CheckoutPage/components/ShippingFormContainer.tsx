@@ -52,8 +52,6 @@ export const ShippingForm = () => {
     alert(JSON.stringify(data));
   };
 
-  console.log('error', errors);
-
   return (
     <>
       <div className='flex items-center justify-center border border-neutral-700 bg-black h-[50px] w-[50px] rounded-xl'>
@@ -111,15 +109,16 @@ export const ShippingForm = () => {
           <div className='grid md:grid-cols-2 md:gap-6'>
             <div className='relative z-0 w-full mb-4 group'>
               <label
-                htmlFor='first-name'
+                htmlFor='firstName'
                 className='block mb-2 text-sm font-medium text-neutral-400'
               >
                 First name
               </label>
               <Input
-                id='first-name'
+                type='text'
+                id='firstName'
                 placeholder='First name'
-                variant={errors?.firstName ? 'error' : 'secondary'}
+                variant={errors?.email ? 'error' : 'secondary'}
                 className='py-3'
                 {...register('firstName')}
               />
