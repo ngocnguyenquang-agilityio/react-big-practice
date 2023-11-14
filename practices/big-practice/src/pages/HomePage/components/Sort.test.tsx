@@ -6,7 +6,7 @@ import { screen, render, RenderResult, fireEvent } from '@testing-library/react'
 import { SortProducts } from './SortProductsContainer';
 
 // Mocks
-import { mockSortConditions } from '../../../mocks/sortConditions';
+import { mockSortConditions } from '@mocks';
 
 const props = {
   sortCondition: mockSortConditions,
