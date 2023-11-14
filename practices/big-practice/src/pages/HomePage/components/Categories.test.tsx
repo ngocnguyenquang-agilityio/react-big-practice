@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { screen, render, RenderResult } from '@testing-library/react';
 
 // Components
-import { Categories } from '../CategoryListContainer';
+import { Categories } from './CategoryListContainer';
 
 const mockListCollection = [
   { value: 'phones', label: 'Phone' },

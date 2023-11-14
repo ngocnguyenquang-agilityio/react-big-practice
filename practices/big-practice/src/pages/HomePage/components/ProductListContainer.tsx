@@ -23,6 +23,8 @@ export const ProductListContainer = () => {
 
   const { data, isLoading } = useSWR(endpoint, { keepPreviousData: true, suspense: true });
 
+  const totalPage = parseInt((data.total / 9).toFixed(0)) + 1;
+
   const handleChangePagination = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       searchParams.set('page', e.currentTarget.value);
@@ -42,14 +44,14 @@ export const ProductListContainer = () => {
           sortBy={sort}
         />
       )}
-      {data?.products.length !== 9 ||
-        (!searchKeyword && (
-          <Pagination
-            totalPages={4}
-            standingPage={standingPage || '1'}
-            handleChangePagination={handleChangePagination}
-          />
-        ))}
+
+      {data.total > 9 && (
+        <Pagination
+          totalPages={totalPage}
+          standingPage={standingPage || '1'}
+          handleChangePagination={handleChangePagination}
+        />
+      )}
     </>
   );
 };

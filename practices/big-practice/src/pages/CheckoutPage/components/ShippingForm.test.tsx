@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import { fireEvent, render, RenderResult } from '@testing-library/react';
 
 // Components
-import { ShippingForm } from '../ShippingFormContainer';
+import { ShippingForm } from './ShippingFormContainer';
 
 describe('ShippingForm component', () => {
   let comp: RenderResult;

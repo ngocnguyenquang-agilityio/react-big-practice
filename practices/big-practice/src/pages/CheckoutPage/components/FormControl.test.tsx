@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { screen, render, RenderResult, fireEvent } from '@testing-library/react';
 
 // Components
-import FormControl from '../FormControl';
+import FormControl from './FormControl';
 
 const onChange = jest.fn();
 const props = {
