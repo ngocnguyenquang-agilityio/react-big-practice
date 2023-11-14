@@ -31,21 +31,23 @@ exports[`CartBody Component Should match snapshot 1`] = `
                   />
                 </button>
               </div>
-              <a
+              <div
                 class="z-30 flex flex-row space-x-4"
-                href=""
               >
                 <div
                   class="relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 hover:bg-neutral-800"
                 >
                   <img
+                    alt="Product Detail-thumbnail"
                     class="h-full w-full object-cover"
+                    data-testid="item-thumbnail"
                     loading="lazy"
                     src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
                   />
                 </div>
                 <div
                   class="flex flex-1 flex-col text-base"
+                  data-testid="item-title"
                 >
                   <span
                     class="leading-tight"
@@ -53,12 +55,13 @@ exports[`CartBody Component Should match snapshot 1`] = `
                     Product Detail
                   </span>
                 </div>
-              </a>
+              </div>
               <div
                 class="flex h-16 flex-col justify-between"
               >
                 <p
                   class="flex justify-end space-y-2 text-right text-sm"
+                  data-testid="item-price"
                 >
                   $ 
                   10
@@ -125,21 +128,23 @@ exports[`CartBody Component Should match snapshot 1`] = `
                   />
                 </button>
               </div>
-              <a
+              <div
                 class="z-30 flex flex-row space-x-4"
-                href=""
               >
                 <div
                   class="relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 hover:bg-neutral-800"
                 >
                   <img
+                    alt="Product Detail 2-thumbnail"
                     class="h-full w-full object-cover"
+                    data-testid="item-thumbnail"
                     loading="lazy"
                     src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
                   />
                 </div>
                 <div
                   class="flex flex-1 flex-col text-base"
+                  data-testid="item-title"
                 >
                   <span
                     class="leading-tight"
@@ -147,12 +152,13 @@ exports[`CartBody Component Should match snapshot 1`] = `
                     Product Detail 2
                   </span>
                 </div>
-              </a>
+              </div>
               <div
                 class="flex h-16 flex-col justify-between"
               >
                 <p
                   class="flex justify-end space-y-2 text-right text-sm"
+                  data-testid="item-price"
                 >
                   $ 
                   20
@@ -285,21 +291,23 @@ exports[`CartBody Component Should match snapshot 1`] = `
                 />
               </button>
             </div>
-            <a
+            <div
               class="z-30 flex flex-row space-x-4"
-              href=""
             >
               <div
                 class="relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 hover:bg-neutral-800"
               >
                 <img
+                  alt="Product Detail-thumbnail"
                   class="h-full w-full object-cover"
+                  data-testid="item-thumbnail"
                   loading="lazy"
                   src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
                 />
               </div>
               <div
                 class="flex flex-1 flex-col text-base"
+                data-testid="item-title"
               >
                 <span
                   class="leading-tight"
@@ -307,12 +315,13 @@ exports[`CartBody Component Should match snapshot 1`] = `
                   Product Detail
                 </span>
               </div>
-            </a>
+            </div>
             <div
               class="flex h-16 flex-col justify-between"
             >
               <p
                 class="flex justify-end space-y-2 text-right text-sm"
+                data-testid="item-price"
               >
                 $ 
                 10
@@ -379,21 +388,23 @@ exports[`CartBody Component Should match snapshot 1`] = `
                 />
               </button>
             </div>
-            <a
+            <div
               class="z-30 flex flex-row space-x-4"
-              href=""
             >
               <div
                 class="relative h-16 w-16 cursor-pointer overflow-hidden rounded-md border border-neutral-700 bg-neutral-900 hover:bg-neutral-800"
               >
                 <img
+                  alt="Product Detail 2-thumbnail"
                   class="h-full w-full object-cover"
+                  data-testid="item-thumbnail"
                   loading="lazy"
                   src="https://demo.vercel.store/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Ft-shirt-1.png%3Fv%3D1689798965&w=3840&q=75"
                 />
               </div>
               <div
                 class="flex flex-1 flex-col text-base"
+                data-testid="item-title"
               >
                 <span
                   class="leading-tight"
@@ -401,12 +412,13 @@ exports[`CartBody Component Should match snapshot 1`] = `
                   Product Detail 2
                 </span>
               </div>
-            </a>
+            </div>
             <div
               class="flex h-16 flex-col justify-between"
             >
               <p
                 class="flex justify-end space-y-2 text-right text-sm"
+                data-testid="item-price"
               >
                 $ 
                 20

@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 // Components
 import ProductCartItem from './ProductCartItem';
@@ -29,19 +30,19 @@ describe('ProductCard Component', () => {
     const comp = render(<ProductCartItem {...props} />);
     const price = comp.getByTestId('item-price');
     expect(price).toBeTruthy();
-    expect(price.textContent).toEqual('$ 20USD');
+    expect(price.textContent).toEqual(`$ ${mockProduct.price}USD`);
   });
 
   test('Should render correct title of product', () => {
     const comp = render(<ProductCartItem {...props} />);
     const title = comp.getByTestId('item-title');
     expect(title).toBeTruthy();
-    expect(title.textContent).toEqual('Product 1');
+    expect(title.textContent).toEqual(mockProduct.title);
   });
 
   test('Should render correct image of product', () => {
     const comp = render(<ProductCartItem {...props} />);
     const img = comp.getByTestId('item-thumbnail');
-    expect(img).toHaveAttribute('alt', 'Product 1-thumbnail');
+    expect(img).toHaveAttribute('alt', `${mockProduct.title}-thumbnail`);
   });
 });

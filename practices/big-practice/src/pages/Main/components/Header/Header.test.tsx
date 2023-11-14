@@ -8,6 +8,9 @@ import { Header } from './HeaderContainer';
 // Mocks
 import { mockCartItems } from '@mocks';
 
+// Constants
+import { headerItems } from '@constants';
+
 const props = {
   cartItems: mockCartItems,
   defaultValueSearch: '',
@@ -34,9 +37,9 @@ describe('Header component', () => {
     expect(comp).toMatchSnapshot();
   });
 
-  test('Should render number of footer items correctly', async () => {
+  test('Should render number of items correctly', async () => {
     const items = await screen.getByTestId('header-items');
-    expect(items.children).toHaveLength(3);
+    expect(items.children).toHaveLength(headerItems.length);
   });
 
   test('Should call toggleCart', () => {
@@ -47,6 +50,6 @@ describe('Header component', () => {
 
   test('Should render correct number of items in cart', () => {
     const item = screen.getByTestId('number-of-items');
-    expect(item.textContent).toBe('2');
+    expect(item.textContent).toBe(props.numberOfItemsInCart.toString());
   });
 });

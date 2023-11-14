@@ -3,10 +3,10 @@ import { MemoryRouter } from 'react-router-dom';
 import { screen, render, RenderResult, fireEvent } from '@testing-library/react';
 
 // Components
-import { SortProducts } from '../SortProductsContainer';
+import { SortProducts } from './SortProductsContainer';
 
 // Mocks
-import { mockSortConditions } from '../../../../mocks/sortConditions';
+import { mockSortConditions } from '@mocks';
 
 const props = {
   sortCondition: mockSortConditions,

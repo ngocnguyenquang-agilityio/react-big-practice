@@ -42,6 +42,7 @@ export const ProductListContainer = () => {
           sortBy={sort}
         />
       )}
+
       {data?.products.length !== 9 ||
         (!searchKeyword && (
           <Pagination

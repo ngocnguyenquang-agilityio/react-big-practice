@@ -30,6 +30,6 @@ describe('ProductList Component', () => {
 
   test('Should render correct number of items in list', async () => {
     const items = await screen.getByTestId('product-list');
-    expect(items.children).toHaveLength(3);
+    expect(items.children).toHaveLength(mockProducts.length);
   });
 });
