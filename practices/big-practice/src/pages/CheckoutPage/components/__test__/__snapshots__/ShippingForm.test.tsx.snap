@@ -30,16 +30,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
           </legend>
           <label
             class="block mb-2 text-sm font-medium text-neutral-400"
-            for="phone"
           >
             Phone
           </label>
           <input
             class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-            id="phone"
-            name="phone"
-            placeholder="Mobile phone number"
+            placeholder="Phone number"
             type="text"
+            value=""
           />
         </fieldset>
         <fieldset
@@ -55,16 +53,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
           >
             <label
               class="block mb-2 text-sm font-medium text-neutral-400"
-              for="email"
             >
               Your email
             </label>
             <input
               class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-              id="email"
-              name="email"
               placeholder="name@flowbite.com"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -75,16 +71,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
             >
               <label
                 class="block mb-2 text-sm font-medium text-neutral-400"
-                for="firstName"
               >
                 First name
               </label>
               <input
                 class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-                id="firstName"
-                name="firstName"
                 placeholder="First name"
                 type="text"
+                value=""
               />
             </div>
             <div
@@ -92,16 +86,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
             >
               <label
                 class="block mb-2 text-sm font-medium text-neutral-400"
-                for="last-name"
               >
                 Last name
               </label>
               <input
                 class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-                id="last-name"
-                name="lastName"
                 placeholder="Last name"
                 type="text"
+                value=""
               />
             </div>
           </div>
@@ -110,16 +102,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
           >
             <label
               class="block mb-2 text-sm font-medium text-neutral-400"
-              for="address"
             >
               Address
             </label>
             <input
               class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-              id="address"
-              name="address"
               placeholder="Address"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -127,16 +117,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
           >
             <label
               class="block mb-2 text-sm font-medium text-neutral-400"
-              for="apartment"
             >
               Apartment
             </label>
             <input
-              class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-              id="apartment"
-              name="apartment"
-              placeholder="Apartment, suite, etc."
+              class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 py-3"
+              placeholder="Apartment"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -144,16 +132,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
           >
             <label
               class="block mb-2 text-sm font-medium text-neutral-400"
-              for="city"
             >
               City
             </label>
             <input
               class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-              id="city"
-              name="city"
               placeholder="City"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -196,16 +182,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
         </legend>
         <label
           class="block mb-2 text-sm font-medium text-neutral-400"
-          for="phone"
         >
           Phone
         </label>
         <input
           class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-          id="phone"
-          name="phone"
-          placeholder="Mobile phone number"
+          placeholder="Phone number"
           type="text"
+          value=""
         />
       </fieldset>
       <fieldset
@@ -221,16 +205,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
         >
           <label
             class="block mb-2 text-sm font-medium text-neutral-400"
-            for="email"
           >
             Your email
           </label>
           <input
             class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-            id="email"
-            name="email"
             placeholder="name@flowbite.com"
             type="text"
+            value=""
           />
         </div>
         <div
@@ -241,16 +223,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
           >
             <label
               class="block mb-2 text-sm font-medium text-neutral-400"
-              for="firstName"
             >
               First name
             </label>
             <input
               class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-              id="firstName"
-              name="firstName"
               placeholder="First name"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -258,16 +238,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
           >
             <label
               class="block mb-2 text-sm font-medium text-neutral-400"
-              for="last-name"
             >
               Last name
             </label>
             <input
               class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-              id="last-name"
-              name="lastName"
               placeholder="Last name"
               type="text"
+              value=""
             />
           </div>
         </div>
@@ -276,16 +254,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
         >
           <label
             class="block mb-2 text-sm font-medium text-neutral-400"
-            for="address"
           >
             Address
           </label>
           <input
             class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-            id="address"
-            name="address"
             placeholder="Address"
             type="text"
+            value=""
           />
         </div>
         <div
@@ -293,16 +269,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
         >
           <label
             class="block mb-2 text-sm font-medium text-neutral-400"
-            for="apartment"
           >
             Apartment
           </label>
           <input
-            class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-            id="apartment"
-            name="apartment"
-            placeholder="Apartment, suite, etc."
+            class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 py-3"
+            placeholder="Apartment"
             type="text"
+            value=""
           />
         </div>
         <div
@@ -310,16 +284,14 @@ exports[`ShippingForm component Should match snapshot 1`] = `
         >
           <label
             class="block mb-2 text-sm font-medium text-neutral-400"
-            for="city"
           >
             City
           </label>
           <input
             class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 focus:outline-none focus:border-blue-600 py-3"
-            id="city"
-            name="city"
             placeholder="City"
             type="text"
+            value=""
           />
         </div>
         <div

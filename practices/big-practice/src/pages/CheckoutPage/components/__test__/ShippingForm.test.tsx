@@ -17,13 +17,13 @@ describe('ShippingForm component', () => {
 
   test('Should render correctly', () => {
     expect(comp).toBeTruthy();
-    expect(comp.getByRole('textbox', { name: /phone/i })).toBeTruthy();
-    expect(comp.getByRole('textbox', { name: /email/i })).toBeTruthy();
-    expect(comp.getByRole('textbox', { name: /address/i })).toBeTruthy();
-    expect(comp.getByRole('textbox', { name: /apartment/i })).toBeTruthy();
-    expect(comp.getByRole('textbox', { name: /city/i })).toBeTruthy();
-    expect(comp.getByRole('textbox', { name: /last name/i })).toBeTruthy();
-    expect(comp.getByRole('textbox', { name: /first name/i })).toBeTruthy();
+    expect(comp.getByPlaceholderText('Phone number')).toBeTruthy();
+    expect(comp.getByPlaceholderText('name@flowbite.com')).toBeTruthy();
+    expect(comp.getByPlaceholderText('First name')).toBeTruthy();
+    expect(comp.getByPlaceholderText('Last name')).toBeTruthy();
+    expect(comp.getByPlaceholderText('Address')).toBeTruthy();
+    expect(comp.getByPlaceholderText('Apartment')).toBeTruthy();
+    expect(comp.getByPlaceholderText('City')).toBeTruthy();
     expect(comp.getByText(/continue to shipping/i, { selector: 'button' })).toBeTruthy();
   });
 
@@ -35,7 +35,7 @@ describe('ShippingForm component', () => {
     const button = comp.getByText(/continue to shipping/i, { selector: 'button' });
     fireEvent.click(button);
 
-    expect(comp.findByText('Enter phone number')).toBeTruthy();
+    expect(comp.findByText('Phone is required')).toBeTruthy();
     expect(comp.findByText('Email is required')).toBeTruthy();
     expect(comp.findByText('First name is required')).toBeTruthy();
     expect(comp.findByText('Last name is required')).toBeTruthy();
@@ -43,3 +43,25 @@ describe('ShippingForm component', () => {
     expect(comp.findByText('City is required')).toBeTruthy();
   });
 });
+
+describe('ShippingForm component phone number field', () => {
+  let comp: RenderResult;
+  beforeEach(() => {
+    comp = render(
+      <MemoryRouter>
+        <ShippingForm />
+      </MemoryRouter>,
+    );
+  });
+
+  test('Should render error message for phone number field', async () => {
+    const phoneInput = comp.getByPlaceholderText('Phone number');
+    const button = comp.getByText(/continue to shipping/i, { selector: 'button' });
+    fireEvent.change(phoneInput, { target: { value: 'this is not phone number' } });
+    await fireEvent.click(button);
+
+    expect(comp.findByText('Phone number is not valid')).toBeTruthy();
+  });
+});
+
+// TODO: Update UT for the rest input field the same as phone number
