@@ -1,35 +1,37 @@
 // Libs
 import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 // Components
 import { Button } from '@components/Button/Button';
 import { Icon } from '@components/Icon/Icon';
-import { Input } from '@components/Input/Input';
+import FormControl from './FormControl';
 
 // Icons
 import logoIcon from '@assets/logoIcon.svg';
 
 // Constants
-import { APP_ROUTERS } from '@constants';
+import { APP_ROUTERS, phoneRegex } from '@constants';
 
-interface IShippingFormSubmit {
-  phone: number;
+export interface IShippingFormSubmit {
+  phone: string;
   email: string;
   firstName: string;
   lastName: string;
+  apartment?: string | null;
   address: string;
   city: string;
 }
 
 const schema = yup
   .object({
-    phone: yup.number().required(),
+    phone: yup.string().matches(phoneRegex, 'Phone number is not valid').required('Phone is required'),
     email: yup.string().email('Invalid email').required('Email is required'),
     firstName: yup.string().required('First name is required'),
     lastName: yup.string().required('Last name is required'),
+    apartment: yup.string().nullable(),
     address: yup.string().required('Address is required'),
     city: yup.string().required('City is required'),
   })
@@ -37,8 +39,8 @@ const schema = yup
 
 export const ShippingForm = () => {
   const {
-    register,
     formState: { errors },
+    control,
     handleSubmit,
   } = useForm<IShippingFormSubmit>({
     mode: 'onSubmit',
@@ -70,127 +72,119 @@ export const ShippingForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset className='mt-6'>
           <legend className='text-lg font-bold mb-2'>Contact</legend>
-          <label
-            htmlFor='phone'
-            className='block mb-2 text-sm font-medium text-neutral-400'
-          >
-            Phone
-          </label>
-          <Input
-            type='text'
-            id='phone'
-            placeholder='Mobile phone number'
-            variant={errors?.phone ? 'error' : 'secondary'}
-            className='py-3'
-            {...register('phone')}
+          <Controller
+            control={control}
+            name='phone'
+            render={({ field: { onChange, value } }) => (
+              <FormControl
+                onChange={onChange}
+                value={value}
+                label='Phone'
+                variant={errors?.phone ? 'error' : 'secondary'}
+                placeholder='Phone number'
+                errorMessage={errors?.phone?.message}
+              />
+            )}
           />
-          {errors?.phone?.message && <p className='text-sm text-red-500'>Enter phone number</p>}
         </fieldset>
 
         <fieldset className='mt-6'>
           <legend className='text-lg font-bold mb-2'>Shipping address</legend>
           <div className='mb-4'>
-            <label
-              htmlFor='email'
-              className='block mb-2 text-sm font-medium text-neutral-400'
-            >
-              Your email
-            </label>
-            <Input
-              type='text'
-              id='email'
-              placeholder='name@flowbite.com'
-              variant={errors?.email ? 'error' : 'secondary'}
-              className='py-3'
-              {...register('email')}
+            <Controller
+              control={control}
+              name='email'
+              render={({ field: { onChange, value } }) => (
+                <FormControl
+                  onChange={onChange}
+                  value={value}
+                  label='Your email'
+                  variant={errors?.phone ? 'error' : 'secondary'}
+                  placeholder='name@flowbite.com'
+                  errorMessage={errors?.email?.message || ''}
+                />
+              )}
             />
-            {errors?.email?.message && <p className='text-sm text-red-500'>{errors?.email?.message}</p>}
           </div>
           <div className='grid md:grid-cols-2 md:gap-6'>
             <div className='relative z-0 w-full mb-4 group'>
-              <label
-                htmlFor='firstName'
-                className='block mb-2 text-sm font-medium text-neutral-400'
-              >
-                First name
-              </label>
-              <Input
-                type='text'
-                id='firstName'
-                placeholder='First name'
-                variant={errors?.email ? 'error' : 'secondary'}
-                className='py-3'
-                {...register('firstName')}
+              <Controller
+                control={control}
+                name='firstName'
+                render={({ field: { onChange, value } }) => (
+                  <FormControl
+                    onChange={onChange}
+                    value={value}
+                    label='First name'
+                    variant={errors?.phone ? 'error' : 'secondary'}
+                    placeholder='First name'
+                    errorMessage={errors?.firstName?.message}
+                  />
+                )}
               />
-              {errors?.firstName?.message && <p className='text-sm text-red-500'>{errors?.firstName?.message}</p>}
             </div>
             <div className='relative z-0 w-full mb-4 group'>
-              <label
-                htmlFor='last-name'
-                className='block mb-2 text-sm font-medium text-neutral-400'
-              >
-                Last name
-              </label>
-              <Input
-                type='text'
-                id='last-name'
-                placeholder='Last name'
-                variant={errors?.lastName ? 'error' : 'secondary'}
-                className='py-3'
-                {...register('lastName')}
+              <Controller
+                control={control}
+                name='lastName'
+                render={({ field: { onChange, value } }) => (
+                  <FormControl
+                    onChange={onChange}
+                    value={value}
+                    label='Last name'
+                    variant={errors?.phone ? 'error' : 'secondary'}
+                    placeholder='Last name'
+                    errorMessage={errors?.lastName?.message}
+                  />
+                )}
               />
-              {errors?.lastName?.message && <p className='text-sm text-red-500'>{errors?.lastName?.message}</p>}
             </div>
           </div>
           <div className='mb-6'>
-            <label
-              htmlFor='address'
-              className='block mb-2 text-sm font-medium text-neutral-400'
-            >
-              Address
-            </label>
-            <Input
-              type='text'
-              id='address'
-              placeholder='Address'
-              variant={errors?.address ? 'error' : 'secondary'}
-              className='py-3'
-              {...register('address')}
+            <Controller
+              control={control}
+              name='address'
+              render={({ field: { onChange, value } }) => (
+                <FormControl
+                  onChange={onChange}
+                  value={value}
+                  label='Address'
+                  variant={errors?.phone ? 'error' : 'secondary'}
+                  placeholder='Address'
+                  errorMessage={errors?.address?.message}
+                />
+              )}
             />
-            {errors?.address?.message && <p className='text-sm text-red-500'>{errors?.address?.message}</p>}
           </div>
           <div className='mb-6'>
-            <label
-              htmlFor='apartment'
-              className='block mb-2 text-sm font-medium text-neutral-400'
-            >
-              Apartment
-            </label>
-            <Input
-              type='text'
-              id='apartment'
+            <Controller
+              control={control}
               name='apartment'
-              placeholder='Apartment, suite, etc.'
-              variant='secondary'
-              className='py-3'
+              render={({ field: { onChange, value } }) => (
+                <FormControl
+                  onChange={onChange}
+                  value={value!}
+                  label='Apartment'
+                  placeholder='Apartment'
+                />
+              )}
             />
           </div>
           <div className='mb-6'>
-            <label
-              htmlFor='city'
-              className='block mb-2 text-sm font-medium text-neutral-400'
-            >
-              City
-            </label>
-            <Input
-              type='text'
-              id='city'
-              placeholder='City'
-              variant={errors?.city ? 'error' : 'secondary'}
-              className='py-3'
-              {...register('city')}
+            <Controller
+              control={control}
+              name='city'
+              render={({ field: { onChange, value } }) => (
+                <FormControl
+                  onChange={onChange}
+                  value={value}
+                  label='City'
+                  variant={errors?.phone ? 'error' : 'secondary'}
+                  placeholder='City'
+                  errorMessage={errors?.city?.message}
+                />
+              )}
             />
-            {errors?.city?.message && <p className='text-sm text-red-500'>{errors?.city?.message}</p>}
           </div>
           <div className='flex justify-end'>
             <Button
@@ -207,8 +201,4 @@ export const ShippingForm = () => {
   );
 };
 
-const ShippingFormContainer = () => {
-  return <ShippingForm />;
-};
-
-export default ShippingFormContainer;
+export default ShippingForm;
