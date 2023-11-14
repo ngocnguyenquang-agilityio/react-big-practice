@@ -7,43 +7,33 @@ exports[`FormControl component Should match snapshot 1`] = `
     <div>
       <label
         class="block mb-2 text-sm font-medium text-neutral-400"
-        for="value1"
+        for="input-1"
       >
         Label 1
       </label>
       <input
         class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 py-3"
-        id="value1"
+        id="input-1"
         placeholder="Placeholder1"
         type="text"
         value="value1"
       />
-      <p
-        class="text-sm text-red-500"
-      >
-        Error messages
-      </p>
     </div>
   </body>,
   "container": <div>
     <label
       class="block mb-2 text-sm font-medium text-neutral-400"
-      for="value1"
+      for="input-1"
     >
       Label 1
     </label>
     <input
       class="w-full rounded-lg border border-neutral-800 bg-transparent px-4 text-sm text-white placeholder:text-neutral-400 py-3"
-      id="value1"
+      id="input-1"
       placeholder="Placeholder1"
       type="text"
       value="value1"
     />
-    <p
-      class="text-sm text-red-500"
-    >
-      Error messages
-    </p>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

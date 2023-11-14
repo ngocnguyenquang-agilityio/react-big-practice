@@ -5,6 +5,7 @@ import { Input } from '@components/Input/Input';
 import { isEmpty } from '@helpers/utils';
 
 const FormControl = ({
+  id = '',
   label = '',
   value,
   variant = 'default',
@@ -12,6 +13,7 @@ const FormControl = ({
   onChange,
   errorMessage = '',
 }: {
+  id: string;
   label: string;
   value: string;
   variant?: 'default' | 'secondary' | 'error' | null | undefined;
@@ -22,14 +24,14 @@ const FormControl = ({
   return (
     <>
       <label
-        htmlFor={value}
+        htmlFor={id}
         className='block mb-2 text-sm font-medium text-neutral-400'
       >
         {label}
       </label>
       <Input
         type='text'
-        id={value}
+        id={id}
         className='py-3'
         placeholder={placeholder}
         variant={!isEmpty(variant) ? variant : 'default'}

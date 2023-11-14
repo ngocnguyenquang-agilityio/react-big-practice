@@ -13,7 +13,7 @@ import FormControl from './FormControl';
 import logoIcon from '@assets/logoIcon.svg';
 
 // Constants
-import { APP_ROUTERS, phoneRegex } from '@constants';
+import { APP_ROUTERS, cityRegex, nameRegex, phoneRegex } from '@constants';
 
 export interface IShippingFormSubmit {
   phone: string;
@@ -29,11 +29,11 @@ const schema = yup
   .object({
     phone: yup.string().matches(phoneRegex, 'Phone number is not valid').required('Phone is required'),
     email: yup.string().email('Invalid email').required('Email is required'),
-    firstName: yup.string().required('First name is required'),
-    lastName: yup.string().required('Last name is required'),
+    firstName: yup.string().matches(nameRegex, 'First name is not valid').required('First name is required'),
+    lastName: yup.string().matches(nameRegex, 'Last name is not valid').required('Last name is required'),
     apartment: yup.string().nullable(),
     address: yup.string().required('Address is required'),
-    city: yup.string().required('City is required'),
+    city: yup.string().matches(cityRegex, 'City name is not valid').required('City is required'),
   })
   .required();
 
@@ -77,6 +77,7 @@ export const ShippingForm = () => {
             name='phone'
             render={({ field: { onChange, value } }) => (
               <FormControl
+                id='phone-number'
                 onChange={onChange}
                 value={value}
                 label='Phone'
@@ -96,6 +97,7 @@ export const ShippingForm = () => {
               name='email'
               render={({ field: { onChange, value } }) => (
                 <FormControl
+                  id='email'
                   onChange={onChange}
                   value={value}
                   label='Your email'
@@ -113,6 +115,7 @@ export const ShippingForm = () => {
                 name='firstName'
                 render={({ field: { onChange, value } }) => (
                   <FormControl
+                    id='first-name'
                     onChange={onChange}
                     value={value}
                     label='First name'
@@ -129,6 +132,7 @@ export const ShippingForm = () => {
                 name='lastName'
                 render={({ field: { onChange, value } }) => (
                   <FormControl
+                    id='last-name'
                     onChange={onChange}
                     value={value}
                     label='Last name'
@@ -146,6 +150,7 @@ export const ShippingForm = () => {
               name='address'
               render={({ field: { onChange, value } }) => (
                 <FormControl
+                  id='address'
                   onChange={onChange}
                   value={value}
                   label='Address'
@@ -162,6 +167,7 @@ export const ShippingForm = () => {
               name='apartment'
               render={({ field: { onChange, value } }) => (
                 <FormControl
+                  id='apartment'
                   onChange={onChange}
                   value={value!}
                   label='Apartment'
@@ -176,6 +182,7 @@ export const ShippingForm = () => {
               name='city'
               render={({ field: { onChange, value } }) => (
                 <FormControl
+                  id='city'
                   onChange={onChange}
                   value={value}
                   label='City'
