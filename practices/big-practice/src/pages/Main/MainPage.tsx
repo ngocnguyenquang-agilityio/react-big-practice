@@ -1,5 +1,5 @@
 // Libs
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 
 // Components
@@ -14,6 +14,10 @@ import { useCartStore } from '@stores/cartStore';
 
 const Main = () => {
   const { isOpenCart, toggleCart } = useCartStore();
+
+  useEffect(() => {
+    document.body.style.overflow = isOpenCart ? 'hidden' : 'scroll';
+  }, [isOpenCart]);
 
   return (
     <Suspense fallback={<Loading />}>
