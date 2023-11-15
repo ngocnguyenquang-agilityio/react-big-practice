@@ -21,15 +21,16 @@ const ProductDetail = ({ product }: { product: IProduct }) => {
   };
 
   return (
-    <div className='flex flex-col rounded-lg border p-8 border-neutral-800 bg-black md:p-12 lg:flex-row lg:gap-8'>
+    <div className='flex flex-col w-full justify-between rounded-lg border p-8 border-neutral-800 bg-black md:p-12 lg:flex-row lg:gap-8'>
       <div className='h-full w-full basis-full'>
         <div className='relative h-full max-h-[500px] w-full overflow-hidden flex items-center justify-between mx-auto'>
           <img
             src={product.thumbnail}
             width={600}
             height={500}
-            className='mx-auto'
+            className='object-cover w-[600px] h-[500px]'
             alt={`${product.title} - ${product.category}`}
+            loading='lazy'
           />
         </div>
         <ul className='my-12 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0'>
